@@ -20,6 +20,7 @@
 			 if(posicao >= 214){
 		    	posicao = 214;
 		    }
+
 		    else if (delta < 0){
 		        /* EVENTO COM O MOUSE WHEEL DESCENDO */
 		        posicao++;
@@ -31,10 +32,14 @@
 		    	posicao=0;
 		    }
 		    
-		     else {
+		    else {
 		        /* EVENTO COM O MOUSE WHEEL DESCENDO */
 		        posicao--;
 		         $('.text').html('para cima'+posicao);
+		    }
+
+		    switch(posicao){
+		    	case 2: 
 		    }
 
 		}
