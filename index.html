@@ -23,7 +23,7 @@
 
 		    else if (delta < 0){
 		        /* EVENTO COM O MOUSE WHEEL DESCENDO */
-		        posicao++;
+		        posicao = posicao + 0.5;
 		         $('.text').html('para baixo'+posicao);
 		         
 
@@ -34,7 +34,7 @@
 		    
 		    else {
 		        /* EVENTO COM O MOUSE WHEEL DESCENDO */
-		        posicao--;
+		        posicao = posicao - 0.5;
 		         $('.text').html('para cima'+posicao);
 		    }
 
