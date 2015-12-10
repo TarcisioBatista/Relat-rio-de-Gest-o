@@ -13,11 +13,42 @@
 	<script scr="js/bootstrap.js" type="text/javascript"></script>
 	<script src="js/scrollReveal.js" type="text/javascript"></script>
 	<script src="js/scripts.js" type="text/javascript"></script> <!-- MEUS CODIGOS JAVASCRIPT -->
+	<script type="text/javascript">
+		var lastScrollTop = 0;
+		var i = 0;
+
+		$(window).scroll(function (event) {
+    	var resultado = $('#direcao');
+    	var st = $(this).scrollTop();
+    	var j = 0;
+    	if (st > lastScrollTop) {
+        	// downscroll code
+          i++;
+          j++;
+          if(i == 1){
+          	
+          	$(".logo").css('background', 'blue');
+          	$('body,html').animate({scrollTop:0},1);
+          }
+
+
+      	  resultado.html('para baixo'+j);
+
+    	} else {
+        	// upscroll code
+        	   j++;
+      	  i--;
+          resultado.html('para cima '+j);
+    	}
+  	  lastScrollTop = st;
+	});
+	</script>
 
 </head>
 <body>
 	<div class="row-fluid">
 		<div class="metade"></div>
+		<div id="direcao">	</div>
 		<div class="metade" style="background:blue;"></div>
 		<div class="logo"><img src="http://www.pdi.unimontes.br/images/Logos/unimontes.png"></div>
 	</div>
