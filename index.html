@@ -43,19 +43,25 @@
 
 			switch (posicao) {
 			case 2:
-				$(".metade-esquerda").slideUp(1000, function(){
+				$(".metade-esquerda").toggle("blind", 1000, function(){
+					$(".metade-esquerda").css("background", "green");
+					$(".metade-esquerda").toggle("blind", 1000, function(){
 					$(".metade-esquerda").css("background", "green");
 				});
-
-				$(".metade-direita").fadeIn(1000, function(){
-					$(".metade-direita").css("background", "pink");
 				});
+
 				break
 
 			case 4:
+				$(".metade-esquerda").toggle("blind", 1000, function(){
+					$(".metade-esquerda").css("background", "yellow");
+				});
 				$(".metade-esquerda").css("background", "purple");
 				break
 			case 6:
+				$(".metade-esquerda").toggle("blind", 1000, function(){
+					$(".metade-esquerda").css("background", "green");
+				});
 				$(".metade-esquerda").css("background", "pink");
 				break
 			default:
