@@ -17,10 +17,9 @@
 
 	height:1000px;
 
-	background: red;
+	background: blue;
 	float: left;
-	background: url('http://static.frasesparaface.com.br/imagem/o/f/o-fabio-jr-canta-a-musica-alma-gemea-e-ja.jpg');
-}
+	}
 .metade-direita{
 	width: 50%;
 	height: 667px;
@@ -32,14 +31,15 @@
 	width: 90px;
 	height: auto;
 	position: absolute;
-	left: 47.5%;
+	left: 44.6%;
 	top: 45%;
 }
 
 .logo img{
 	background: white;
-	width: 70px;
+	width: 90px;
 	height: auto;
+	padding:25px;
 
 
 	position: fixed;

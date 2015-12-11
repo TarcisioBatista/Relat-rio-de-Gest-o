@@ -38,9 +38,30 @@
 		         $('.text').html('para cima'+posicao);
 		    }
 
-		    switch(posicao){
-		    	case 2: 
-		    }
+			
+		    
+
+			switch (posicao) {
+			case 2:
+				$(".metade-esquerda").slideUp(1000, function(){
+					$(".metade-esquerda").css("background", "green");
+				});
+
+				$(".metade-direita").fadeIn(1000, function(){
+					$(".metade-direita").css("background", "pink");
+				});
+				break
+
+			case 4:
+				$(".metade-esquerda").css("background", "purple");
+				break
+			case 6:
+				$(".metade-esquerda").css("background", "pink");
+				break
+			default:
+				
+			}
+		   
 
 		}
 
@@ -80,13 +101,16 @@
 </head>
 <body>
 	<div class="row-fluid">
-		<div class="metade"></div>
-		<div id="direcao">	</div>
-		<div class="metade" style="background:blue;"></div>
 		<div class="logo"><img src="http://www.pdi.unimontes.br/images/Logos/unimontes.png"></div>
+		<div class="metade-esquerda"></div>
+		<div id="direcao"></div>
+		<div class="metade-direita"></div>
 		<div class="text"></div>
 	</div>
 </body>
 </html>
 
 
+<script>
+	
+</script>
