@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/anicollection.css">
 	<link rel="stylesheet" href="css/dti.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<script src="js/jquery.js" type="text/javascript"></script>	
 	<script src="js/jquery-ui.js" type="text/javascript"></script>
 	<script scr="js/bootstrap.js" type="text/javascript"></script>
@@ -38,29 +39,26 @@
 		         $('.text').html('para cima'+posicao);
 		    }
 
-			
-		    
+			if(posicao == 4){
 
-			switch (posicao) {
-			case 2:
-				$(".metade-esquerda").slideUp(1000, function(){
-					$(".metade-esquerda").css("background", "green");
-				});
+				var styles = {
+      				left : "-13px",
+      				fontSize: "4em"
+    			};
+				$("#list4").css(styles);
 
-				$(".metade-direita").fadeIn(1000, function(){
-					$(".metade-direita").css("background", "pink");
-				});
-				break
-
-			case 4:
-				$(".metade-esquerda").css("background", "purple");
-				break
-			case 6:
-				$(".metade-esquerda").css("background", "pink");
-				break
-			default:
-				
 			}
+		    	if(posicao != 4){
+
+				var styles = {
+      				left : "",
+      				fontSize: "2em"
+    			};
+				$("#list4").css(styles);
+
+			}
+
+		
 		   
 
 		}
@@ -102,15 +100,38 @@
 <body>
 	<div class="row-fluid">
 		<div class="logo"><img src="http://www.pdi.unimontes.br/images/Logos/unimontes.png"></div>
-		<div class="metade-esquerda"></div>
-		<div id="direcao"></div>
-		<div class="metade-direita"></div>
+		
+		<div class="metade-esquerda">
+			<div class="container-fluid">
+				<div class="row-fluid">
+					<div class="span1 conteudo-esquerda">
+						<ul class="time-line">
+							<li><i class="fa fa-dot-circle-o fa-2x" id="list1"></i></li>
+							<li><i class="fa fa-dot-circle-o fa-2x" id="list2"></i></li>
+							<li><i class="fa fa-dot-circle-o fa-2x" id="list3"></i></li>
+							<li><i class="fa fa-dot-circle-o fa-2x" id="list4"></i></li>
+							<li><i class="fa fa-dot-circle-o fa-2x" id="list5"></i></li>
+							<li><i class="fa fa-dot-circle-o fa-2x" id="list6"></i></li>
+							<li><i class="fa fa-dot-circle-o fa-2x" id="list7"></i></li>	
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<div class="metade-direita">
+			<div class="container-fluid">
+				<div class="row-fluid">
+					<div class="span12 conteudo-esquerda" style="background:yellow;">
+						
+					</div>
+				</div>
+			</div>
+
+		</div>
 		<div class="text"></div>
 	</div>
 </body>
 </html>
 
 
-<script>
-	
-</script>
