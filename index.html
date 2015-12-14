@@ -14,6 +14,18 @@
 	<script src="js/jquery-ui.js" type="text/javascript"></script>
 	<script scr="js/bootstrap.js" type="text/javascript"></script>
 	<script src="js/scrollReveal.js" type="text/javascript"></script>
+	<script scr="js/roda.js" type="text/javascript"></script>
+	<script src="js/jquery-roda.js" type="text/javascript"></script>
+	<script type="text/javascript">
+setInterval(
+    function () {
+        $('.foto').animate({rotate: '+=1deg'}, 0);
+    },
+    200
+);
+
+
+	</script>
 	<script src="js/scripts.js" type="text/javascript"></script> <!-- MEUS CODIGOS JAVASCRIPT -->
 	<script type="text/javascript">
 	
@@ -135,7 +147,7 @@
 </head>
 <body>
 	<div class="row-fluid">
-		<div class="logo"><img src="http://www.pdi.unimontes.br/images/Logos/unimontes.png"></div>
+		<div class="logo"><img src="img/unimontes.png"></div>
 		
 		<div class="metade-esquerda">
 			<div class="container-fluid">
@@ -159,7 +171,39 @@
 			<div class="container-fluid">
 				<div class="row-fluid">
 					<div class="span12 conteudo-direita" >
-						
+						<div class="background-icones">
+							<table>
+								<tr>
+									<td> <img class="foto"src="img/ic-1.png"  id="foto4" alt=""></td>
+									<td> <img class="foto"src="img/ic-1.png"  id="foto1" alt=""></td>
+									<td> <img class="foto"src="img/ic-2.png"  id="foto2" alt=""></td>
+									<td> <img class="foto"src="img/ic-3.png"  id="foto3" alt=""></td>
+								</tr>
+									<tr>
+										<td> <img class="foto"src="img/ic-5.png"  id="foto1" alt=""></td>
+									<td> <img class="foto"src="img/ic-3.png"  id="foto4" alt=""></td>
+									<td> <img class="foto"src="img/ic-6.png"  id="foto5" alt=""></td>
+									<td> <img class="foto"src="img/ic-2.png"  id="foto6" alt=""></td>
+								</tr>
+									<tr>
+										<td> <img class="foto"src="img/ic-3.png"  id="foto6" alt=""></td>
+									<td ><img class="foto"src="img/ic-1.png"  id="foto1" alt=""></td>
+									<td ><img class="foto"src="img/ic-3.png"  id="foto2" alt=""></td>
+									<td ><img class="foto"src="img/ic-1.png"  id="foto3" alt=""></td>
+								</tr>
+									<tr>
+										<td> <img class="foto"src="img/ic-4.png"  id="foto2" alt=""></td>
+									<td ><img class="foto"src="img/ic-2.png"  id="foto5" alt=""></td>
+									<td ><img class="foto"src="img/ic-5.png"  id="foto6" alt=""></td>
+									<td ><img class="foto"src="img/ic-2.png"  id="foto2" alt=""></td>
+								</tr>
+							</table>
+						</div>
+						<div class="encapsulador-conteudo">
+							<h1>Titulo</h1>
+							<p>Une solution sur-mesure pour aider les hôteliers indépendants à prospérer sur le Web. Nous avons eu plaisir à réaliser un site en Responsive Design, avec de belles animations SVG.</p>
+							<a href="" class="btn">Botao</a>
+						</div>
 					</div>
 				</div>
 			</div>
