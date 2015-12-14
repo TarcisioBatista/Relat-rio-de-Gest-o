@@ -16,7 +16,11 @@
 	<script src="js/scrollReveal.js" type="text/javascript"></script>
 	<script src="js/scripts.js" type="text/javascript"></script> <!-- MEUS CODIGOS JAVASCRIPT -->
 	<script type="text/javascript">
-	var posicao = 0;
+	
+	var posicao			= 0;
+	var styles 			= {left : "-13px", fontSize: "4em"}; //ESTILIZACAO DA TIMELINE
+	var styledefault	= {left : "", fontSize: "2em"}; 	 //ESTILIZACAO DA TIMELINE DEFAULT
+
 		function handle(delta) {
 			 if(posicao >= 214){
 		    	posicao = 214;
@@ -39,22 +43,54 @@
 		         $('.text').html('para cima'+posicao);
 		    }
 
-			if(posicao == 4){
+			
+			switch (posicao) {
+			case 2:
+				$(".metade-esquerda").toggle("blind", 1000, function(){
+					//$(".metade-esquerda").css("background", "green");
+					$(".metade-esquerda").toggle("blind", 600, function(){
+						//$(".metade-esquerda").css("background", "green");	
+					});
+				});
+					$("#list1").css(styles); // lista da timeline que se altera
+					$("#list2").css(styledefault); // timeline que mantem-se default
+					$("#list3").css(styledefault); // timeline que mantem-se default
+					$("#list4").css(styledefault); // timeline que mantem-se default
+					$("#list5").css(styledefault); // timeline que mantem-se default
+					$("#list6").css(styledefault); // timeline que mantem-se default
+					$("#list7").css(styledefault); // timeline que mantem-se default
+					$("#list8").css(styledefault); // timeline que mantem-se default
+					$("#list9").css(styledefault); // timeline que mantem-se default
+					$("#list10").css(styledefault); // timeline que mantem-se default
 
-				var styles = {
-      				left : "-13px",
-      				fontSize: "4em"
-    			};
-				$("#list4").css(styles);
+				break;
 
-			}
-		    	if(posicao != 4){
+			case 4:
+				$(".metade-esquerda").toggle("blind", 1000, function(){
+					$(".metade-esquerda").css("background", "yellow");
+				});
 
-				var styles = {
-      				left : "",
-      				fontSize: "2em"
-    			};
-				$("#list4").css(styles);
+					$("#list1").css(styledefault); // lista da timeline que se altera
+					$("#list2").css(style); // timeline que mantem-se default
+					$("#list3").css(styledefault); // timeline que mantem-se default
+					$("#list4").css(styledefault); // timeline que mantem-se default
+					$("#list5").css(styledefault); // timeline que mantem-se default
+					$("#list6").css(styledefault); // timeline que mantem-se default
+					$("#list7").css(styledefault); // timeline que mantem-se default
+					$("#list8").css(styledefault); // timeline que mantem-se default
+					$("#list9").css(styledefault); // timeline que mantem-se default
+					$("#list10").css(styledefault); // timeline que mantem-se default
+
+				$(".metade-esquerda").css("background", "purple");
+				break
+			case 6:
+				$(".metade-esquerda").toggle("blind", 1000, function(){
+					$(".metade-esquerda").css("background", "green");
+				});
+				$(".metade-esquerda").css("background", "pink");
+				break
+			default:
+				
 
 			}
 
