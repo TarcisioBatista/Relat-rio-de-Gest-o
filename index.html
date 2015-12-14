@@ -38,43 +38,16 @@
 		    }
 		    
 		    else {
-		        /* EVENTO COM O MOUSE WHEEL DESCENDO */
+		        /* EVENTO COM O MOUSE WHEEL SUBINDO */
 		        posicao = posicao - 0.5;
 		         $('.text').html('para cima'+posicao);
 		    }
 
 			
 			switch (posicao) {
-			case 2:
 
-				$(".metade-esquerda").css("background", "green");
-
-				$(".metade-esquerda").toggle("clip", 700, function(){
-					$(".metade-esquerda").css("background", "green");
-				});
-				$(".metade-esquerda").css("background", "white");
-				//$(".metade-esquerda").toggle("blind", 1000, function(){
-					//$(".metade-esquerda").css("background", "green");
-					//$(".metade-esquerda").toggle("blind", 600, function(){
-						//$(".metade-esquerda").css("background", "green");	
-					//});
-
-				//});
-					$("#list1").css(styles); // lista da timeline que se altera
-					$("#list2").css(styledefault); // timeline que mantem-se default
-					$("#list3").css(styledefault); // timeline que mantem-se default
-					$("#list4").css(styledefault); // timeline que mantem-se default
-					$("#list5").css(styledefault); // timeline que mantem-se default
-					$("#list6").css(styledefault); // timeline que mantem-se default
-					$("#list7").css(styledefault); // timeline que mantem-se default
-					$("#list8").css(styledefault); // timeline que mantem-se default
-					$("#list9").css(styledefault); // timeline que mantem-se default
-					$("#list10").css(styledefault); // timeline que mantem-se default
-
-				break;
-
-			case 4:
-				$(".metade-esquerda").toggle("blind", 1000, function(){
+				case 0:				
+					$(".metade-esquerda").toggle("blind", 1000, function(){
 					$(".metade-esquerda").css("background", "yellow");
 				});
 
@@ -91,15 +64,222 @@
 
 				$(".metade-esquerda").css("background", "purple");
 				break
-			case 6:
-				$(".metade-esquerda").toggle("blind", 1000, function(){
-					$(".metade-esquerda").css("background", "green");
-				});
-				$(".metade-esquerda").css("background", "pink");
-				break
-			default:
-				
 
+
+				case 2:
+
+					$(".metade-esquerda").toggle("clip", 1000, function(){
+						$(".metade-esquerda").css("background", "yellow");
+					}); 
+
+						$("#list1").css(styledefault); // lista da timeline que se altera
+						$("#list2").css(style); // timeline que mantem-se default
+						$("#list3").css(styledefault); // timeline que mantem-se default
+						$("#list4").css(styledefault); // timeline que mantem-se default
+						$("#list5").css(styledefault); // timeline que mantem-se default
+						$("#list6").css(styledefault); // timeline que mantem-se default
+						$("#list7").css(styledefault); // timeline que mantem-se default
+						$("#list8").css(styledefault); // timeline que mantem-se default
+						$("#list9").css(styledefault); // timeline que mantem-se default
+						$("#list10").css(styledefault); // timeline que mantem-se default
+
+					$(".metade-esquerda").css("background", "purple");
+					break;
+
+
+
+				case 4:
+					$(".metade-esquerda").toggle("blind", 1000, function(){
+						$(".metade-esquerda").css("background", "yellow");
+					});
+
+						$("#list1").css(styledefault); // lista da timeline que se altera
+						$("#list2").css(style); // timeline que mantem-se default
+						$("#list3").css(styledefault); // timeline que mantem-se default
+						$("#list4").css(styledefault); // timeline que mantem-se default
+						$("#list5").css(styledefault); // timeline que mantem-se default
+						$("#list6").css(styledefault); // timeline que mantem-se default
+						$("#list7").css(styledefault); // timeline que mantem-se default
+						$("#list8").css(styledefault); // timeline que mantem-se default
+						$("#list9").css(styledefault); // timeline que mantem-se default
+						$("#list10").css(styledefault); // timeline que mantem-se default
+
+					$(".metade-esquerda").css("background", "purple");
+					break;
+
+
+				case 6:
+
+					$(".metade-esquerda").toggle("drop", 1000, function(){
+						$(".metade-esquerda").css("background", "yellow");
+					});
+
+						$("#list1").css(styledefault); // lista da timeline que se altera
+						$("#list2").css(styledefault); // timeline que mantem-se default
+						$("#list3").css(style); // timeline que mantem-se default
+						$("#list4").css(styledefault); // timeline que mantem-se default
+						$("#list5").css(styledefault); // timeline que mantem-se default
+						$("#list6").css(styledefault); // timeline que mantem-se default
+						$("#list7").css(styledefault); // timeline que mantem-se default
+						$("#list8").css(styledefault); // timeline que mantem-se default
+						$("#list9").css(styledefault); // timeline que mantem-se default
+						$("#list10").css(styledefault); // timeline que mantem-se default
+
+					$(".metade-esquerda").css("background", "purple");
+					break;
+
+				case 8:
+
+						$(".metade-esquerda").toggle("clip", 1000, function(){
+						$(".metade-esquerda").css("background", "yellow");
+					});
+
+						$("#list1").css(styledefault); // lista da timeline que se altera
+						$("#list2").css(styledefault); // timeline que mantem-se default
+						$("#list3").css(styledefault); // timeline que mantem-se default
+						$("#list4").css(style); // timeline que mantem-se default
+						$("#list5").css(styledefault); // timeline que mantem-se default
+						$("#list6").css(styledefault); // timeline que mantem-se default
+						$("#list7").css(styledefault); // timeline que mantem-se default
+						$("#list8").css(styledefault); // timeline que mantem-se default
+						$("#list9").css(styledefault); // timeline que mantem-se default
+						$("#list10").css(styledefault); // timeline que mantem-se default
+
+					$(".metade-esquerda").css("background", "purple");
+					break;
+
+
+				case 10:
+
+						$(".metade-esquerda").toggle("fold", 1000, function(){
+						$(".metade-esquerda").css("background", "yellow");
+					});
+
+						$("#list1").css(styledefault); // lista da timeline que se altera
+						$("#list2").css(styledefault); // timeline que mantem-se default
+						$("#list3").css(styledefault); // timeline que mantem-se default
+						$("#list4").css(styledefault); // timeline que mantem-se default
+						$("#list5").css(style); // timeline que mantem-se default
+						$("#list6").css(styledefault); // timeline que mantem-se default
+						$("#list7").css(styledefault); // timeline que mantem-se default
+						$("#list8").css(styledefault); // timeline que mantem-se default
+						$("#list9").css(styledefault); // timeline que mantem-se default
+						$("#list10").css(styledefault); // timeline que mantem-se default
+
+					$(".metade-esquerda").css("background", "purple");
+					break;
+
+
+				case 12:
+
+						$(".metade-esquerda").toggle("blind", 1000, function(){
+						$(".metade-esquerda").css("background", "yellow");
+					});
+
+						$("#list1").css(styledefault); // lista da timeline que se altera
+						$("#list2").css(styledefault); // timeline que mantem-se default
+						$("#list3").css(styledefault); // timeline que mantem-se default
+						$("#list4").css(styledefault); // timeline que mantem-se default
+						$("#list5").css(styledefault); // timeline que mantem-se default
+						$("#list6").css(style); // timeline que mantem-se default
+						$("#list7").css(styledefault); // timeline que mantem-se default
+						$("#list8").css(styledefault); // timeline que mantem-se default
+						$("#list9").css(styledefault); // timeline que mantem-se default
+						$("#list10").css(styledefault); // timeline que mantem-se default
+
+					$(".metade-esquerda").css("background", "purple");
+					break;
+
+
+				case 14:
+
+						$(".metade-esquerda").toggle("clip", 1000, function(){
+						$(".metade-esquerda").css("background", "yellow");
+					});
+
+						$("#list1").css(styledefault); // lista da timeline que se altera
+						$("#list2").css(styledefault); // timeline que mantem-se default
+						$("#list3").css(styledefault); // timeline que mantem-se default
+						$("#list4").css(styledefault); // timeline que mantem-se default
+						$("#list5").css(styledefault); // timeline que mantem-se default
+						$("#list6").css(styledefault); // timeline que mantem-se default
+						$("#list7").css(style); // timeline que mantem-se default
+						$("#list8").css(styledefault); // timeline que mantem-se default
+						$("#list9").css(styledefault); // timeline que mantem-se default
+						$("#list10").css(styledefault); // timeline que mantem-se default
+
+					$(".metade-esquerda").css("background", "purple");
+					break;
+
+
+				case 16:
+
+					$(".metade-esquerda").toggle("slide", 1000, function(){
+						$(".metade-esquerda").css("background", "yellow");
+					});
+
+						$("#list1").css(styledefault); // lista da timeline que se altera
+						$("#list2").css(styledefault); // timeline que mantem-se default
+						$("#list3").css(styledefault); // timeline que mantem-se default
+						$("#list4").css(styledefault); // timeline que mantem-se default
+						$("#list5").css(styledefault); // timeline que mantem-se default
+						$("#list6").css(styledefault); // timeline que mantem-se default
+						$("#list7").css(styledefault); // timeline que mantem-se default
+						$("#list8").css(style); // timeline que mantem-se default
+						$("#list9").css(styledefault); // timeline que mantem-se default
+						$("#list10").css(styledefault); // timeline que mantem-se default
+
+					$(".metade-esquerda").css("background", "purple");
+					break;
+
+				case 18:
+
+						$(".metade-esquerda").toggle("blind", 1000, function(){
+						$(".metade-esquerda").css("background", "yellow");
+					});
+
+						$("#list1").css(styledefault); // lista da timeline que se altera
+						$("#list2").css(styledefault); // timeline que mantem-se default
+						$("#list3").css(styledefault); // timeline que mantem-se default
+						$("#list4").css(styledefault); // timeline que mantem-se default
+						$("#list5").css(styledefault); // timeline que mantem-se default
+						$("#list6").css(styledefault); // timeline que mantem-se default
+						$("#list7").css(styledefault); // timeline que mantem-se default
+						$("#list8").css(styledefault); // timeline que mantem-se default
+						$("#list9").css(style); // timeline que mantem-se default
+						$("#list10").css(styledefault); // timeline que mantem-se default
+
+					$(".metade-esquerda").css("background", "purple");
+					break;
+
+
+				case 20:
+						
+						$(".metade-esquerda").toggle("clip", 1000, function(){
+						$(".metade-esquerda").css("background", "yellow");
+					});
+
+						$("#list1").css(styledefault); // lista da timeline que se altera
+						$("#list2").css(styledefault); // timeline que mantem-se default
+						$("#list3").css(styledefault); // timeline que mantem-se default
+						$("#list4").css(styledefault); // timeline que mantem-se default
+						$("#list5").css(styledefault); // timeline que mantem-se default
+						$("#list6").css(styledefault); // timeline que mantem-se default
+						$("#list7").css(styledefault); // timeline que mantem-se default
+						$("#list8").css(styledefault); // timeline que mantem-se default
+						$("#list9").css(styledefault); // timeline que mantem-se default
+						$("#list10").css(style); // timeline que mantem-se default
+
+					$(".metade-esquerda").css("background", "purple");
+					break;
+
+				case 22:
+
+					posicao = 0;
+					$(".metade-esquerda").toggle("blind", 1000, function(){
+						$(".metade-esquerda").css("background", "yellow");
+					});
+					break;
 			}
 
 		
