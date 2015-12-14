@@ -16,15 +16,16 @@
 	width: 50%;
 
 	height:1000px;
-
+	left: 1px;
 	background: blue;
-	float: left;
+	position: fixed;
 	}
 .metade-direita{
 	width: 50%;
 	height: 667px;
 	background: red;
-	float: left;
+	position: fixed;
+	right:1px;
 }
 
 .logo{
@@ -40,11 +41,10 @@
 	width: 90px;
 	height: auto;
 	padding:25px;
-
+	
 
 	position: fixed;
-	left: auto;
-	right: auto;
+	z-index: 1000;
 }
 body {
     	height: 700px;
@@ -55,10 +55,14 @@ body {
 		}
 .conteudo-esquerda{
 	margin-top: 25px;
+	z-index: 1000;
+	background-color: grey;
 
 }
 .conteudo-direita{
 	margin-top: 25px;
+	z-index: 1000;
+	background-color: grey;
 	
 }
 .time-line i{
@@ -74,7 +78,7 @@ body {
 	text-align: center;
 }
 
-.time-line {
+/*.time-line {
     content: "";
     position: fixed;
    
@@ -84,7 +88,7 @@ body {
     width: 8px;
     background: #fff;
     background: rgba(255,255,255);
-}
+}*/
  ul {
 	list-style: none;
 }
