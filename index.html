@@ -61,7 +61,11 @@ setInterval(
 				case 0:	
 					posicao = 20.5;
 					$(".metade-esquerda").toggle("blind", 1000, function(){
-						$(".metade-esquerda").css("background", "yellow");
+						
+						$(".metade-esquerda").css("background", "yellow");	
+						$(".metade-esquerda").toggle("blind", 1000, function(){
+						});	
+						
 					});
 					break;		
 
@@ -69,9 +73,13 @@ setInterval(
 
 				case 2:
 
-					$(".metade-esquerda").toggle("clip", 1000, function(){
+					$(".metade-esquerda").toggle("blind", 1000, function(){
+
 						$(".metade-esquerda").css("background", "yellow");
-					}); 
+						$(".metade-esquerda").toggle("drop", 1000, function(){							
+						});	
+						
+					});
 
 						$("#list1").css(style); // lista da timeline que se altera
 						$("#list2").css(styledefault); // timeline que mantem-se default
@@ -91,7 +99,11 @@ setInterval(
 
 				case 4:
 					$(".metade-esquerda").toggle("blind", 1000, function(){
+
 						$(".metade-esquerda").css("background", "yellow");
+						$(".metade-esquerda").toggle("blind", 1000, function(){					
+						});
+
 					});
 
 						$("#list1").css(styledefault); // lista da timeline que se altera
@@ -110,9 +122,12 @@ setInterval(
 
 
 				case 6:
-
 					$(".metade-esquerda").toggle("drop", 1000, function(){
+
 						$(".metade-esquerda").css("background", "yellow");
+						$(".metade-esquerda").toggle("drop", 1000, function(){					
+						});
+
 					});
 
 						$("#list1").css(styledefault); // lista da timeline que se altera
@@ -126,15 +141,18 @@ setInterval(
 						$("#list9").css(styledefault); // timeline que mantem-se default
 						$("#list10").css(styledefault); // timeline que mantem-se default
 
-					$(".metade-esquerda").css("background", "purple");
+					
 					break;
 
 				case 8:
+					$(".metade-esquerda").css("background", "purple");
+					$(".metade-esquerda").toggle("clip", 1000, function(){
 
-						$(".metade-esquerda").toggle("clip", 1000, function(){
 						$(".metade-esquerda").css("background", "yellow");
-					});
+						$(".metade-esquerda").toggle("clip", 1000, function(){					
+						});
 
+					});
 						$("#list1").css(styledefault); // lista da timeline que se altera
 						$("#list2").css(styledefault); // timeline que mantem-se default
 						$("#list3").css(styledefault); // timeline que mantem-se default
@@ -152,10 +170,13 @@ setInterval(
 
 				case 10:
 
-						$(".metade-esquerda").toggle("fold", 1000, function(){
-						$(".metade-esquerda").css("background", "yellow");
-					});
+					$(".metade-esquerda").toggle("fold", 1000, function(){
 
+						$(".metade-esquerda").css("background", "yellow");
+						$(".metade-esquerda").toggle("fold", 1000, function(){					
+						});
+
+					});
 						$("#list1").css(styledefault); // lista da timeline que se altera
 						$("#list2").css(styledefault); // timeline que mantem-se default
 						$("#list3").css(styledefault); // timeline que mantem-se default
