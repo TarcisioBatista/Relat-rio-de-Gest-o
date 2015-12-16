@@ -40,7 +40,7 @@ setInterval(
 
 		    else if (delta < 0){
 		        /* EVENTO COM O MOUSE WHEEL DESCENDO */
-		        posicao = posicao + 0.5;
+		        posicao = posicao + 1;
 		         $('.text').html('para baixo'+posicao);
 		         
 
@@ -51,7 +51,7 @@ setInterval(
 		    
 		    else {
 		        /* EVENTO COM O MOUSE WHEEL SUBINDO */
-		        posicao = posicao - 0.5;
+		        posicao = posicao - 1;
 		         $('.text').html('para cima'+posicao);
 		    }
 		    
@@ -59,24 +59,28 @@ setInterval(
 			switch (posicao) {
 
 				case 0:	
-					posicao = 20.5;
-					$(".metade-esquerda").toggle("blind", 1000, function(){
-						
-						$(".metade-esquerda").css("background", "yellow");	
-						$(".metade-esquerda").toggle("blind", 1000, function(){
-						});	
-						
-					});
+					posicao = 61;
+					//$(".metade-esquerda").toggle("blind", 1000, function(){
+//						
+						//$(".metade-esquerda").css("background", "blue");	
+						//$(".metade-esquerda").toggle("blind", 1000, function(){
+						//});	
+//						
+					//});
+					
 					break;		
 
 
 
-				case 2:
+				case 6:
+				
+					
 
-					$(".metade-esquerda").toggle("blind", 1000, function(){
+					$(".metade-esquerda").toggle("puff", 800, function(){
 
-						$(".metade-esquerda").css("background", "yellow");
-						$(".metade-esquerda").toggle("drop", 1000, function(){							
+						$(".metade-esquerda").css("background", "purple");
+						$(".metade-esquerda").toggle("puff", 400, function(){	
+							$(".metade-esquerda").css("background", "purple");						
 						});	
 						
 					});
@@ -94,16 +98,20 @@ setInterval(
 						$("#list9").css(styledefault); // timeline que mantem-se default
 						$("#list10").css(styledefault); // timeline que mantem-se default
 
-					$(".metade-esquerda").css("background", "purple");
+						$(".metade-esquerda").css("background", "purple");
+						
+
 					break;
 
 
 
-				case 4:
-					$(".metade-esquerda").toggle("blind", 1000, function(){
+				case 12:
+					$(".metade-esquerda").css("background", "purple");
 
-						$(".metade-esquerda").css("background", "yellow");
-						$(".metade-esquerda").toggle("blind", 1000, function(){					
+					$(".metade-esquerda").toggle("blind", 800, function(){
+
+						$(".metade-esquerda").css("background", "blue");
+						$(".metade-esquerda").toggle("blind", 400, function(){					
 						});
 
 					});
@@ -118,19 +126,20 @@ setInterval(
 						$("#list8").css(styledefault); // timeline que mantem-se default
 						$("#list9").css(styledefault); // timeline que mantem-se default
 						$("#list10").css(styledefault); // timeline que mantem-se default
-
-					$(".metade-esquerda").css("background", "purple");
 					break;
 
 
-				case 6:
-					$(".metade-esquerda").toggle("drop", 1000, function(){
+				case 18:
+					$(".metade-esquerda").css("background", "blue");
+					
+					$(".metade-esquerda").toggle("size", 700, function(){
 
-						$(".metade-esquerda").css("background", "yellow");
-						$(".metade-esquerda").toggle("drop", 1000, function(){					
+						$(".metade-esquerda").css("background", "red");
+						$(".metade-esquerda").toggle("size", 700, function(){					
 						});
 
 					});
+					
 
 						$("#list1").css(styledefault); // lista da timeline que se altera
 						$("#list2").css(styledefault); // timeline que mantem-se default
@@ -146,12 +155,12 @@ setInterval(
 					
 					break;
 
-				case 8:
-					$(".metade-esquerda").css("background", "purple");
-					$(".metade-esquerda").toggle("clip", 1000, function(){
+				case 24:
+					$(".metade-esquerda").css("background", "red");
+					$(".metade-esquerda").toggle("clip", 800, function(){
 
-						$(".metade-esquerda").css("background", "yellow");
-						$(".metade-esquerda").toggle("clip", 1000, function(){					
+						$(".metade-esquerda").css("background", "black");
+						$(".metade-esquerda").toggle("clip", 800, function(){					
 						});
 
 					});
@@ -166,16 +175,16 @@ setInterval(
 						$("#list9").css(styledefault); // timeline que mantem-se default
 						$("#list10").css(styledefault); // timeline que mantem-se default
 
-					$(".metade-esquerda").css("background", "purple");
 					break;
 
 
-				case 10:
+				case 30:
+					$(".metade-esquerda").css("background", "black");
+					
+					$(".metade-esquerda").toggle("blind", 1000, function(){
 
-					$(".metade-esquerda").toggle("fold", 1000, function(){
-
-						$(".metade-esquerda").css("background", "yellow");
-						$(".metade-esquerda").toggle("fold", 1000, function(){					
+						$(".metade-esquerda").css("background", "blue");
+						$(".metade-esquerda").toggle("blind", 1000, function(){					
 						});
 
 					});
@@ -190,14 +199,19 @@ setInterval(
 						$("#list9").css(styledefault); // timeline que mantem-se default
 						$("#list10").css(styledefault); // timeline que mantem-se default
 
-					$(".metade-esquerda").css("background", "purple");
 					break;
 
 
-				case 12:
+				case 36:
 
-						$(".metade-esquerda").toggle("blind", 1000, function(){
-						$(".metade-esquerda").css("background", "yellow");
+					$(".metade-esquerda").css("background", "blue");
+					
+					$(".metade-esquerda").toggle("puff", 1000, function(){
+
+						$(".metade-esquerda").css("background", "purple");
+						$(".metade-esquerda").toggle("puff", 1000, function(){					
+						});
+
 					});
 
 						$("#list1").css(styledefault); // lista da timeline que se altera
@@ -211,14 +225,19 @@ setInterval(
 						$("#list9").css(styledefault); // timeline que mantem-se default
 						$("#list10").css(styledefault); // timeline que mantem-se default
 
-					$(".metade-esquerda").css("background", "purple");
 					break;
 
 
-				case 14:
+				case 42:
 
-						$(".metade-esquerda").toggle("clip", 1000, function(){
-						$(".metade-esquerda").css("background", "yellow");
+					$(".metade-esquerda").css("background", "purple");
+					
+					$(".metade-esquerda").toggle("blind", 1000, function(){
+
+						$(".metade-esquerda").css("background", "blue");
+						$(".metade-esquerda").toggle("blind", 1000, function(){					
+						});
+
 					});
 
 						$("#list1").css(styledefault); // lista da timeline que se altera
@@ -232,16 +251,20 @@ setInterval(
 						$("#list9").css(styledefault); // timeline que mantem-se default
 						$("#list10").css(styledefault); // timeline que mantem-se default
 
-					$(".metade-esquerda").css("background", "purple");
 					break;
 
 
-				case 16:
+				case 48:
 
-					$(".metade-esquerda").toggle("slide", 1000, function(){
-						$(".metade-esquerda").css("background", "yellow");
+					$(".metade-esquerda").css("background", "blue");
+					
+					$(".metade-esquerda").toggle("size", 1000, function(){
+
+						$(".metade-esquerda").css("background", "green");
+						$(".metade-esquerda").toggle("size", 1000, function(){					
+						});
+
 					});
-
 						$("#list1").css(styledefault); // lista da timeline que se altera
 						$("#list2").css(styledefault); // timeline que mantem-se default
 						$("#list3").css(styledefault); // timeline que mantem-se default
@@ -253,16 +276,20 @@ setInterval(
 						$("#list9").css(styledefault); // timeline que mantem-se default
 						$("#list10").css(styledefault); // timeline que mantem-se default
 
-					$(".metade-esquerda").css("background", "purple");
 					break;
 
-				case 18:
+				case 54:
 
-						$(".metade-esquerda").toggle("blind", 1000, function(){
-						$(".metade-esquerda").css("background", "yellow");
+					$(".metade-esquerda").css("background", "green");
+					
+					$(".metade-esquerda").toggle("clip", 1000, function(){
+
+						$(".metade-esquerda").css("background", "blue");
+						$(".metade-esquerda").toggle("clip", 1000, function(){					
+						});
+
+
 					});
-
-
 						$("#list1").css(styledefault); // lista da timeline que se altera
 						$("#list2").css(styledefault); // timeline que mantem-se default
 						$("#list3").css(styledefault); // timeline que mantem-se default
@@ -274,6 +301,7 @@ setInterval(
 						$("#list9").css("font-size", "3em"); // timeline que mantem-se default
 						$("#list10").css(styledefault); // timeline que mantem-se default
 
+
 						$(".metade-esquerda").css("background", "purple");
 
 						/* DEFINE OS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO */
@@ -282,13 +310,20 @@ setInterval(
 						$("#foto1").css("height", "100px");
 
 						/* FIM DA DEFINICAO DOS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO*/
+
 					break;
 
 
-				case 20:
+				case 60:
 						
-						$(".metade-esquerda").toggle("clip", 1000, function(){
-						$(".metade-esquerda").css("background", "yellow");
+					$(".metade-esquerda").css("background", "blue");
+					
+					$(".metade-esquerda").toggle("blind", 1000, function(){
+
+						$(".metade-esquerda").css("background", "red");
+						$(".metade-esquerda").toggle("blind", 1000, function(){					
+						});
+
 					});
 
 						$("#list1").css(styledefault); // lista da timeline que se altera
@@ -302,15 +337,14 @@ setInterval(
 						$("#list9").css(styledefault); // timeline que mantem-se default
 						$("#list10").css("font-size", "3em"); // timeline que mantem-se default
 
-					$(".metade-esquerda").css("background", "purple");
-					break;
+						break;
 
-				case 22:
+				case 66:
 
-					posicao = 2;
-					$(".metade-esquerda").toggle("blind", 1000, function(){
-						$(".metade-esquerda").css("background", "yellow");
-					});
+					posicao = 5;
+					//$(".metade-esquerda").toggle("blind", 1000, function(){
+						//$(".metade-esquerda").css("background", "red");
+					//});
 					break;
 			}
 
