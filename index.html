@@ -30,9 +30,9 @@ setInterval(
 	<script type="text/javascript">
 	
 	var posicao			= 0;
-	var styles 			= {left : "-13px", fontSize: "4em"}; //ESTILIZACAO DA TIMELINE
-	var styledefault	= { fontSize: "2em"}; 	 //ESTILIZACAO DA TIMELINE DEFAULT
-
+	var titulo = "Título default";
+	var paragrafo = "Texto default";
+	var link = '';
 		function handle(delta) {
 			 if(posicao >= 214){
 		    	posicao = 214;
@@ -54,7 +54,7 @@ setInterval(
 		        posicao = posicao - 1;
 		         $('.text').html('para cima'+posicao);
 		    }
-		    
+		    	$('h1').html("Hello world")
 		
 			switch (posicao) {
 
@@ -74,8 +74,10 @@ setInterval(
 
 				case 6:
 				
-					
-
+					paragrafo = "Novo parágrafo";
+					titulo = "novo titulo";
+					link = "http://www.google.com";
+						
 					$(".metade-esquerda").toggle("puff", 800, function(){
 
 						$(".metade-esquerda").css("background", "purple");
@@ -88,18 +90,27 @@ setInterval(
 
 
 						$("#list1").css("font-size", "3em"); // lista da timeline que se altera
-						$("#list2").css(styledefault); // timeline que mantem-se default
-						$("#list3").css(styledefault); // timeline que mantem-se default
-						$("#list4").css(styledefault); // timeline que mantem-se default
-						$("#list5").css(styledefault); // timeline que mantem-se default
-						$("#list6").css(styledefault); // timeline que mantem-se default
-						$("#list7").css(styledefault); // timeline que mantem-se default
-						$("#list8").css(styledefault); // timeline que mantem-se default
-						$("#list9").css(styledefault); // timeline que mantem-se default
-						$("#list10").css(styledefault); // timeline que mantem-se default
+						$("#list2").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list3").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list4").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list5").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list6").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list7").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list8").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list9").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list10").css("font-size", "2em"); // timeline que mantem-se default
 
 						$(".metade-esquerda").css("background", "purple");
 						
+						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
+						$('h1, p').fadeOut("slow", function(){
+							$('h1').html(titulo);
+							$('p').html(paragrafo);
+							$('h1, p').fadeIn("slow");
+						});
+						
+						/* MUDA O LINK DOS BOTOES */
+						$('a').attr("href", link);
 
 					break;
 
@@ -116,16 +127,16 @@ setInterval(
 
 					});
 
-						$("#list1").css(styledefault); // lista da timeline que se altera
+						$("#list1").css("font-size", "2em"); // lista da timeline que se altera
 						$("#list2").css("font-size", "3em"); // timeline que mantem-se default
-						$("#list3").css(styledefault); // timeline que mantem-se default
-						$("#list4").css(styledefault); // timeline que mantem-se default
-						$("#list5").css(styledefault); // timeline que mantem-se default
-						$("#list6").css(styledefault); // timeline que mantem-se default
-						$("#list7").css(styledefault); // timeline que mantem-se default
-						$("#list8").css(styledefault); // timeline que mantem-se default
-						$("#list9").css(styledefault); // timeline que mantem-se default
-						$("#list10").css(styledefault); // timeline que mantem-se default
+						$("#list3").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list4").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list5").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list6").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list7").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list8").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list9").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list10").css("font-size", "2em"); // timeline que mantem-se default
 					break;
 
 
@@ -141,16 +152,16 @@ setInterval(
 					});
 					
 
-						$("#list1").css(styledefault); // lista da timeline que se altera
-						$("#list2").css(styledefault); // timeline que mantem-se default
+						$("#list1").css("font-size", "2em"); // lista da timeline que se altera
+						$("#list2").css("font-size", "2em"); // timeline que mantem-se default
 						$("#list3").css("font-size", "3em"); // timeline que mantem-se default
-						$("#list4").css(styledefault); // timeline que mantem-se default
-						$("#list5").css(styledefault); // timeline que mantem-se default
-						$("#list6").css(styledefault); // timeline que mantem-se default
-						$("#list7").css(styledefault); // timeline que mantem-se default
-						$("#list8").css(styledefault); // timeline que mantem-se default
-						$("#list9").css(styledefault); // timeline que mantem-se default
-						$("#list10").css(styledefault); // timeline que mantem-se default
+						$("#list4").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list5").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list6").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list7").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list8").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list9").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list10").css("font-size", "2em"); // timeline que mantem-se default
 
 					
 					break;
@@ -164,16 +175,16 @@ setInterval(
 						});
 
 					});
-						$("#list1").css(styledefault); // lista da timeline que se altera
-						$("#list2").css(styledefault); // timeline que mantem-se default
-						$("#list3").css(styledefault); // timeline que mantem-se default
+						$("#list1").css("font-size", "2em"); // lista da timeline que se altera
+						$("#list2").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list3").css("font-size", "2em"); // timeline que mantem-se default
 						$("#list4").css("font-size", "3em"); // timeline que mantem-se default
-						$("#list5").css(styledefault); // timeline que mantem-se default
-						$("#list6").css(styledefault); // timeline que mantem-se default
-						$("#list7").css(styledefault); // timeline que mantem-se default
-						$("#list8").css(styledefault); // timeline que mantem-se default
-						$("#list9").css(styledefault); // timeline que mantem-se default
-						$("#list10").css(styledefault); // timeline que mantem-se default
+						$("#list5").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list6").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list7").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list8").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list9").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list10").css("font-size", "2em"); // timeline que mantem-se default
 
 					break;
 
@@ -188,16 +199,16 @@ setInterval(
 						});
 
 					});
-						$("#list1").css(styledefault); // lista da timeline que se altera
-						$("#list2").css(styledefault); // timeline que mantem-se default
-						$("#list3").css(styledefault); // timeline que mantem-se default
-						$("#list4").css(styledefault); // timeline que mantem-se default
+						$("#list1").css("font-size", "2em"); // lista da timeline que se altera
+						$("#list2").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list3").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list4").css("font-size", "2em"); // timeline que mantem-se default
 						$("#list5").css("font-size", "3em"); // timeline que mantem-se default
-						$("#list6").css(styledefault); // timeline que mantem-se default
-						$("#list7").css(styledefault); // timeline que mantem-se default
-						$("#list8").css(styledefault); // timeline que mantem-se default
-						$("#list9").css(styledefault); // timeline que mantem-se default
-						$("#list10").css(styledefault); // timeline que mantem-se default
+						$("#list6").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list7").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list8").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list9").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list10").css("font-size", "2em"); // timeline que mantem-se default
 
 					break;
 
@@ -214,16 +225,16 @@ setInterval(
 
 					});
 
-						$("#list1").css(styledefault); // lista da timeline que se altera
-						$("#list2").css(styledefault); // timeline que mantem-se default
-						$("#list3").css(styledefault); // timeline que mantem-se default
-						$("#list4").css(styledefault); // timeline que mantem-se default
-						$("#list5").css(styledefault); // timeline que mantem-se default
+						$("#list1").css("font-size", "2em"); // lista da timeline que se altera
+						$("#list2").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list3").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list4").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list5").css("font-size", "2em"); // timeline que mantem-se default
 						$("#list6").css("font-size", "3em"); // timeline que mantem-se default
-						$("#list7").css(styledefault); // timeline que mantem-se default
-						$("#list8").css(styledefault); // timeline que mantem-se default
-						$("#list9").css(styledefault); // timeline que mantem-se default
-						$("#list10").css(styledefault); // timeline que mantem-se default
+						$("#list7").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list8").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list9").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list10").css("font-size", "2em"); // timeline que mantem-se default
 
 					break;
 
@@ -240,16 +251,16 @@ setInterval(
 
 					});
 
-						$("#list1").css(styledefault); // lista da timeline que se altera
-						$("#list2").css(styledefault); // timeline que mantem-se default
-						$("#list3").css(styledefault); // timeline que mantem-se default
-						$("#list4").css(styledefault); // timeline que mantem-se default
-						$("#list5").css(styledefault); // timeline que mantem-se default
-						$("#list6").css(styledefault); // timeline que mantem-se default
+						$("#list1").css("font-size", "2em"); // lista da timeline que se altera
+						$("#list2").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list3").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list4").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list5").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list6").css("font-size", "2em"); // timeline que mantem-se default
 						$("#list7").css("font-size", "3em"); // timeline que mantem-se default
-						$("#list8").css(styledefault); // timeline que mantem-se default
-						$("#list9").css(styledefault); // timeline que mantem-se default
-						$("#list10").css(styledefault); // timeline que mantem-se default
+						$("#list8").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list9").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list10").css("font-size", "2em"); // timeline que mantem-se default
 
 					break;
 
@@ -265,16 +276,16 @@ setInterval(
 						});
 
 					});
-						$("#list1").css(styledefault); // lista da timeline que se altera
-						$("#list2").css(styledefault); // timeline que mantem-se default
-						$("#list3").css(styledefault); // timeline que mantem-se default
-						$("#list4").css(styledefault); // timeline que mantem-se default
-						$("#list5").css(styledefault); // timeline que mantem-se default
-						$("#list6").css(styledefault); // timeline que mantem-se default
-						$("#list7").css(styledefault); // timeline que mantem-se default
+						$("#list1").css("font-size", "2em"); // lista da timeline que se altera
+						$("#list2").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list3").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list4").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list5").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list6").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list7").css("font-size", "2em"); // timeline que mantem-se default
 						$("#list8").css("font-size", "3em"); // timeline que mantem-se default
-						$("#list9").css(styledefault); // timeline que mantem-se default
-						$("#list10").css(styledefault); // timeline que mantem-se default
+						$("#list9").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list10").css("font-size", "2em"); // timeline que mantem-se default
 
 					break;
 
@@ -290,16 +301,16 @@ setInterval(
 
 
 					});
-						$("#list1").css(styledefault); // lista da timeline que se altera
-						$("#list2").css(styledefault); // timeline que mantem-se default
-						$("#list3").css(styledefault); // timeline que mantem-se default
-						$("#list4").css(styledefault); // timeline que mantem-se default
-						$("#list5").css(styledefault); // timeline que mantem-se default
-						$("#list6").css(styledefault); // timeline que mantem-se default
-						$("#list7").css(styledefault); // timeline que mantem-se default
-						$("#list8").css(styledefault); // timeline que mantem-se default
+						$("#list1").css("font-size", "2em"); // lista da timeline que se altera
+						$("#list2").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list3").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list4").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list5").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list6").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list7").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list8").css("font-size", "2em"); // timeline que mantem-se default
 						$("#list9").css("font-size", "3em"); // timeline que mantem-se default
-						$("#list10").css(styledefault); // timeline que mantem-se default
+						$("#list10").css("font-size", "2em"); // timeline que mantem-se default
 
 
 						$(".metade-esquerda").css("background", "purple");
@@ -326,15 +337,15 @@ setInterval(
 
 					});
 
-						$("#list1").css(styledefault); // lista da timeline que se altera
-						$("#list2").css(styledefault); // timeline que mantem-se default
-						$("#list3").css(styledefault); // timeline que mantem-se default
-						$("#list4").css(styledefault); // timeline que mantem-se default
-						$("#list5").css(styledefault); // timeline que mantem-se default
-						$("#list6").css(styledefault); // timeline que mantem-se default
-						$("#list7").css(styledefault); // timeline que mantem-se default
-						$("#list8").css(styledefault); // timeline que mantem-se default
-						$("#list9").css(styledefault); // timeline que mantem-se default
+						$("#list1").css("font-size", "2em"); // lista da timeline que se altera
+						$("#list2").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list3").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list4").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list5").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list6").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list7").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list8").css("font-size", "2em"); // timeline que mantem-se default
+						$("#list9").css("font-size", "2em"); // timeline que mantem-se default
 						$("#list10").css("font-size", "3em"); // timeline que mantem-se default
 
 						break;
@@ -445,7 +456,7 @@ setInterval(
 							</table>
 						</div>
 						<div class="encapsulador-conteudo">
-							<h1>Titulo</h1>
+							<h1></h1>
 							<p>Une solution sur-mesure pour aider les hôteliers indépendants à prospérer sur le Web. Nous avons eu plaisir à réaliser un site en Responsive Design, avec de belles animations SVG.</p>
 							<a href="" class="btn">Botao</a>
 						</div>
