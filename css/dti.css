@@ -34,15 +34,15 @@ body{
 	width: 90px;
 	height: auto;
 	position: absolute;
-	left: 44.6%;
+	left: 46.3%;
 	top: 45%;
 }
 
 .logo img{
 	background: white;
-	width: 90px;
+	width: 70px;
 	height: auto;
-	padding:25px;
+	padding:15px;
 	
 
 	position: fixed;
