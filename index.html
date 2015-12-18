@@ -99,7 +99,7 @@ setInterval(
 						$("#list9").css(listapadrao); // timeline que mantem-se default
 						$("#list10").css(listapadrao); // timeline que mantem-se default
 
-						$(".metade-esquerda").css("background", "purple");
+					
 						
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, p').fadeOut("slow", function(){
@@ -107,6 +107,10 @@ setInterval(
 							$('p').html(paragrafo);
 							$('h1, p').fadeIn("slow");
 						});
+
+						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
+
+						$(".metade-direita").css({backgroundImage: "url(img/fundo-1.png)"});
 						
 						/* MUDA O LINK DOS BOTOES */
 						$('a').attr("href", link);
@@ -130,7 +134,7 @@ setInterval(
 
 
 				case 12:
-
+					$(".metade-direita").css({backgroundImage: "url(img/fundo-2.png)"});
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "http://www.google.com";
@@ -713,7 +717,7 @@ setInterval(
 										<td> </td>
 									<td> <img class="foto"src="img/ic-5.png"  id="foto4" alt=""></td>
 									<td></td>
-									<td> <img class="foto1"src="img/ic-2.png"  id="foto2" alt=""></td>
+									<td> </td>
 									<td> </td>
 									<td> <img class="foto"src="img/ic-1.png"  id="foto6" alt=""></td>
 									

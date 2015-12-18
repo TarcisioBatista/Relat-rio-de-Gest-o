@@ -25,7 +25,8 @@ body{
 .metade-direita{
 	width: 50%;
 	height: 667px;
-	background: #ccc;
+	
+	/*background-image: url(../img/fundo-2.png);*/
 	position: fixed;
 	right:1px;
 }
