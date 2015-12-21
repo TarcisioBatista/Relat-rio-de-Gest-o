@@ -3,8 +3,9 @@
 
 <html>
 <head>
-	<title></title>
+	<title>Relatório de Gestão</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
 				<!-- MINHAS ESTILIZAÇÕES -->
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/anicollection.css">
@@ -37,49 +38,79 @@ setInterval(
 	var paragrafo = "Texto default";
 	var link = '';
 	
-		function handle(delta) {
+		
+
+		
+
+		
+		function handle(delta, ver) {
+
 			 if(posicao >= 214){
 		    	posicao = 214;
+		    	if(ver == 2){
+				posicao = 156;
+			}
+
 		    }
 
 		    else if (delta < 0){
 		        /* EVENTO COM O MOUSE WHEEL DESCENDO */
 		        posicao = posicao + 1;
 		         $('.text').html('para baixo'+posicao);
-		         
+
+		          if(ver == 2){
+				posicao = 156;
+			}
 
 		    }
 		    else if(posicao <=0){
-		    	posicao=0;
+		    	posicao=0 ;
+ if(ver == 2){
+				posicao = 156;
+			}
+		    
 		    }
 		    
+		   
 		    else {
 		        /* EVENTO COM O MOUSE WHEEL SUBINDO */
 		        posicao = posicao - 1;
 		         $('.text').html('para cima'+posicao);
+
+ if(ver == 2){
+				posicao = 156;
+			}
 		    }
 		    	//$('h1').html("Hello world");
 		
+			
 			switch (posicao) {
+
+
 
 				case 0:	
 
-					posicao = 161;				
+
+					posicao = 161;			
 					break;		
 
 
-				case 6:				
+				case 6:		
+
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "http://www.google.com";
 
-					$("body").css("background", "red");
+				
+
+					//$("body").css("background", "red");
 
 					$(".metade-esquerda").toggle("puff", 800, function(){
 
-						$(".metade-esquerda").css("background", "purple");
+						$(".metade-esquerda").css({"background": "url(img/relatorio/apresentacao.jpg)", "background-repeat": "no-repeat", backgroundSize: "cover"});
+
 						$(".metade-esquerda").toggle("puff", 400, function(){	
-							$(".metade-esquerda").css("background", "purple");						
+							$(".metade-esquerda").css({"background": "url(img/relatorio/apresentacao.jpg)", "background-repeat": "no-repeat", backgroundSize: "cover"});						
 						});	
 						
 					});
@@ -127,23 +158,29 @@ setInterval(
 						});
 
 						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
+						
+						$( ".metade-direita" ).animate({
+							
+							 opacity: 0.1
+							}, 800, function(){
+								$(".metade-direita").css("background" ,"url(img/fundo-1.png)"); //COLOCAREMOS IMAGEM OU COR
+						
+							});
 
-						$(".metade-direita").css({backgroundImage: "url(img/fundo-1.png)"});
+						$( ".metade-direita" ).animate({
+							  opacity: 1
+							}, 800);
 						
 						/* MUDA O LINK DOS BOTOES */
 						$('a').attr("href", link);
 
 						/* DEFINE OS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO */
 
-						$("#foto1").attr("src","img/ic-2.png");
-						$("#foto1").attr("id", "foto2");
+						$("#foto3").attr("src","img/ic-2.png");
+						$("#foto3").attr("id", "foto6");
 
-						$("#foto5").attr("src","img/ic-1.png");
-						$("#foto5").attr("id", "foto3");
-						
-						$("#foto4").attr("src","img/ic-3.png");
-						$("#foto4").attr("id", "foto6");
-
+						$("#foto6").attr("src","img/ic-5.png");
+						$("#foto6").attr("id", "foto3");
 						/* FIM DA DEFINICAO DOS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO*/
 
 
@@ -152,21 +189,26 @@ setInterval(
 
 
 				case 12:
-					$(".metade-direita").css({backgroundImage: "url(img/fundo-2.png)"});
+
+					
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "http://www.google.com";
 
-					$("body").css("background", "yellow");
-					$(".metade-esquerda").css("background", "purple");
+					$("body").css("background", "#6ce9fc");
+					//$(".metade-esquerda").css("background", "purple");
 
+					
 					$(".metade-esquerda").toggle("blind", 800, function(){
 
-						$(".metade-esquerda").css("background", "blue");
-						$(".metade-esquerda").toggle("blind", 400, function(){					
-						});
+						$(".metade-esquerda").css({"background": "url(img/relatorio/Documentacao.jpg)", "background-repeat": "no-repeat", backgroundSize: "cover"});
 
+						$(".metade-esquerda").toggle("blind", 400, function(){	
+							$(".metade-esquerda").css({"background": "url(img/relatorio/Documentacao.jpg)", "background-repeat": "no-repeat", backgroundSize: "cover"});						
+						});	
+						
 					});
+
 
 						$("#list1").css(listapadrao); // lista da timeline que se altera
 						$("#list2").css(efeitolista); // timeline que mantem-se default
@@ -203,20 +245,28 @@ setInterval(
 							$('p').html(paragrafo);
 							$('h1, p').fadeIn("slow");
 						});
+						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
 						
+						$( ".metade-direita" ).animate({
+							
+							 opacity: 0.1
+							}, 800, function(){
+								$(".metade-direita").css("background" ,"url(img/fundo-2.png)");
+						
+							});
+
+						$( ".metade-direita" ).animate({
+							  opacity: 1
+							}, 800);
 						/* MUDA O LINK DOS BOTOES */
 						$('a').attr("href", link);
 
 						/* DEFINE OS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO */
+						$("#foto3").attr("src","img/ic-3.png");
+						$("#foto3").attr("id", "foto6");
 
-						$("#foto2").attr("src","img/ic-3.png");
-						$("#foto2").attr("id", "foto1");
-
-						$("#foto3").attr("src","img/ic-5.png");
-						$("#foto3").attr("id", "foto2");
-						
-						$("#foto6").attr("src","img/ic-4.png");
-						$("#foto6").attr("id", "foto4");
+						$("#foto6").attr("src","img/ic-5.png");
+						$("#foto6").attr("id", "foto3");
 
 						/* FIM DA DEFINICAO DOS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO*/
 
@@ -224,6 +274,7 @@ setInterval(
 
 
 				case 18:
+
 
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
@@ -275,20 +326,30 @@ setInterval(
 							$('p').html(paragrafo);
 							$('h1, p').fadeIn("slow");
 						});
+						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
+						
+						$( ".metade-direita" ).animate({
+							
+							 opacity: 0.1
+							}, 800, function(){
+								$(".metade-direita").css("background" ,"url(img/fundo-2.png)");
+						
+							});
+
+						$( ".metade-direita" ).animate({
+							  opacity: 1
+							}, 800);
 						
 						/* MUDA O LINK DOS BOTOES */
 						$('a').attr("href", link);
 
 						/* DEFINE OS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO */
 
-						$("#foto4").attr("src","img/ic-2.png");
-						$("#foto4").attr("id", "foto2");
+						$("#foto3").attr("src","img/ic-4.png");
+						$("#foto3").attr("id", "foto6");
 
-						$("#foto5").attr("src","img/ic-4.png");
-						$("#foto5").attr("id", "foto3");
-						
-						$("#foto6").attr("src","img/ic-2.png");
-						$("#foto6").attr("id", "foto1");
+						$("#foto6").attr("src","img/ic-1.png");
+						$("#foto6").attr("id", "foto3");
 
 						/* FIM DA DEFINICAO DOS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO*/
 
@@ -296,6 +357,7 @@ setInterval(
 					break;
 
 				case 24:
+
 
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
@@ -344,7 +406,19 @@ setInterval(
 							$('p').html(paragrafo);
 							$('h1, p').fadeIn("slow");
 						});
+						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
 						
+						$( ".metade-direita" ).animate({
+							
+							 opacity: 0.1
+							}, 800, function(){
+								$(".metade-direita").css("background" ,"url(img/fundo-2.png)");
+						
+							});
+
+						$( ".metade-direita" ).animate({
+							  opacity: 1
+							}, 800);
 						/* MUDA O LINK DOS BOTOES */
 						$('a').attr("href", link);
 
@@ -352,6 +426,7 @@ setInterval(
 
 
 				case 30:
+
 
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
@@ -401,20 +476,29 @@ setInterval(
 							$('p').html(paragrafo);
 							$('h1, p').fadeIn("slow");
 						});
+						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
 						
+						$( ".metade-direita" ).animate({
+							
+							 opacity: 0.1
+							}, 800, function(){
+								$(".metade-direita").css("background" ,"url(img/fundo-2.png)");
+						
+							});
+
+						$( ".metade-direita" ).animate({
+							  opacity: 1
+							}, 800);
 						/* MUDA O LINK DOS BOTOES */
 						$('a').attr("href", link);
 
 						/* DEFINE OS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO */
 
-						$("#foto4").attr("src","img/ic-6.png");
-						$("#foto4").attr("id", "foto2");
+						$("#foto3").attr("src","img/ic-1.png");
+						$("#foto3").attr("id", "foto6");
 
-						$("#foto5").attr("src","img/ic-6.png");
-						$("#foto5").attr("id", "foto3");
-						
-						$("#foto6").attr("src","img/ic-1.png");
-						$("#foto6").attr("id", "foto1");
+						$("#foto6").attr("src","img/ic-2.png");
+						$("#foto6").attr("id", "foto3");
 
 						/* FIM DA DEFINICAO DOS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO*/
 
@@ -422,6 +506,7 @@ setInterval(
 
 
 				case 36:
+
 
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
@@ -472,20 +557,29 @@ setInterval(
 							$('p').html(paragrafo);
 							$('h1, p').fadeIn("slow");
 						});
+						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
 						
+						$( ".metade-direita" ).animate({
+							
+							 opacity: 0.1
+							}, 800, function(){
+								$(".metade-direita").css("background" ,"url(img/fundo-2.png)");
+						
+							});
+
+						$( ".metade-direita" ).animate({
+							  opacity: 1
+							}, 800);
 						/* MUDA O LINK DOS BOTOES */
 						$('a').attr("href", link);
 
 						/* DEFINE OS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO */
 
-						$("#foto1").attr("src","img/ic-4.png");
-						$("#foto1").attr("id", "foto5");
+						$("#foto3").attr("src","img/ic-3.png");
+						$("#foto3").attr("id", "foto6");
 
-						$("#foto2").attr("src","img/ic-1.png");
-						$("#foto2").attr("id", "foto3");
-						
-						$("#foto3").attr("src","img/ic-1.png");
-						$("#foto3").attr("id", "foto4");
+						$("#foto6").attr("src","img/ic-1.png");
+						$("#foto6").attr("id", "foto3");
 
 						/* FIM DA DEFINICAO DOS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO*/
 
@@ -493,6 +587,7 @@ setInterval(
 
 
 				case 42:
+
 
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
@@ -543,20 +638,29 @@ setInterval(
 							$('p').html(paragrafo);
 							$('h1, p').fadeIn("slow");
 						});
+						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
 						
+						$( ".metade-direita" ).animate({
+							
+							 opacity: 0.1
+							}, 800, function(){
+								$(".metade-direita").css("background" ,"url(img/fundo-2.png)");
+						
+							});
+
+						$( ".metade-direita" ).animate({
+							  opacity: 1
+							}, 800);
 						/* MUDA O LINK DOS BOTOES */
 						$('a').attr("href", link);
 
 						/* DEFINE OS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO */
 
-						$("#foto5").attr("src","img/ic-1.png");
-						$("#foto5").attr("id", "foto2");
+						$("#foto3").attr("src","img/ic-6.png");
+						$("#foto3").attr("id", "foto6");
 
-						$("#foto4").attr("src","img/ic-3.png");
-						$("#foto4").attr("id", "foto3");
-						
-						$("#foto3").attr("src","img/ic-3.png");
-						$("#foto3").attr("id", "foto1");
+						$("#foto6").attr("src","img/ic-4.png");
+						$("#foto6").attr("id", "foto3");
 
 						/* FIM DA DEFINICAO DOS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO*/
 
@@ -564,6 +668,7 @@ setInterval(
 
 
 				case 48:
+
 
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
@@ -613,26 +718,36 @@ setInterval(
 							$('p').html(paragrafo);
 							$('h1, p').fadeIn("slow");
 						});
+						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
 						
+						$( ".metade-direita" ).animate({
+							
+							 opacity: 0.1
+							}, 800, function(){
+								$(".metade-direita").css("background" ,"url(img/fundo-2.png)");
+						
+							});
+
+						$( ".metade-direita" ).animate({
+							  opacity: 1
+							}, 800);
 						/* MUDA O LINK DOS BOTOES */
 						$('a').attr("href", link);
 
 						/* DEFINE OS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO */
 
-						$("#foto2").attr("src","img/ic-4.png");
-						$("#foto2").attr("id", "foto6");
+						$("#foto3").attr("src","img/ic-5.png");
+						$("#foto3").attr("id", "foto6");
 
-						$("#foto3").attr("src","img/ic-6.png");
-						$("#foto3").attr("id", "foto1");
-						
-						$("#foto1").attr("src","img/ic-5.png");
-						$("#foto1").attr("id", "foto4");
+						$("#foto6").attr("src","img/ic-2.png");
+						$("#foto6").attr("id", "foto3");
 
 						/* FIM DA DEFINICAO DOS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO*/
 
 					break;
 
 				case 54:
+
 
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
@@ -688,20 +803,29 @@ setInterval(
 							$('p').html(paragrafo);
 							$('h1, p').fadeIn("slow");
 						});
+						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
 						
+						$( ".metade-direita" ).animate({
+							
+							 opacity: 0.1
+							}, 800, function(){
+								$(".metade-direita").css("background" ,"url(img/fundo-2.png)");
+						
+							});
+
+						$( ".metade-direita" ).animate({
+							  opacity: 1
+							}, 800);
 						/* MUDA O LINK DOS BOTOES */
 						$('a').attr("href", link);
 
 						/* DEFINE OS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO */
 
-						$("#foto1").attr("src","img/ic-3.png");
-						$("#foto1").attr("id", "foto2");
+						$("#foto3").attr("src","img/ic-6.png");
+						$("#foto3").attr("id", "foto6");
 
-						$("#foto6").attr("src","img/ic-2.png");
+						$("#foto6").attr("src","img/ic-3.png");
 						$("#foto6").attr("id", "foto3");
-						
-						$("#foto3").attr("src","img/ic-4.png");
-						$("#foto3").attr("id", "foto1");
 
 						/* FIM DA DEFINICAO DOS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO*/
 
@@ -709,6 +833,7 @@ setInterval(
 
 
 				case 60:
+
 
 
 					paragrafo = "Novo parágrafo";
@@ -760,19 +885,28 @@ setInterval(
 							$('p').html(paragrafo);
 							$('h1, p').fadeIn("slow");
 						});
+						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
 						
+						$( ".metade-direita" ).animate({
+							
+							 opacity: 0.1
+							}, 800, function(){
+								$(".metade-direita").css("background" ,"url(img/fundo-2.png)");
+						
+							});
+
+						$( ".metade-direita" ).animate({
+							  opacity: 1
+							}, 800);
 						/* MUDA O LINK DOS BOTOES */
 						$('a').attr("href", link);
 
 						/* DEFINE OS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO */
 
-						$("#foto2").attr("src","img/ic-6.png");
-						$("#foto2").attr("id", "foto2");
+						$("#foto3").attr("src","img/ic-2.png");
+						$("#foto3").attr("id", "foto6");
 
-						$("#foto4").attr("src","img/ic-1.png");
-						$("#foto4").attr("id", "foto3");
-						
-						$("#foto6").attr("src","img/ic-5.png");
+						$("#foto6").attr("src","img/ic-2.png");
 						$("#foto6").attr("id", "foto3");
 
 						/* FIM DA DEFINICAO DOS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO*/
@@ -780,6 +914,7 @@ setInterval(
 						break;
 
 				case 66:
+
 
 
 				paragrafo = "Novo parágrafo";
@@ -825,7 +960,19 @@ setInterval(
 						$('p').html(paragrafo);
 						$('h1, p').fadeIn("slow");
 					});						
-					/* MUDA O LINK DOS BOTOES */
+					/* MUDA O BACKGRDOUND DA METADE DIREITA*/
+						
+						$( ".metade-direita" ).animate({
+							
+							 opacity: 0.1
+							}, 800, function(){
+								$(".metade-direita").css("background" ,"url(img/fundo-2.png)");
+						
+							});
+
+						$( ".metade-direita" ).animate({
+							  opacity: 1
+							}, 800);/* MUDA O LINK DOS BOTOES */
 					$('a').attr("href", link);
 					/* DEFINE OS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO */
 					$("#foto2").attr("src","img/ic-6.png");
@@ -839,6 +986,7 @@ setInterval(
 
 
 				case 72:
+
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "http://www.google.com";
@@ -888,19 +1036,28 @@ setInterval(
 							$('p').html(paragrafo);
 							$('h1, p').fadeIn("slow");
 						});
+						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
 						
+						$( ".metade-direita" ).animate({
+							
+							 opacity: 0.1
+							}, 800, function(){
+								$(".metade-direita").css("background" ,"url(img/fundo-2.png)");
+						
+							});
+
+						$( ".metade-direita" ).animate({
+							  opacity: 1
+							}, 800);
 						/* MUDA O LINK DOS BOTOES */
 						$('a').attr("href", link);
 
 						/* DEFINE OS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO */
-
-						$("#foto2").attr("src","img/ic-6.png");
-						$("#foto2").attr("id", "foto2");
-
-						$("#foto4").attr("src","img/ic-1.png");
-						$("#foto4").attr("id", "foto3");
 						
-						$("#foto6").attr("src","img/ic-5.png");
+						$("#foto3").attr("src","img/ic-1.png");
+						$("#foto3").attr("id", "foto6");
+
+						$("#foto6").attr("src","img/ic-6.png");
 						$("#foto6").attr("id", "foto3");
 
 						/* FIM DA DEFINICAO DOS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO*/
@@ -908,6 +1065,7 @@ setInterval(
 						break;
 
 				case 78:
+
 
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
@@ -958,19 +1116,28 @@ setInterval(
 							$('p').html(paragrafo);
 							$('h1, p').fadeIn("slow");
 						});
+						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
 						
+						$( ".metade-direita" ).animate({
+							
+							 opacity: 0.1
+							}, 800, function(){
+								$(".metade-direita").css("background" ,"url(img/fundo-2.png)");
+						
+							});
+
+						$( ".metade-direita" ).animate({
+							  opacity: 1
+							}, 800);
 						/* MUDA O LINK DOS BOTOES */
 						$('a').attr("href", link);
 
 						/* DEFINE OS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO */
 
-						$("#foto2").attr("src","img/ic-6.png");
-						$("#foto2").attr("id", "foto2");
+						$("#foto3").attr("src","img/ic-2.png");
+						$("#foto3").attr("id", "foto6");
 
-						$("#foto4").attr("src","img/ic-1.png");
-						$("#foto4").attr("id", "foto3");
-						
-						$("#foto6").attr("src","img/ic-5.png");
+						$("#foto6").attr("src","img/ic-4.png");
 						$("#foto6").attr("id", "foto3");
 
 						/* FIM DA DEFINICAO DOS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO*/
@@ -978,6 +1145,7 @@ setInterval(
 						break;
 
 				case 84:
+
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "http://www.google.com";
@@ -1027,18 +1195,27 @@ setInterval(
 							$('p').html(paragrafo);
 							$('h1, p').fadeIn("slow");
 						});
+						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
 						
+						$( ".metade-direita" ).animate({
+							
+							 opacity: 0.1
+							}, 800, function(){
+								$(".metade-direita").css("background" ,"url(img/fundo-2.png)");
+						
+							});
+
+						$( ".metade-direita" ).animate({
+							  opacity: 1
+							}, 800);
 						/* MUDA O LINK DOS BOTOES */
 						$('a').attr("href", link);
 
 						/* DEFINE OS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO */
 
-						$("#foto2").attr("src","img/ic-6.png");
-						$("#foto2").attr("id", "foto2");
+						$("#foto3").attr("src","img/ic-3.png");
+						$("#foto3").attr("id", "foto6");
 
-						$("#foto4").attr("src","img/ic-1.png");
-						$("#foto4").attr("id", "foto3");
-						
 						$("#foto6").attr("src","img/ic-5.png");
 						$("#foto6").attr("id", "foto3");
 
@@ -1046,6 +1223,7 @@ setInterval(
 
 						break;
 				case 90:
+
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "http://www.google.com";
@@ -1095,19 +1273,27 @@ setInterval(
 							$('p').html(paragrafo);
 							$('h1, p').fadeIn("slow");
 						});
+						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
 						
+						$( ".metade-direita" ).animate({
+							
+							 opacity: 0.1
+							}, 800, function(){
+								$(".metade-direita").css("background" ,"url(img/fundo-2.png)");
+						
+							});
+
+						$( ".metade-direita" ).animate({
+							  opacity: 1
+							}, 800);
 						/* MUDA O LINK DOS BOTOES */
 						$('a').attr("href", link);
 
 						/* DEFINE OS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO */
+						$("#foto3").attr("src","img/ic-2.png");
+						$("#foto3").attr("id", "foto6");
 
-						$("#foto2").attr("src","img/ic-6.png");
-						$("#foto2").attr("id", "foto2");
-
-						$("#foto4").attr("src","img/ic-1.png");
-						$("#foto4").attr("id", "foto3");
-						
-						$("#foto6").attr("src","img/ic-5.png");
+						$("#foto6").attr("src","img/ic-4.png");
 						$("#foto6").attr("id", "foto3");
 
 						/* FIM DA DEFINICAO DOS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO*/
@@ -1115,6 +1301,7 @@ setInterval(
 						break;
 
 				case 96:
+
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "http://www.google.com";
@@ -1164,19 +1351,28 @@ setInterval(
 							$('p').html(paragrafo);
 							$('h1, p').fadeIn("slow");
 						});
+						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
 						
+						$( ".metade-direita" ).animate({
+							
+							 opacity: 0.1
+							}, 800, function(){
+								$(".metade-direita").css("background" ,"url(img/fundo-2.png)");
+						
+							});
+
+						$( ".metade-direita" ).animate({
+							  opacity: 1
+							}, 800);
 						/* MUDA O LINK DOS BOTOES */
 						$('a').attr("href", link);
 
 						/* DEFINE OS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO */
 
-						$("#foto2").attr("src","img/ic-6.png");
-						$("#foto2").attr("id", "foto2");
+						$("#foto3").attr("src","img/ic-2.png");
+						$("#foto3").attr("id", "foto6");
 
-						$("#foto4").attr("src","img/ic-1.png");
-						$("#foto4").attr("id", "foto3");
-						
-						$("#foto6").attr("src","img/ic-5.png");
+						$("#foto6").attr("src","img/ic-3.png");
 						$("#foto6").attr("id", "foto3");
 
 						/* FIM DA DEFINICAO DOS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO*/
@@ -1184,6 +1380,7 @@ setInterval(
 						break;
 
 				case 102:
+
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "http://www.google.com";
@@ -1233,19 +1430,28 @@ setInterval(
 							$('p').html(paragrafo);
 							$('h1, p').fadeIn("slow");
 						});
+						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
 						
+						$( ".metade-direita" ).animate({
+							
+							 opacity: 0.1
+							}, 800, function(){
+								$(".metade-direita").css("background" ,"url(img/fundo-2.png)");
+						
+							});
+
+						$( ".metade-direita" ).animate({
+							  opacity: 1
+							}, 800);
 						/* MUDA O LINK DOS BOTOES */
 						$('a').attr("href", link);
 
 						/* DEFINE OS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO */
 
-						$("#foto2").attr("src","img/ic-6.png");
-						$("#foto2").attr("id", "foto2");
+						$("#foto3").attr("src","img/ic-1.png");
+						$("#foto3").attr("id", "foto6");
 
-						$("#foto4").attr("src","img/ic-1.png");
-						$("#foto4").attr("id", "foto3");
-						
-						$("#foto6").attr("src","img/ic-5.png");
+						$("#foto6").attr("src","img/ic-6.png");
 						$("#foto6").attr("id", "foto3");
 
 						/* FIM DA DEFINICAO DOS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO*/
@@ -1254,6 +1460,7 @@ setInterval(
 
 				case 108:
 
+					
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "http://www.google.com";
@@ -1304,18 +1511,27 @@ setInterval(
 							$('p').html(paragrafo);
 							$('h1, p').fadeIn("slow");
 						});
+						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
 						
+						$( ".metade-direita" ).animate({
+							
+							 opacity: 0.1
+							}, 800, function(){
+								$(".metade-direita").css("background" ,"url(img/fundo-2.png)");
+						
+							});
+
+						$( ".metade-direita" ).animate({
+							  opacity: 1
+							}, 800);
 						/* MUDA O LINK DOS BOTOES */
 						$('a').attr("href", link);
 
 						/* DEFINE OS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO */
 
-						$("#foto2").attr("src","img/ic-6.png");
-						$("#foto2").attr("id", "foto2");
+						$("#foto3").attr("src","img/ic-3.png");
+						$("#foto3").attr("id", "foto6");
 
-						$("#foto4").attr("src","img/ic-1.png");
-						$("#foto4").attr("id", "foto3");
-						
 						$("#foto6").attr("src","img/ic-5.png");
 						$("#foto6").attr("id", "foto3");
 
@@ -1324,6 +1540,7 @@ setInterval(
 						break;
 
 				case 114:
+
 
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
@@ -1374,27 +1591,36 @@ setInterval(
 							$('p').html(paragrafo);
 							$('h1, p').fadeIn("slow");
 						});
+						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
 						
+						$( ".metade-direita" ).animate({
+							
+							 opacity: 0.1
+							}, 800, function(){
+								$(".metade-direita").css("background" ,"url(img/fundo-2.png)");
+						
+							});
+
+						$( ".metade-direita" ).animate({
+							  opacity: 1
+							}, 800);
 						/* MUDA O LINK DOS BOTOES */
 						$('a').attr("href", link);
 
 						/* DEFINE OS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO */
 
-						$("#foto2").attr("src","img/ic-6.png");
-						$("#foto2").attr("id", "foto2");
+						$("#foto3").attr("src","img/ic-1.png");
+						$("#foto3").attr("id", "foto6");
 
-						$("#foto4").attr("src","img/ic-1.png");
-						$("#foto4").attr("id", "foto3");
-						
 						$("#foto6").attr("src","img/ic-5.png");
 						$("#foto6").attr("id", "foto3");
-
 						/* FIM DA DEFINICAO DOS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO*/
 
 						break;
 
 
 				case 120:
+
 
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
@@ -1445,19 +1671,28 @@ setInterval(
 							$('p').html(paragrafo);
 							$('h1, p').fadeIn("slow");
 						});
+						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
 						
+						$( ".metade-direita" ).animate({
+							
+							 opacity: 0.1
+							}, 800, function(){
+								$(".metade-direita").css("background" ,"url(img/fundo-2.png)");
+						
+							});
+
+						$( ".metade-direita" ).animate({
+							  opacity: 1
+							}, 800);
 						/* MUDA O LINK DOS BOTOES */
 						$('a').attr("href", link);
 
 						/* DEFINE OS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO */
 
-						$("#foto2").attr("src","img/ic-6.png");
-						$("#foto2").attr("id", "foto2");
+						$("#foto3").attr("src","img/ic-6.png");
+						$("#foto3").attr("id", "foto6");
 
-						$("#foto4").attr("src","img/ic-1.png");
-						$("#foto4").attr("id", "foto3");
-						
-						$("#foto6").attr("src","img/ic-5.png");
+						$("#foto6").attr("src","img/ic-2.png");
 						$("#foto6").attr("id", "foto3");
 
 						/* FIM DA DEFINICAO DOS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO*/
@@ -1465,6 +1700,7 @@ setInterval(
 						break;
 
 				case 126:
+
 
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
@@ -1515,18 +1751,26 @@ setInterval(
 							$('p').html(paragrafo);
 							$('h1, p').fadeIn("slow");
 						});
+						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
 						
+						$( ".metade-direita" ).animate({
+							
+							 opacity: 0.1
+							}, 800, function(){
+								$(".metade-direita").css("background" ,"url(img/fundo-2.png)");
+						
+							});
+
+						$( ".metade-direita" ).animate({
+							  opacity: 1
+							}, 800);
 						/* MUDA O LINK DOS BOTOES */
 						$('a').attr("href", link);
 
 						/* DEFINE OS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO */
+						$("#foto3").attr("src","img/ic-3.png");
+						$("#foto3").attr("id", "foto6");
 
-						$("#foto2").attr("src","img/ic-6.png");
-						$("#foto2").attr("id", "foto2");
-
-						$("#foto4").attr("src","img/ic-1.png");
-						$("#foto4").attr("id", "foto3");
-						
 						$("#foto6").attr("src","img/ic-5.png");
 						$("#foto6").attr("id", "foto3");
 
@@ -1535,6 +1779,7 @@ setInterval(
 						break;
 
 				case 132:
+
 
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
@@ -1585,26 +1830,35 @@ setInterval(
 							$('p').html(paragrafo);
 							$('h1, p').fadeIn("slow");
 						});
+						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
 						
+						$( ".metade-direita" ).animate({
+							
+							 opacity: 0.1
+							}, 800, function(){
+								$(".metade-direita").css("background" ,"url(img/fundo-2.png)");
+						
+							});
+
+						$( ".metade-direita" ).animate({
+							  opacity: 1
+							}, 800);
 						/* MUDA O LINK DOS BOTOES */
 						$('a').attr("href", link);
 
 						/* DEFINE OS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO */
 
-						$("#foto2").attr("src","img/ic-6.png");
-						$("#foto2").attr("id", "foto2");
+						$("#foto3").attr("src","img/ic-6.png");
+						$("#foto3").attr("id", "foto6");
 
-						$("#foto4").attr("src","img/ic-1.png");
-						$("#foto4").attr("id", "foto3");
-						
-						$("#foto6").attr("src","img/ic-5.png");
+						$("#foto6").attr("src","img/ic-1.png");
 						$("#foto6").attr("id", "foto3");
-
 						/* FIM DA DEFINICAO DOS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO*/
 
 						break;
 
 				case 138:
+
 
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
@@ -1655,19 +1909,28 @@ setInterval(
 							$('p').html(paragrafo);
 							$('h1, p').fadeIn("slow");
 						});
+						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
 						
+						$( ".metade-direita" ).animate({
+							
+							 opacity: 0.1
+							}, 800, function(){
+								$(".metade-direita").css("background" ,"url(img/fundo-2.png)");
+						
+							});
+
+						$( ".metade-direita" ).animate({
+							  opacity: 1
+							}, 800);
 						/* MUDA O LINK DOS BOTOES */
 						$('a').attr("href", link);
 
 						/* DEFINE OS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO */
 
-						$("#foto2").attr("src","img/ic-6.png");
-						$("#foto2").attr("id", "foto2");
+						$("#foto3").attr("src","img/ic-4.png");
+						$("#foto3").attr("id", "foto6");
 
-						$("#foto4").attr("src","img/ic-1.png");
-						$("#foto4").attr("id", "foto3");
-						
-						$("#foto6").attr("src","img/ic-5.png");
+						$("#foto6").attr("src","img/ic-4.png");
 						$("#foto6").attr("id", "foto3");
 
 						/* FIM DA DEFINICAO DOS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO*/
@@ -1675,6 +1938,7 @@ setInterval(
 						break;
 
 				case 144:
+
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "http://www.google.com";
@@ -1724,18 +1988,27 @@ setInterval(
 							$('p').html(paragrafo);
 							$('h1, p').fadeIn("slow");
 						});
+						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
 						
+						$( ".metade-direita" ).animate({
+							
+							 opacity: 0.1
+							}, 800, function(){
+								$(".metade-direita").css("background" ,"url(img/fundo-2.png)");
+						
+							});
+
+						$( ".metade-direita" ).animate({
+							  opacity: 1
+							}, 800);
 						/* MUDA O LINK DOS BOTOES */
 						$('a').attr("href", link);
 
 						/* DEFINE OS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO */
 
-						$("#foto2").attr("src","img/ic-6.png");
-						$("#foto2").attr("id", "foto2");
+						$("#foto3").attr("src","img/ic-2.png");
+						$("#foto3").attr("id", "foto6");
 
-						$("#foto4").attr("src","img/ic-1.png");
-						$("#foto4").attr("id", "foto3");
-						
 						$("#foto6").attr("src","img/ic-5.png");
 						$("#foto6").attr("id", "foto3");
 
@@ -1744,6 +2017,7 @@ setInterval(
 						break;
 
 					case 150:
+
 						paragrafo = "Novo parágrafo";
 						titulo = "novo titulo";
 						link = "http://www.google.com";
@@ -1793,26 +2067,36 @@ setInterval(
 								$('p').html(paragrafo);
 								$('h1, p').fadeIn("slow");
 							});
+							/* MUDA O BACKGRDOUND DA METADE DIREITA*/
+						
+						$( ".metade-direita" ).animate({
 							
+							 opacity: 0.1
+							}, 800, function(){
+								$(".metade-direita").css("background" ,"url(img/fundo-2.png)");
+						
+							});
+
+						$( ".metade-direita" ).animate({
+							  opacity: 1
+							}, 800);
 							/* MUDA O LINK DOS BOTOES */
 							$('a').attr("href", link);
 
 							/* DEFINE OS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO */
 
-							$("#foto2").attr("src","img/ic-6.png");
-							$("#foto2").attr("id", "foto2");
+							$("#foto3").attr("src","img/ic-1.png");
+						$("#foto3").attr("id", "foto6");
 
-							$("#foto4").attr("src","img/ic-1.png");
-							$("#foto4").attr("id", "foto3");
-							
-							$("#foto6").attr("src","img/ic-5.png");
-							$("#foto6").attr("id", "foto3");
+						$("#foto6").attr("src","img/ic-2.png");
+						$("#foto6").attr("id", "foto3");
 
 							/* FIM DA DEFINICAO DOS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO*/
 
 							break;
 
 					case 156:
+
 						paragrafo = "Novo parágrafo";
 						titulo = "novo titulo";
 						link = "http://www.google.com";
@@ -1862,26 +2146,35 @@ setInterval(
 								$('p').html(paragrafo);
 								$('h1, p').fadeIn("slow");
 							});
+							/* MUDA O BACKGRDOUND DA METADE DIREITA*/
+						
+						$( ".metade-direita" ).animate({
 							
+							 opacity: 0.1
+							}, 800, function(){
+								$(".metade-direita").css("background" ,"url(img/fundo-2.png)");
+						
+							});
+
+						$( ".metade-direita" ).animate({
+							  opacity: 1
+							}, 800);
 							/* MUDA O LINK DOS BOTOES */
 							$('a').attr("href", link);
 
 							/* DEFINE OS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO */
 
-							$("#foto2").attr("src","img/ic-6.png");
-							$("#foto2").attr("id", "foto2");
+							$("#foto3").attr("src","img/ic-3.png");
+						$("#foto3").attr("id", "foto6");
 
-							$("#foto4").attr("src","img/ic-1.png");
-							$("#foto4").attr("id", "foto3");
-							
-							$("#foto6").attr("src","img/ic-5.png");
-							$("#foto6").attr("id", "foto3");
-
+						$("#foto6").attr("src","img/ic-1.png");
+						$("#foto6").attr("id", "foto3");
 							/* FIM DA DEFINICAO DOS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO*/
 
 							break;
 
 					case 156:
+
 						paragrafo = "Novo parágrafo";
 						titulo = "novo titulo";
 						link = "http://www.google.com";
@@ -1931,26 +2224,36 @@ setInterval(
 								$('p').html(paragrafo);
 								$('h1, p').fadeIn("slow");
 							});
+							/* MUDA O BACKGRDOUND DA METADE DIREITA*/
+						
+						$( ".metade-direita" ).animate({
 							
+							 opacity: 0.1
+							}, 800, function(){
+								$(".metade-direita").css("background" ,"url(img/fundo-2.png)");
+						
+							});
+
+						$( ".metade-direita" ).animate({
+							  opacity: 1
+							}, 800);
 							/* MUDA O LINK DOS BOTOES */
 							$('a').attr("href", link);
 
 							/* DEFINE OS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO */
 
-							$("#foto2").attr("src","img/ic-6.png");
-							$("#foto2").attr("id", "foto2");
+							$("#foto3").attr("src","img/ic-3.png");
+						$("#foto3").attr("id", "foto6");
 
-							$("#foto4").attr("src","img/ic-1.png");
-							$("#foto4").attr("id", "foto3");
-							
-							$("#foto6").attr("src","img/ic-5.png");
-							$("#foto6").attr("id", "foto3");
+						$("#foto6").attr("src","img/ic-5.png");
+						$("#foto6").attr("id", "foto3");
 
 							/* FIM DA DEFINICAO DOS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO*/
 
 							break;
 
 					case 162:
+
 						posicao = 5;
 						break;
 
@@ -1992,7 +2295,9 @@ setInterval(
 		window.onmousewheel=document.onmousewheel=wheel;
 	}
 
+	
 	</script>
+
 	
 
 
@@ -2000,6 +2305,7 @@ setInterval(
 <body>
 	<div class="row-fluid">
 		<div class="logo"><img src="img/unimontes.png"></div>
+		<div class="go-to"  onClick="handle(event , 2)"><i class="fa fa-chevron-down fa-2x"></i></div>
 					<div class="conteudo-esquerda">
 						<ul class="time-line">
 							<li><i class="fa fa-circle " id="list1"></i></li>
@@ -2028,12 +2334,12 @@ setInterval(
 							<li><i class="fa fa-circle " id="list24"></i></li>
 							<li><i class="fa fa-circle " id="list25"></i></li>
 							<li><i class="fa fa-circle " id="list26"></i></li>
-							<li><i class="fa fa-circle " id="list27"></i></li>
+							
 							
 						</ul>
 					</div>
 
-		<div class="metade-esquerda">
+		<div class="metade-esquerda" >
 			<div class="container-fluid">
 				<div class="row-fluid">
 					
@@ -2049,17 +2355,17 @@ setInterval(
 						<div class="background-icones">
 							<table>
 								<tr>
-									<td> <img class="foto"src="img/ic-1.png"  id="foto4" alt=""></td>
+									<td> <img class="foto"src="img/ic-1.png"  id="foto6" alt=""></td>
 									<td> </td>
-									<td> <img class="foto1"src="img/ic-6.png"  id="foto2" alt=""></td>
+									<td> <img class="foto1"src="img/ic-6.png"  id="foto6" alt=""></td>
 									<td> <img class="foto"src="img/ic-5.png"  id="foto3" alt=""></td>
 									<td></td>
-									<td> <img class="foto"src="img/ic-4.png"  id="foto4" alt=""></td>
+									<td> <img class="foto"src="img/ic-4.png"  id="foto6" alt=""></td>
 									<td> <img class="foto"src="img/ic-3.png"  id="foto3" alt=""></td>
 								</tr>
 									<tr>
 										<td> </td>
-									<td> <img class="foto"src="img/ic-5.png"  id="foto4" alt=""></td>
+									<td> <img class="foto"src="img/ic-5.png"  id="foto6" alt=""></td>
 									<td></td>
 									<td> </td>
 									<td> </td>
@@ -2069,28 +2375,28 @@ setInterval(
 								</tr>
 									<tr>
 									<td> <img class="foto"src="img/ic-6.png"  id="foto6" alt=""></td>
-									<td ><img class="foto"src="img/ic-1.png"  id="foto1" alt=""></td>
-									<td> </td>
-									<td> </td>
 									<td ></td>
-									<td> <img class="foto1"src="img/ic-3.png"  id="foto3" alt=""></td>
+									<td> <img class="foto"src="img/ic-1.png"  id="foto3" alt=""></td>
+									<td> </td>
 									<td ><img class="foto"src="img/ic-4.png"  id="foto3" alt=""></td>
+									<td> </td>
+									<td ><img class="foto1"src="img/ic-3.png"  id="foto3" alt=""></td>
 								</tr>
 									<tr>
-										<td> <img class="foto1"src="img/ic-4.png"  id="foto2" alt=""></td>
-									<td ><img class="foto"src="img/ic-2.png"  id="foto5" alt=""></td>
+									<td> <img class="foto1"src="img/ic-4.png"  id="foto6" alt=""></td>
+									<td ><img class="foto"src="img/ic-2.png"  id="foto3" alt=""></td>
 									<td></td>
-									<td> <img class="foto"src="img/ic-6.png"  id="foto1" alt=""></td>
-									<td> <img class="foto1"src="img/ic-3.png"  id="foto3" alt=""></td>
-									<td ><img class="foto"src="img/ic-5.png"  id="foto6" alt=""></td>
+									<td><img class="foto1"src="img/ic-3.png"  id="foto3" alt=""> </td>
+									<td> </td>
 									<td ></td>
+									<td ><img class="foto"src="img/ic-5.png"  id="foto6" alt=""></td>
 								</tr>
 							</table>
 						</div>
 						<div class="encapsulador-conteudo">
-							<h1></h1>
+							<h1>Título</h1>
 							<p>Une solution sur-mesure pour aider les hôteliers indépendants à prospérer sur le Web. Nous avons eu plaisir à réaliser un site en Responsive Design, avec de belles animations SVG.</p>
-							<a href="" class="btn">Botao</a>
+							<a href="#myModal" role="button" data-toggle="modal" class="botao">Botao</a>
 						</div>
 					</div>
 				</div>
@@ -2103,3 +2409,6 @@ setInterval(
 </html>
 
 
+
+ 
+<!-- Modal -->
