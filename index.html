@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="css/anicollection.css">
 	<link rel="stylesheet" href="css/dti.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 	<script src="js/jquery.js" type="text/javascript"></script>	
 	<script src="js/jquery-ui.js" type="text/javascript"></script>
 	<script scr="js/bootstrap.js" type="text/javascript"></script>
@@ -37,6 +38,7 @@ setInterval(
 	var titulo = "Título default";
 	var paragrafo = "Texto default";
 	var link = '';
+
 	
 		
 
@@ -97,11 +99,11 @@ setInterval(
 
 				case 6:		
 
+					//$('#myModal').modal('show');
+
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
-					link = "http://www.google.com";
-
-				
+					link = "http://www.google.com";	
 
 					//$("body").css("background", "red");
 
@@ -2396,7 +2398,7 @@ setInterval(
 						<div class="encapsulador-conteudo">
 							<h1>Título</h1>
 							<p>Une solution sur-mesure pour aider les hôteliers indépendants à prospérer sur le Web. Nous avons eu plaisir à réaliser un site en Responsive Design, avec de belles animations SVG.</p>
-							<a href="#myModal" role="button" data-toggle="modal" class="botao">Botao</a>
+							<a href="#myModal" role="button" class="botao" data-toggle="modal">Botão</a>
 						</div>
 					</div>
 				</div>
@@ -2412,3 +2414,16 @@ setInterval(
 
  
 <!-- Modal -->
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+    <h3 id="myModalLabel">Modal header</h3>
+  </div>
+  <div class="modal-body">
+    <p>Um corpo fino …</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Fechar</button>
+    <button class="btn btn-primary">Salvar mudanças</button>
+  </div>
+</div>
