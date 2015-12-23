@@ -80,7 +80,6 @@
 			switch (posicao) {
 
 
-
 				case 0:	
 
 
@@ -94,20 +93,15 @@
 					titulo = "novo titulo";
 					link = "#myModal1";
 
-				
-
-					//$("body").css("background", "red");
-
 					$(".metade-esquerda").toggle("puff", 800, function(){
 
-						$(".metade-esquerda").css({"background": "url(img/relatorio/apresentacao.jpg)", "background-repeat": "no-repeat", backgroundSize: "cover"});
+						$(".metade-esquerda").css({"background": "url(img/relatorio/Atividades.jpg)", "background-repeat": "no-repeat", backgroundSize: "cover"});
 
-						$(".metade-esquerda").toggle("puff", 400, function(){	
-							$(".metade-esquerda").css({"background": "url(img/relatorio/apresentacao.jpg)", "background-repeat": "no-repeat", backgroundSize: "cover"});						
+						$(".metade-esquerda").toggle("puff", 600, function(){	
+							$(".metade-esquerda").css({"background": "url(img/relatorio/Atividades.jpg)", "background-repeat": "no-repeat", backgroundSize: "cover"});						
 						});	
 						
 					});
-
 
 
 						$("#list1").css(efeitolista); // lista da timeline que se altera
@@ -141,8 +135,7 @@
 						$("#list27").css(listapadrao); // timeline que mantem-se default
 
 
-					
-						
+											
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, p').fadeOut("slow", function(){
 							$('h1').html(titulo);
@@ -176,7 +169,6 @@
 						$("#foto6").attr("id", "foto3");
 						/* FIM DA DEFINICAO DOS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO*/
 
-
 					break;
 
 
@@ -189,15 +181,13 @@
 					link = "#myModal2";
 
 					$("body").css("background", "#6ce9fc");
-					//$(".metade-esquerda").css("background", "purple");
-
 					
-					$(".metade-esquerda").toggle("blind", 800, function(){
+					$(".metade-esquerda").toggle("blind", 700, function(){
 
-						$(".metade-esquerda").css({"background": "url(img/relatorio/Documentacao.jpg)", "background-repeat": "no-repeat", backgroundSize: "cover"});
+						$(".metade-esquerda").css({"background": "url(img/relatorio/Ensino.jpg)", "background-repeat": "no-repeat", backgroundSize: "cover"});
 
-						$(".metade-esquerda").toggle("blind", 400, function(){	
-							$(".metade-esquerda").css({"background": "url(img/relatorio/Documentacao.jpg)", "background-repeat": "no-repeat", backgroundSize: "cover"});						
+						$(".metade-esquerda").toggle("blind", 600, function(){	
+							$(".metade-esquerda").css({"background": "url(img/relatorio/Ensino.jpg)", "background-repeat": "no-repeat", backgroundSize: "cover"});						
 						});	
 						
 					});
@@ -273,12 +263,14 @@
 					titulo = "novo titulo";
 					link = "#myModal3";
 
-					$(".metade-esquerda").css("background", "blue");
-					
+				
 					$(".metade-esquerda").toggle("size", 700, function(){
 
-						$(".metade-esquerda").css("background", "red");
-						$(".metade-esquerda").toggle("size", 700, function(){					
+						$(".metade-esquerda").css({"background": "url(img/relatorio/pesquisa.jpg)", "background-repeat": "no-repeat", backgroundSize: "cover"});
+
+						$(".metade-esquerda").toggle("size", 600, function(){	
+							$(".metade-esquerda").css({"background": "url(img/relatorio/pesquisa.jpg)", "background-repeat": "no-repeat", backgroundSize: "cover"});
+				
 						});
 
 					});
@@ -356,11 +348,13 @@
 					titulo = "novo titulo";
 					link = "#myModal4";
 
-					$(".metade-esquerda").css("background", "red");
-					$(".metade-esquerda").toggle("clip", 800, function(){
+					$(".metade-esquerda").toggle("clip", 700, function(){
 
-						$(".metade-esquerda").css("background", "black");
-						$(".metade-esquerda").toggle("clip", 800, function(){					
+						$(".metade-esquerda").css({"background": "url(img/relatorio/Extensão.jpg)", "background-repeat": "no-repeat", backgroundSize: "cover"});
+
+						$(".metade-esquerda").toggle("clip", 600, function(){
+							$(".metade-esquerda").css({"background": "url(img/relatorio/Extensão.jpg)", "background-repeat": "no-repeat", backgroundSize: "cover"});
+					
 						});
 
 					});
@@ -425,12 +419,11 @@
 					titulo = "novo titulo";
 					link = "#myModal5";
 
-					$(".metade-esquerda").css("background", "black");
 					
-					$(".metade-esquerda").toggle("blind", 1000, function(){
+					$(".metade-esquerda").toggle("blind", 700, function(){
 
 						$(".metade-esquerda").css("background", "blue");
-						$(".metade-esquerda").toggle("blind", 1000, function(){					
+						$(".metade-esquerda").toggle("blind", 600, function(){					
 						});
 
 					});
@@ -504,14 +497,12 @@
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal6";
-
-					$(".metade-esquerda").css("background", "blue");
 					
-					$(".metade-esquerda").toggle("puff", 1000, function(){
+					$(".metade-esquerda").toggle("puff", 700, function(){
 
 						$(".metade-esquerda").css("background", "purple");
-						$(".metade-esquerda").toggle("puff", 1000, function(){					
-						});
+						$(".metade-esquerda").toggle("puff", 600, function(){					
+					});
 
 					});
 
@@ -585,13 +576,11 @@
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal7";
-
-					$(".metade-esquerda").css("background", "purple");
 					
-					$(".metade-esquerda").toggle("blind", 1000, function(){
+					$(".metade-esquerda").toggle("clip", 800, function(){
 
 						$(".metade-esquerda").css("background", "blue");
-						$(".metade-esquerda").toggle("blind", 1000, function(){					
+						$(".metade-esquerda").toggle("clip", 600, function(){					
 						});
 
 					});
@@ -667,12 +656,11 @@
 					titulo = "novo titulo";
 					link = "#myModal8";
 
-					$(".metade-esquerda").css("background", "blue");
 					
-					$(".metade-esquerda").toggle("size", 1000, function(){
+					$(".metade-esquerda").toggle("size", 800, function(){
 
 						$(".metade-esquerda").css("background", "green");
-						$(".metade-esquerda").toggle("size", 1000, function(){					
+						$(".metade-esquerda").toggle("size", 600, function(){					
 						});
 
 					});
@@ -746,12 +734,11 @@
 					titulo = "novo titulo";
 					link = "#myModal9";
 
-					$(".metade-esquerda").css("background", "green");
 					
-					$(".metade-esquerda").toggle("clip", 1000, function(){
+					$(".metade-esquerda").toggle("blind", 800, function(){
 
 						$(".metade-esquerda").css("background", "blue");
-						$(".metade-esquerda").toggle("clip", 1000, function(){					
+						$(".metade-esquerda").toggle("blind", 600, function(){					
 						});
 
 
@@ -833,12 +820,11 @@
 					titulo = "novo titulo";
 					link = "#myModal10";
 						
-					$(".metade-esquerda").css("background", "blue");
 					
-					$(".metade-esquerda").toggle("blind", 1000, function(){
+					$(".metade-esquerda").toggle("puff", 800, function(){
 
 						$(".metade-esquerda").css("background", "red");
-						$(".metade-esquerda").toggle("blind", 1000, function(){					
+						$(".metade-esquerda").toggle("puff", 600, function(){					
 						});
 
 					});
@@ -914,9 +900,9 @@
 				titulo = "novo titulo";
 				link = "#myModal11";						
 									
-				$(".metade-esquerda").toggle("blind", 1000, function(){
+				$(".metade-esquerda").toggle("size", 800, function(){
 					$(".metade-esquerda").css("background", "red");
-					$(".metade-esquerda").toggle("blind", 1000, function(){					
+					$(".metade-esquerda").toggle("size", 600, function(){					
 					});
 				});
 					$("#list1").css(listapadrao); // lista da timeline que se altera
@@ -986,10 +972,10 @@
 						
 					
 					
-					$(".metade-esquerda").toggle("blind", 1000, function(){
+					$(".metade-esquerda").toggle("blind", 800, function(){
 
 						$(".metade-esquerda").css("background", "red");
-						$(".metade-esquerda").toggle("blind", 1000, function(){					
+						$(".metade-esquerda").toggle("blind", 600, function(){					
 						});
 
 					});
@@ -1063,13 +1049,12 @@
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal13";
-						
-					$(".metade-esquerda").css("background", "red");
+
 					
-					$(".metade-esquerda").toggle("blind", 1000, function(){
+					$(".metade-esquerda").toggle("clip", 800, function(){
 
 						$(".metade-esquerda").css("background", "red");
-						$(".metade-esquerda").toggle("blind", 1000, function(){					
+						$(".metade-esquerda").toggle("clip", 600, function(){					
 						});
 
 					});
@@ -1143,12 +1128,11 @@
 					titulo = "novo titulo";
 					link = "#myModal14";
 						
-					$(".metade-esquerda").css("background", "blue");
 					
-					$(".metade-esquerda").toggle("blind", 1000, function(){
+					$(".metade-esquerda").toggle("puff", 800, function(){
 
 						$(".metade-esquerda").css("background", "red");
-						$(".metade-esquerda").toggle("blind", 1000, function(){					
+						$(".metade-esquerda").toggle("puff", 600, function(){					
 						});
 
 					});
@@ -1221,12 +1205,11 @@
 					titulo = "novo titulo";
 					link = "#myModal15";
 						
-					$(".metade-esquerda").css("background", "blue");
 					
-					$(".metade-esquerda").toggle("blind", 1000, function(){
+					$(".metade-esquerda").toggle("size", 800, function(){
 
 						$(".metade-esquerda").css("background", "red");
-						$(".metade-esquerda").toggle("blind", 1000, function(){					
+						$(".metade-esquerda").toggle("size", 600, function(){					
 						});
 
 					});
@@ -1299,12 +1282,11 @@
 					titulo = "novo titulo";
 					link = "#myModal16";
 						
-					$(".metade-esquerda").css("background", "blue");
-					
-					$(".metade-esquerda").toggle("blind", 1000, function(){
+				
+					$(".metade-esquerda").toggle("blind", 800, function(){
 
 						$(".metade-esquerda").css("background", "red");
-						$(".metade-esquerda").toggle("blind", 1000, function(){					
+						$(".metade-esquerda").toggle("blind", 600, function(){					
 						});
 
 					});
@@ -1377,13 +1359,12 @@
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal17";
-						
-					$(".metade-esquerda").css("background", "blue");
+
 					
-					$(".metade-esquerda").toggle("blind", 1000, function(){
+					$(".metade-esquerda").toggle("clip", 800, function(){
 
 						$(".metade-esquerda").css("background", "red");
-						$(".metade-esquerda").toggle("blind", 1000, function(){					
+						$(".metade-esquerda").toggle("clip", 600, function(){					
 						});
 
 					});
@@ -1458,12 +1439,11 @@
 					titulo = "novo titulo";
 					link = "#myModal18";
 						
-					$(".metade-esquerda").css("background", "blue");
 					
-					$(".metade-esquerda").toggle("blind", 1000, function(){
+					$(".metade-esquerda").toggle("puff", 800, function(){
 
 						$(".metade-esquerda").css("background", "red");
-						$(".metade-esquerda").toggle("blind", 1000, function(){					
+						$(".metade-esquerda").toggle("puff", 600, function(){					
 						});
 
 					});
@@ -1539,12 +1519,11 @@
 					titulo = "novo titulo";
 					link = "#myModal19";
 						
-					$(".metade-esquerda").css("background", "blue");
 					
-					$(".metade-esquerda").toggle("blind", 1000, function(){
+					$(".metade-esquerda").toggle("clip", 800, function(){
 
 						$(".metade-esquerda").css("background", "red");
-						$(".metade-esquerda").toggle("blind", 1000, function(){					
+						$(".metade-esquerda").toggle("clip", 600, function(){					
 						});
 
 					});
@@ -1619,12 +1598,11 @@
 					titulo = "novo titulo";
 					link = "#myModal20";
 						
-					$(".metade-esquerda").css("background", "blue");
 					
-					$(".metade-esquerda").toggle("blind", 1000, function(){
+					$(".metade-esquerda").toggle("size", 800, function(){
 
 						$(".metade-esquerda").css("background", "red");
-						$(".metade-esquerda").toggle("blind", 1000, function(){					
+						$(".metade-esquerda").toggle("size", 600, function(){					
 						});
 
 					});
@@ -1698,13 +1676,11 @@
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal21";
-						
-					$(".metade-esquerda").css("background", "blue");
 					
-					$(".metade-esquerda").toggle("blind", 1000, function(){
+					$(".metade-esquerda").toggle("blind", 800, function(){
 
 						$(".metade-esquerda").css("background", "red");
-						$(".metade-esquerda").toggle("blind", 1000, function(){					
+						$(".metade-esquerda").toggle("blind", 600, function(){					
 						});
 
 					});
@@ -1778,12 +1754,11 @@
 					titulo = "novo titulo";
 					link = "#myModal22";
 						
-					$(".metade-esquerda").css("background", "blue");
 					
-					$(".metade-esquerda").toggle("blind", 1000, function(){
+					$(".metade-esquerda").toggle("puff", 800, function(){
 
 						$(".metade-esquerda").css("background", "red");
-						$(".metade-esquerda").toggle("blind", 1000, function(){					
+						$(".metade-esquerda").toggle("puff", 600, function(){					
 						});
 
 					});
@@ -1856,13 +1831,11 @@
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal23";
-						
-					$(".metade-esquerda").css("background", "blue");
 					
-					$(".metade-esquerda").toggle("blind", 1000, function(){
+					$(".metade-esquerda").toggle("size", 800, function(){
 
 						$(".metade-esquerda").css("background", "red");
-						$(".metade-esquerda").toggle("blind", 1000, function(){					
+						$(".metade-esquerda").toggle("size", 600, function(){					
 						});
 
 					});
@@ -1936,12 +1909,11 @@
 					titulo = "novo titulo";
 					link = "#myModal24";
 						
-					$(".metade-esquerda").css("background", "blue");
 					
-					$(".metade-esquerda").toggle("blind", 1000, function(){
+					$(".metade-esquerda").toggle("clip", 800, function(){
 
 						$(".metade-esquerda").css("background", "red");
-						$(".metade-esquerda").toggle("blind", 1000, function(){					
+						$(".metade-esquerda").toggle("clip", 600, function(){					
 						});
 
 					});
@@ -2015,12 +1987,11 @@
 						titulo = "novo titulo";
 						link = "#myModal25";
 							
-						$(".metade-esquerda").css("background", "blue");
 						
-						$(".metade-esquerda").toggle("blind", 1000, function(){
+						$(".metade-esquerda").toggle("blind", 800, function(){
 
 							$(".metade-esquerda").css("background", "red");
-							$(".metade-esquerda").toggle("blind", 1000, function(){					
+							$(".metade-esquerda").toggle("blind", 600, function(){					
 							});
 
 						});
@@ -2093,13 +2064,11 @@
 						paragrafo = "Novo parágrafo";
 						titulo = "novo titulo";
 						link = "#myModal26";
-							
-						$(".metade-esquerda").css("background", "blue");
 						
-						$(".metade-esquerda").toggle("blind", 1000, function(){
+						$(".metade-esquerda").toggle("puff", 800, function(){
 
 							$(".metade-esquerda").css("background", "red");
-							$(".metade-esquerda").toggle("blind", 1000, function(){					
+							$(".metade-esquerda").toggle("puff", 600, function(){					
 							});
 
 						});
@@ -2172,12 +2141,11 @@
 						titulo = "novo titulo";
 						link = "#myModal28";
 							
-						$(".metade-esquerda").css("background", "blue");
 						
-						$(".metade-esquerda").toggle("blind", 1000, function(){
+						$(".metade-esquerda").toggle("size", 800, function(){
 
 							$(".metade-esquerda").css("background", "red");
-							$(".metade-esquerda").toggle("blind", 1000, function(){					
+							$(".metade-esquerda").toggle("size", 600, function(){					
 							});
 
 						});
