@@ -1,30 +1,10 @@
-	
 	setInterval(
     function () {
         $('.foto').animate({rotate: '+=0.12deg'}, 0);
         $('.foto1').animate({rotate: '-=0.12deg'}, 0);
     },
     100
-	);
-
-	function handledot (item, listname){
-		if(item == 1){
-			$("#list"+item).css(efeitolista);$("#list"+item).html(listname);
-			$("#list"+(item+1)).css(listapadrao);$("#list"(item+1)).html('');
-			$("#list"+(item+26)).css(listapadrao);$("#list"+(item+26)).html('');
-		}
-		else if(item == 27){
-			$("#list"+item).css(efeitolista);$("#list"+item).html(listname);
-			$("#list"+(item-26)).css(listapadrao);$("#list"+(item-26)).html('');
-			$("#list"+(item-1)).css(listapadrao);$("#list"+(item-1)).html('');
-		}
-		else{
-			$("#list"+item).css(efeitolista);$("#list"+item).html(listname);
-			$("#list"+(item+1)).css(listapadrao);$("#list"+item+1).html('');
-			$("#list"+(item-1)).css(listapadrao);$("#list"+item-1).html('');
-		}
-	}
-
+);
 	var posicao	= 5;
 	var listapadrao = {marginLeft: "", fontSize: "1em", marginTop: ""};
 	var efeitolista = {marginLeft: "-11px", fontSize: "2em", marginTop: "3px"};
@@ -32,51 +12,60 @@
 	var paragrafo = "Texto default";
 	var link = '';
 	
-	
+		
+
+		function teste(){
+			 var myVar = {};
+			  myVar = 5;
+		}
+
+		
 		function handle(delta, ver) {
-			
-			if(posicao >= 214){
+	
+			if(window.myVar == 5){alert("5");}
+			 if(posicao >= 214){
 		    	posicao = 214;
 		    	if(ver == 2){
-					posicao = 156;
+				posicao = 156;
 				}
+
+
 		    }
 
-		   	else if(posicao <= 0){
-		    	posicao = 0 ;
+		    else if (delta < 0){
+		        /* EVENTO COM O MOUSE WHEEL DESCENDO */
+		        posicao = posicao + 1;
+		         $('.text').html('para baixo'+posicao);
+
+		         if(ver == 2){
+					posicao = 156;
+				 }
+
+				if(ver >2 ){ 
+					posicao=ver;
+				}
+
+		    }
+		    else if(posicao <=0){
+		    	posicao=0 ;
 
 	 			if(ver == 2){
 					posicao = 156;
 				}
 
-				if(ver > 2){
+				if(ver >2 ){
 					posicao=ver;
 				}
 		    
 		    }
-
-
-		    /* EVENTO COM O MOUSE WHEEL DESCENDO */
-		    else if (delta < 0){ 
-		        posicao = posicao + 1;
-		        $('.text').html('para baixo'+posicao);
-
-		        if(ver == 2){
-					posicao = 156;
-				}
-
-				if(ver >2 ){ 
-					posicao = ver;
-				}
-
-		    }
-
-		   /* EVENTO COM O MOUSE WHEEL SUBINDO */
+		    
+		   
 		    else {
+		        /* EVENTO COM O MOUSE WHEEL SUBINDO */
 		        posicao = posicao - 1;
-		        $('.text').html('para cima'+posicao);
+		         $('.text').html('para cima'+posicao);
 
-				if(ver == 2){
+				 if(ver == 2){
 					posicao = 156;
 				}
 
@@ -87,7 +76,9 @@
 		    }
 		    	//$('h1').html("Hello world");
 		
+			
 			switch (posicao) {
+
 
 				case 0:	
 
@@ -100,26 +91,51 @@
 
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
-					link = "#biblioteca";
-
-				
-
-					//$("body").css("background", "red");
+					link = "#myModal1";
 
 					$(".metade-esquerda").toggle("puff", 800, function(){
 
-						$(".metade-esquerda").css({"background": "url(img/relatorio/apresentacao.jpg)", "background-repeat": "no-repeat", backgroundSize: "cover"});
+						$(".metade-esquerda").css({"background": "url(img/relatorio/capa.png)", "background-repeat": "no-repeat", backgroundSize: "cover"});
 
-						$(".metade-esquerda").toggle("puff", 400, function(){	
-							$(".metade-esquerda").css({"background": "url(img/relatorio/apresentacao.jpg)", "background-repeat": "no-repeat", backgroundSize: "cover"});						
+						$(".metade-esquerda").toggle("puff", 600, function(){	
+							$(".metade-esquerda").css({"background": "url(img/relatorio/capa.png)", "background-repeat": "no-repeat", backgroundSize: "cover"});						
 						});	
 						
 					});
 
 
-						handledot(1,' Apresentacao');;
-					
-						
+						$("#list1").css(efeitolista); // lista da timeline que se altera
+					 // lista da timeline que se altera
+
+						$("#list2").css(listapadrao); // timeline que mantem-se default
+						$("#list3").css(listapadrao); // timeline que mantem-se default
+						$("#list4").css(listapadrao); // timeline que mantem-se default
+						$("#list5").css(listapadrao); // timeline que mantem-se default
+						$("#list6").css(listapadrao); // timeline que mantem-se default
+						$("#list7").css(listapadrao); // timeline que mantem-se default
+						$("#list8").css(listapadrao); // timeline que mantem-se default
+						$("#list9").css(listapadrao); // timeline que mantem-se default
+						$("#list10").css(listapadrao); // timeline que mantem-se default
+						$("#list11").css(listapadrao); // timeline que mantem-se default
+						$("#list12").css(listapadrao); // timeline que mantem-se default
+						$("#list13").css(listapadrao); // timeline que mantem-se default
+						$("#list14").css(listapadrao); // timeline que mantem-se default
+						$("#list15").css(listapadrao); // timeline que mantem-se default
+						$("#list16").css(listapadrao); // timeline que mantem-se default
+						$("#list17").css(listapadrao); // timeline que mantem-se default
+						$("#list18").css(listapadrao); // timeline que mantem-se default
+						$("#list19").css(listapadrao); // timeline que mantem-se default
+						$("#list20").css(listapadrao); // timeline que mantem-se default
+						$("#list21").css(listapadrao); // timeline que mantem-se default
+						$("#list22").css(listapadrao); // timeline que mantem-se default
+						$("#list23").css(listapadrao); // timeline que mantem-se default
+						$("#list24").css(listapadrao); // timeline que mantem-se default
+						$("#list25").css(listapadrao); // timeline que mantem-se default
+						$("#list26").css(listapadrao); // timeline que mantem-se default
+						$("#list27").css(listapadrao); // timeline que mantem-se default
+
+
+											
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, .p').fadeOut("slow", function(){
 						$('h1').html(titulo);
@@ -153,7 +169,6 @@
 						$("#foto6").attr("id", "foto3");
 						/* FIM DA DEFINICAO DOS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO*/
 
-
 					break;
 
 
@@ -166,21 +181,46 @@
 					link = "#myModal2";
 
 					$("body").css("background", "#6ce9fc");
-					//$(".metade-esquerda").css("background", "purple");
-
 					
-					$(".metade-esquerda").toggle("blind", 800, function(){
+					$(".metade-esquerda").toggle("blind", 700, function(){
 
-						$(".metade-esquerda").css({"background": "url(img/relatorio/Documentacao.jpg)", "background-repeat": "no-repeat", backgroundSize: "cover"});
+						$(".metade-esquerda").css({"background": "url(img/relatorio/Ensino.jpg)", "background-repeat": "no-repeat", backgroundSize: "cover"});
 
-						$(".metade-esquerda").toggle("blind", 400, function(){	
-							$(".metade-esquerda").css({"background": "url(img/relatorio/Documentacao.jpg)", "background-repeat": "no-repeat", backgroundSize: "cover"});						
+						$(".metade-esquerda").toggle("blind", 600, function(){	
+							$(".metade-esquerda").css({"background": "url(img/relatorio/Ensino.jpg)", "background-repeat": "no-repeat", backgroundSize: "cover"});						
 						});	
 						
 					});
 
 
-						handledot(2,' Documentação');
+						$("#list1").css(listapadrao); // lista da timeline que se altera
+						$("#list2").css(efeitolista); // timeline que mantem-se default
+					 // lista da timeline que se altera
+						$("#list3").css(listapadrao); // timeline que mantem-se default
+						$("#list4").css(listapadrao); // timeline que mantem-se default
+						$("#list5").css(listapadrao); // timeline que mantem-se default
+						$("#list6").css(listapadrao); // timeline que mantem-se default
+						$("#list7").css(listapadrao); // timeline que mantem-se default
+						$("#list8").css(listapadrao); // timeline que mantem-se default
+						$("#list9").css(listapadrao); // timeline que mantem-se default
+						$("#list10").css(listapadrao); // timeline que mantem-se default
+						$("#list11").css(listapadrao); // timeline que mantem-se default
+						$("#list12").css(listapadrao); // timeline que mantem-se default
+						$("#list13").css(listapadrao); // timeline que mantem-se default
+						$("#list14").css(listapadrao); // timeline que mantem-se default
+						$("#list15").css(listapadrao); // timeline que mantem-se default
+						$("#list16").css(listapadrao); // timeline que mantem-se default
+						$("#list17").css(listapadrao); // timeline que mantem-se default
+						$("#list18").css(listapadrao); // timeline que mantem-se default
+						$("#list19").css(listapadrao); // timeline que mantem-se default
+						$("#list20").css(listapadrao); // timeline que mantem-se default
+						$("#list21").css(listapadrao); // timeline que mantem-se default
+						$("#list22").css(listapadrao); // timeline que mantem-se default
+						$("#list23").css(listapadrao); // timeline que mantem-se default
+						$("#list24").css(listapadrao); // timeline que mantem-se default
+						$("#list25").css(listapadrao); // timeline que mantem-se default
+						$("#list26").css(listapadrao); // timeline que mantem-se default
+						$("#list27").css(listapadrao); // timeline que mantem-se default
 
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, .p').fadeOut("slow", function(){
@@ -223,18 +263,47 @@
 					titulo = "novo titulo";
 					link = "#myModal3";
 
-					$(".metade-esquerda").css("background", "blue");
-					
+				
 					$(".metade-esquerda").toggle("size", 700, function(){
 
-						$(".metade-esquerda").css("background", "red");
-						$(".metade-esquerda").toggle("size", 700, function(){					
+						$(".metade-esquerda").css({"background": "url(img/relatorio/pesquisa.jpg)", "background-repeat": "no-repeat", backgroundSize: "cover"});
+
+						$(".metade-esquerda").toggle("size", 600, function(){	
+							$(".metade-esquerda").css({"background": "url(img/relatorio/pesquisa.jpg)", "background-repeat": "no-repeat", backgroundSize: "cover"});
+				
 						});
 
 					});
 					
 
-						handledot(3,' teste3');
+						$("#list1").css(listapadrao); // lista da timeline que se altera
+						$("#list2").css(listapadrao); // timeline que mantem-se default
+						$("#list3").css(efeitolista); // timeline que mantem-se default
+					 // lista da timeline que se altera
+						$("#list4").css(listapadrao); // timeline que mantem-se default
+						$("#list5").css(listapadrao); // timeline que mantem-se default
+						$("#list6").css(listapadrao); // timeline que mantem-se default
+						$("#list7").css(listapadrao); // timeline que mantem-se default
+						$("#list8").css(listapadrao); // timeline que mantem-se default
+						$("#list9").css(listapadrao); // timeline que mantem-se default
+						$("#list10").css(listapadrao); // timeline que mantem-se default
+						$("#list11").css(listapadrao); // timeline que mantem-se default
+						$("#list12").css(listapadrao); // timeline que mantem-se default
+						$("#list13").css(listapadrao); // timeline que mantem-se default
+						$("#list14").css(listapadrao); // timeline que mantem-se default
+						$("#list15").css(listapadrao); // timeline que mantem-se default
+						$("#list16").css(listapadrao); // timeline que mantem-se default
+						$("#list17").css(listapadrao); // timeline que mantem-se default
+						$("#list18").css(listapadrao); // timeline que mantem-se default
+						$("#list19").css(listapadrao); // timeline que mantem-se default
+						$("#list20").css(listapadrao); // timeline que mantem-se default
+						$("#list21").css(listapadrao); // timeline que mantem-se default
+						$("#list22").css(listapadrao); // timeline que mantem-se default
+						$("#list23").css(listapadrao); // timeline que mantem-se default
+						$("#list24").css(listapadrao); // timeline que mantem-se default
+						$("#list25").css(listapadrao); // timeline que mantem-se default
+						$("#list26").css(listapadrao); // timeline que mantem-se default
+						$("#list27").css(listapadrao); // timeline que mantem-se default
 
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, .p').fadeOut("slow", function(){
@@ -279,15 +348,44 @@
 					titulo = "novo titulo";
 					link = "#myModal4";
 
-					$(".metade-esquerda").css("background", "red");
-					$(".metade-esquerda").toggle("clip", 800, function(){
+					$(".metade-esquerda").toggle("clip", 700, function(){
 
-						$(".metade-esquerda").css("background", "black");
-						$(".metade-esquerda").toggle("clip", 800, function(){					
+						$(".metade-esquerda").css({"background": "url(img/relatorio/Extensão.jpg)", "background-repeat": "no-repeat", backgroundSize: "cover"});
+
+						$(".metade-esquerda").toggle("clip", 600, function(){
+							$(".metade-esquerda").css({"background": "url(img/relatorio/Extensão.jpg)", "background-repeat": "no-repeat", backgroundSize: "cover"});
+					
 						});
 
 					});
-						handledot(4,' teste4');
+						$("#list1").css(listapadrao); // lista da timeline que se altera
+						$("#list2").css(listapadrao); // timeline que mantem-se default
+						$("#list3").css(listapadrao); // timeline que mantem-se default
+						$("#list4").css(efeitolista); // timeline que mantem-se default
+					 // lista da timeline que se altera
+						$("#list5").css(listapadrao); // timeline que mantem-se default
+						$("#list6").css(listapadrao); // timeline que mantem-se default
+						$("#list7").css(listapadrao); // timeline que mantem-se default
+						$("#list8").css(listapadrao); // timeline que mantem-se default
+						$("#list9").css(listapadrao); // timeline que mantem-se default
+						$("#list10").css(listapadrao); // timeline que mantem-se default
+						$("#list11").css(listapadrao); // timeline que mantem-se default
+						$("#list12").css(listapadrao); // timeline que mantem-se default
+						$("#list13").css(listapadrao); // timeline que mantem-se default
+						$("#list14").css(listapadrao); // timeline que mantem-se default
+						$("#list15").css(listapadrao); // timeline que mantem-se default
+						$("#list16").css(listapadrao); // timeline que mantem-se default
+						$("#list17").css(listapadrao); // timeline que mantem-se default
+						$("#list18").css(listapadrao); // timeline que mantem-se default
+						$("#list19").css(listapadrao); // timeline que mantem-se default
+						$("#list20").css(listapadrao); // timeline que mantem-se default
+						$("#list21").css(listapadrao); // timeline que mantem-se default
+						$("#list22").css(listapadrao); // timeline que mantem-se default
+						$("#list23").css(listapadrao); // timeline que mantem-se default
+						$("#list24").css(listapadrao); // timeline que mantem-se default
+						$("#list25").css(listapadrao); // timeline que mantem-se default
+						$("#list26").css(listapadrao); // timeline que mantem-se default
+						$("#list27").css(listapadrao); // timeline que mantem-se default
 
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, .p').fadeOut("slow", function(){
@@ -321,16 +419,42 @@
 					titulo = "novo titulo";
 					link = "#myModal5";
 
-					$(".metade-esquerda").css("background", "black");
 					
-					$(".metade-esquerda").toggle("blind", 1000, function(){
+					$(".metade-esquerda").toggle("blind", 700, function(){
 
 						$(".metade-esquerda").css("background", "blue");
-						$(".metade-esquerda").toggle("blind", 1000, function(){					
+						$(".metade-esquerda").toggle("blind", 600, function(){					
 						});
 
 					});
-						handledot(5,' Teste5');
+						$("#list1").css(listapadrao); // lista da timeline que se altera
+						$("#list2").css(listapadrao); // timeline que mantem-se default
+						$("#list3").css(listapadrao); // timeline que mantem-se default
+						$("#list4").css(listapadrao); // timeline que mantem-se default
+						$("#list5").css(efeitolista); // timeline que mantem-se default
+					 // lista da timeline que se altera
+						$("#list6").css(listapadrao); // timeline que mantem-se default
+						$("#list7").css(listapadrao); // timeline que mantem-se default
+						$("#list8").css(listapadrao); // timeline que mantem-se default
+						$("#list9").css(listapadrao); // timeline que mantem-se default
+						$("#list10").css(listapadrao); // timeline que mantem-se default
+						$("#list11").css(listapadrao); // timeline que mantem-se default
+						$("#list12").css(listapadrao); // timeline que mantem-se default
+						$("#list13").css(listapadrao); // timeline que mantem-se default
+						$("#list14").css(listapadrao); // timeline que mantem-se default
+						$("#list15").css(listapadrao); // timeline que mantem-se default
+						$("#list16").css(listapadrao); // timeline que mantem-se default
+						$("#list17").css(listapadrao); // timeline que mantem-se default
+						$("#list18").css(listapadrao); // timeline que mantem-se default
+						$("#list19").css(listapadrao); // timeline que mantem-se default
+						$("#list20").css(listapadrao); // timeline que mantem-se default
+						$("#list21").css(listapadrao); // timeline que mantem-se default
+						$("#list22").css(listapadrao); // timeline que mantem-se default
+						$("#list23").css(listapadrao); // timeline que mantem-se default
+						$("#list24").css(listapadrao); // timeline que mantem-se default
+						$("#list25").css(listapadrao); // timeline que mantem-se default
+						$("#list26").css(listapadrao); // timeline que mantem-se default
+						$("#list27").css(listapadrao); // timeline que mantem-se default
 
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, .p').fadeOut("slow", function(){
@@ -373,18 +497,43 @@
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal6";
-
-					$(".metade-esquerda").css("background", "blue");
 					
-					$(".metade-esquerda").toggle("puff", 1000, function(){
+					$(".metade-esquerda").toggle("puff", 700, function(){
 
 						$(".metade-esquerda").css("background", "purple");
-						$(".metade-esquerda").toggle("puff", 1000, function(){					
-						});
+						$(".metade-esquerda").toggle("puff", 600, function(){					
+					});
 
 					});
 
-						handledot(6,'Teste6');
+						$("#list1").css(listapadrao); // lista da timeline que se altera
+						$("#list2").css(listapadrao); // timeline que mantem-se default
+						$("#list3").css(listapadrao); // timeline que mantem-se default
+						$("#list4").css(listapadrao); // timeline que mantem-se default
+						$("#list5").css(listapadrao); // timeline que mantem-se default
+						$("#list6").css(efeitolista); // timeline que mantem-se default
+					 // lista da timeline que se altera
+						$("#list7").css(listapadrao); // timeline que mantem-se default
+						$("#list8").css(listapadrao); // timeline que mantem-se default
+						$("#list9").css(listapadrao); // timeline que mantem-se default
+						$("#list10").css(listapadrao); // timeline que mantem-se default
+						$("#list11").css(listapadrao); // timeline que mantem-se default
+						$("#list12").css(listapadrao); // timeline que mantem-se default
+						$("#list13").css(listapadrao); // timeline que mantem-se default
+						$("#list14").css(listapadrao); // timeline que mantem-se default
+						$("#list15").css(listapadrao); // timeline que mantem-se default
+						$("#list16").css(listapadrao); // timeline que mantem-se default
+						$("#list17").css(listapadrao); // timeline que mantem-se default
+						$("#list18").css(listapadrao); // timeline que mantem-se default
+						$("#list19").css(listapadrao); // timeline que mantem-se default
+						$("#list20").css(listapadrao); // timeline que mantem-se default
+						$("#list21").css(listapadrao); // timeline que mantem-se default
+						$("#list22").css(listapadrao); // timeline que mantem-se default
+						$("#list23").css(listapadrao); // timeline que mantem-se default
+						$("#list24").css(listapadrao); // timeline que mantem-se default
+						$("#list25").css(listapadrao); // timeline que mantem-se default
+						$("#list26").css(listapadrao); // timeline que mantem-se default
+						$("#list27").css(listapadrao); // timeline que mantem-se default
 
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, .p').fadeOut("slow", function(){
@@ -427,18 +576,43 @@
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal7";
-
-					$(".metade-esquerda").css("background", "purple");
 					
-					$(".metade-esquerda").toggle("blind", 1000, function(){
+					$(".metade-esquerda").toggle("clip", 800, function(){
 
 						$(".metade-esquerda").css("background", "blue");
-						$(".metade-esquerda").toggle("blind", 1000, function(){					
+						$(".metade-esquerda").toggle("clip", 600, function(){					
 						});
 
 					});
 
-						handledot(7,' Teste7');
+						$("#list1").css(listapadrao); // lista da timeline que se altera
+						$("#list2").css(listapadrao); // timeline que mantem-se default
+						$("#list3").css(listapadrao); // timeline que mantem-se default
+						$("#list4").css(listapadrao); // timeline que mantem-se default
+						$("#list5").css(listapadrao); // timeline que mantem-se default
+						$("#list6").css(listapadrao); // timeline que mantem-se default
+						$("#list7").css(efeitolista); // timeline que mantem-se default
+					 // lista da timeline que se altera
+						$("#list8").css(listapadrao); // timeline que mantem-se default
+						$("#list9").css(listapadrao); // timeline que mantem-se default
+						$("#list10").css(listapadrao); // timeline que mantem-se default
+						$("#list11").css(listapadrao); // timeline que mantem-se default
+						$("#list12").css(listapadrao); // timeline que mantem-se default
+						$("#list13").css(listapadrao); // timeline que mantem-se default
+						$("#list14").css(listapadrao); // timeline que mantem-se default
+						$("#list15").css(listapadrao); // timeline que mantem-se default
+						$("#list16").css(listapadrao); // timeline que mantem-se default
+						$("#list17").css(listapadrao); // timeline que mantem-se default
+						$("#list18").css(listapadrao); // timeline que mantem-se default
+						$("#list19").css(listapadrao); // timeline que mantem-se default
+						$("#list20").css(listapadrao); // timeline que mantem-se default
+						$("#list21").css(listapadrao); // timeline que mantem-se default
+						$("#list22").css(listapadrao); // timeline que mantem-se default
+						$("#list23").css(listapadrao); // timeline que mantem-se default
+						$("#list24").css(listapadrao); // timeline que mantem-se default
+						$("#list25").css(listapadrao); // timeline que mantem-se default
+						$("#list26").css(listapadrao); // timeline que mantem-se default
+						$("#list27").css(listapadrao); // timeline que mantem-se default
 
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, .p').fadeOut("slow", function(){
@@ -482,16 +656,42 @@
 					titulo = "novo titulo";
 					link = "#myModal8";
 
-					$(".metade-esquerda").css("background", "blue");
 					
-					$(".metade-esquerda").toggle("size", 1000, function(){
+					$(".metade-esquerda").toggle("size", 800, function(){
 
 						$(".metade-esquerda").css("background", "green");
-						$(".metade-esquerda").toggle("size", 1000, function(){					
+						$(".metade-esquerda").toggle("size", 600, function(){					
 						});
 
 					});
-						handledot(8, 'Teste8');
+						$("#list1").css(listapadrao); // lista da timeline que se altera
+						$("#list2").css(listapadrao); // timeline que mantem-se default
+						$("#list3").css(listapadrao); // timeline que mantem-se default
+						$("#list4").css(listapadrao); // timeline que mantem-se default
+						$("#list5").css(listapadrao); // timeline que mantem-se default
+						$("#list6").css(listapadrao); // timeline que mantem-se default
+						$("#list7").css(listapadrao); // timeline que mantem-se default
+						$("#list8").css(efeitolista); // timeline que mantem-se default
+					 // lista da timeline que se altera
+						$("#list9").css(listapadrao); // timeline que mantem-se default
+						$("#list10").css(listapadrao); // timeline que mantem-se default
+						$("#list11").css(listapadrao); // timeline que mantem-se default
+						$("#list12").css(listapadrao); // timeline que mantem-se default
+						$("#list13").css(listapadrao); // timeline que mantem-se default
+						$("#list14").css(listapadrao); // timeline que mantem-se default
+						$("#list15").css(listapadrao); // timeline que mantem-se default
+						$("#list16").css(listapadrao); // timeline que mantem-se default
+						$("#list17").css(listapadrao); // timeline que mantem-se default
+						$("#list18").css(listapadrao); // timeline que mantem-se default
+						$("#list19").css(listapadrao); // timeline que mantem-se default
+						$("#list20").css(listapadrao); // timeline que mantem-se default
+						$("#list21").css(listapadrao); // timeline que mantem-se default
+						$("#list22").css(listapadrao); // timeline que mantem-se default
+						$("#list23").css(listapadrao); // timeline que mantem-se default
+						$("#list24").css(listapadrao); // timeline que mantem-se default
+						$("#list25").css(listapadrao); // timeline que mantem-se default
+						$("#list26").css(listapadrao); // timeline que mantem-se default
+						$("#list27").css(listapadrao); // timeline que mantem-se default						
 
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, .p').fadeOut("slow", function(){
@@ -534,17 +734,43 @@
 					titulo = "novo titulo";
 					link = "#myModal9";
 
-					$(".metade-esquerda").css("background", "green");
 					
-					$(".metade-esquerda").toggle("clip", 1000, function(){
+					$(".metade-esquerda").toggle("blind", 800, function(){
 
 						$(".metade-esquerda").css("background", "blue");
-						$(".metade-esquerda").toggle("clip", 1000, function(){					
+						$(".metade-esquerda").toggle("blind", 600, function(){					
 						});
 
 
 					});
-						handledot(9,' Teste9');
+						$("#list1").css(listapadrao); // lista da timeline que se altera
+						$("#list2").css(listapadrao); // timeline que mantem-se default
+						$("#list3").css(listapadrao); // timeline que mantem-se default
+						$("#list4").css(listapadrao); // timeline que mantem-se default
+						$("#list5").css(listapadrao); // timeline que mantem-se default
+						$("#list6").css(listapadrao); // timeline que mantem-se default
+						$("#list7").css(listapadrao); // timeline que mantem-se default
+						$("#list8").css(listapadrao); // timeline que mantem-se default
+						$("#list9").css(efeitolista); // timeline que mantem-se default
+					 // lista da timeline que se altera
+						$("#list10").css(listapadrao); // timeline que mantem-se default
+						$("#list11").css(listapadrao); // timeline que mantem-se default
+						$("#list12").css(listapadrao); // timeline que mantem-se default
+						$("#list13").css(listapadrao); // timeline que mantem-se default
+						$("#list14").css(listapadrao); // timeline que mantem-se default
+						$("#list15").css(listapadrao); // timeline que mantem-se default
+						$("#list16").css(listapadrao); // timeline que mantem-se default
+						$("#list17").css(listapadrao); // timeline que mantem-se default
+						$("#list18").css(listapadrao); // timeline que mantem-se default
+						$("#list19").css(listapadrao); // timeline que mantem-se default
+						$("#list20").css(listapadrao); // timeline que mantem-se default
+						$("#list21").css(listapadrao); // timeline que mantem-se default
+						$("#list22").css(listapadrao); // timeline que mantem-se default
+						$("#list23").css(listapadrao); // timeline que mantem-se default
+						$("#list24").css(listapadrao); // timeline que mantem-se default
+						$("#list25").css(listapadrao); // timeline que mantem-se default
+						$("#list26").css(listapadrao); // timeline que mantem-se default
+						$("#list27").css(listapadrao); // timeline que mantem-se default						
 
 
 						$(".metade-esquerda").css("background", "purple");
@@ -594,18 +820,43 @@
 					titulo = "novo titulo";
 					link = "#myModal10";
 						
-					$(".metade-esquerda").css("background", "blue");
 					
-					$(".metade-esquerda").toggle("blind", 1000, function(){
+					$(".metade-esquerda").toggle("puff", 800, function(){
 
 						$(".metade-esquerda").css("background", "red");
-						$(".metade-esquerda").toggle("blind", 1000, function(){					
+						$(".metade-esquerda").toggle("puff", 600, function(){					
 						});
 
 					});
 
-						handledot(10,' teste10');
-
+						$("#list1").css(listapadrao); // lista da timeline que se altera
+						$("#list2").css(listapadrao); // timeline que mantem-se default
+						$("#list3").css(listapadrao); // timeline que mantem-se default
+						$("#list4").css(listapadrao); // timeline que mantem-se default
+						$("#list5").css(listapadrao); // timeline que mantem-se default
+						$("#list6").css(listapadrao); // timeline que mantem-se default
+						$("#list7").css(listapadrao); // timeline que mantem-se default
+						$("#list8").css(listapadrao); // timeline que mantem-se default
+						$("#list9").css(listapadrao); // timeline que mantem-se default
+						$("#list10").css(efeitolista); // timeline que mantem-se default
+						 // lista da timeline que se altera
+						$("#list11").css(listapadrao); // timeline que mantem-se default
+						$("#list12").css(listapadrao); // timeline que mantem-se default
+						$("#list13").css(listapadrao); // timeline que mantem-se default
+						$("#list14").css(listapadrao); // timeline que mantem-se default
+						$("#list15").css(listapadrao); // timeline que mantem-se default
+						$("#list16").css(listapadrao); // timeline que mantem-se default
+						$("#list17").css(listapadrao); // timeline que mantem-se default
+						$("#list18").css(listapadrao); // timeline que mantem-se default
+						$("#list19").css(listapadrao); // timeline que mantem-se default
+						$("#list20").css(listapadrao); // timeline que mantem-se default
+						$("#list21").css(listapadrao); // timeline que mantem-se default
+						$("#list22").css(listapadrao); // timeline que mantem-se default
+						$("#list23").css(listapadrao); // timeline que mantem-se default
+						$("#list24").css(listapadrao); // timeline que mantem-se default
+						$("#list25").css(listapadrao); // timeline que mantem-se default
+						$("#list26").css(listapadrao); // timeline que mantem-se default
+						$("#list27").css(listapadrao); // timeline que mantem-se default						 
 
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, .p').fadeOut("slow", function(){
@@ -649,15 +900,39 @@
 				titulo = "novo titulo";
 				link = "#myModal11";						
 									
-				$(".metade-esquerda").toggle("blind", 1000, function(){
+				$(".metade-esquerda").toggle("size", 800, function(){
 					$(".metade-esquerda").css("background", "red");
-					$(".metade-esquerda").toggle("blind", 1000, function(){					
+					$(".metade-esquerda").toggle("size", 600, function(){					
 					});
 				});
-					
-					handledot(11,'teste11');
-					
-
+					$("#list1").css(listapadrao); // lista da timeline que se altera
+					$("#list2").css(listapadrao); // timeline que mantem-se default
+					$("#list3").css(listapadrao); // timeline que mantem-se default
+					$("#list4").css(listapadrao); // timeline que mantem-se default
+					$("#list5").css(listapadrao); // timeline que mantem-se default
+					$("#list6").css(listapadrao); // timeline que mantem-se default
+					$("#list7").css(listapadrao); // timeline que mantem-se default
+					$("#list8").css(listapadrao); // timeline que mantem-se default
+					$("#list9").css(listapadrao); // timeline que mantem-se default
+					$("#list10").css(listapadrao); // timeline que mantem-se default
+					// lista da timeline que se altera
+					$("#list11").css(efeitolista); // timeline que mantem-se default
+					$("#list12").css(listapadrao); // timeline que mantem-se default
+					$("#list13").css(listapadrao); // timeline que mantem-se default
+					$("#list14").css(listapadrao); // timeline que mantem-se default
+					$("#list15").css(listapadrao); // timeline que mantem-se default
+					$("#list16").css(listapadrao); // timeline que mantem-se default
+					$("#list17").css(listapadrao); // timeline que mantem-se default
+					$("#list18").css(listapadrao); // timeline que mantem-se default
+					$("#list19").css(listapadrao); // timeline que mantem-se default
+					$("#list20").css(listapadrao); // timeline que mantem-se default
+					$("#list21").css(listapadrao); // timeline que mantem-se default
+					$("#list22").css(listapadrao); // timeline que mantem-se default
+					$("#list23").css(listapadrao); // timeline que mantem-se default
+					$("#list24").css(listapadrao); // timeline que mantem-se default
+					$("#list25").css(listapadrao); // timeline que mantem-se default
+					$("#list26").css(listapadrao); // timeline que mantem-se default
+					$("#list27").css(listapadrao); // timeline que mantem-se default						 
 					/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 					$('h1, .p').fadeOut("slow", function(){
 						$('h1').html(titulo);
@@ -697,15 +972,42 @@
 						
 					
 					
-					$(".metade-esquerda").toggle("blind", 1000, function(){
+					$(".metade-esquerda").toggle("blind", 800, function(){
 
 						$(".metade-esquerda").css("background", "red");
-						$(".metade-esquerda").toggle("blind", 1000, function(){					
+						$(".metade-esquerda").toggle("blind", 600, function(){					
 						});
 
 					});
 
-						handledot(12,'');
+						$("#list1").css(listapadrao); // lista da timeline que se altera
+						$("#list2").css(listapadrao); // timeline que mantem-se default
+						$("#list3").css(listapadrao); // timeline que mantem-se default
+						$("#list4").css(listapadrao); // timeline que mantem-se default
+						$("#list5").css(listapadrao); // timeline que mantem-se default
+						$("#list6").css(listapadrao); // timeline que mantem-se default
+						$("#list7").css(listapadrao); // timeline que mantem-se default
+						$("#list8").css(listapadrao); // timeline que mantem-se default
+						$("#list9").css(listapadrao); // timeline que mantem-se default
+						$("#list10").css(listapadrao); // timeline que mantem-se default
+						$("#list11").css(listapadrao); // timeline que mantem-se default
+						// lista da timeline que se altera
+						$("#list12").css(efeitolista); // timeline que mantem-se default
+						$("#list13").css(listapadrao); // timeline que mantem-se default
+						$("#list14").css(listapadrao); // timeline que mantem-se default
+						$("#list15").css(listapadrao); // timeline que mantem-se default
+						$("#list16").css(listapadrao); // timeline que mantem-se default
+						$("#list17").css(listapadrao); // timeline que mantem-se default
+						$("#list18").css(listapadrao); // timeline que mantem-se default
+						$("#list19").css(listapadrao); // timeline que mantem-se default
+						$("#list20").css(listapadrao); // timeline que mantem-se default
+						$("#list21").css(listapadrao); // timeline que mantem-se default
+						$("#list22").css(listapadrao); // timeline que mantem-se default
+						$("#list23").css(listapadrao); // timeline que mantem-se default
+						$("#list24").css(listapadrao); // timeline que mantem-se default
+						$("#list25").css(listapadrao); // timeline que mantem-se default
+						$("#list26").css(listapadrao); // timeline que mantem-se default
+						$("#list27").css(listapadrao); // timeline que mantem-se default						 
 
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, .p').fadeOut("slow", function(){
@@ -747,18 +1049,44 @@
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal13";
-						
-					$(".metade-esquerda").css("background", "red");
+
 					
-					$(".metade-esquerda").toggle("blind", 1000, function(){
+					$(".metade-esquerda").toggle("clip", 800, function(){
 
 						$(".metade-esquerda").css("background", "red");
-						$(".metade-esquerda").toggle("blind", 1000, function(){					
+						$(".metade-esquerda").toggle("clip", 600, function(){					
 						});
 
 					});
 
-						handledot(13,'');
+						$("#list1").css(listapadrao); // lista da timeline que se altera
+						$("#list2").css(listapadrao); // timeline que mantem-se default
+						$("#list3").css(listapadrao); // timeline que mantem-se default
+						$("#list4").css(listapadrao); // timeline que mantem-se default
+						$("#list5").css(listapadrao); // timeline que mantem-se default
+						$("#list6").css(listapadrao); // timeline que mantem-se default
+						$("#list7").css(listapadrao); // timeline que mantem-se default
+						$("#list8").css(listapadrao); // timeline que mantem-se default
+						$("#list9").css(listapadrao); // timeline que mantem-se default
+						$("#list10").css(listapadrao); // timeline que mantem-se default
+						$("#list11").css(listapadrao); // timeline que mantem-se default
+						$("#list12").css(listapadrao); // timeline que mantem-se default
+						// lista da timeline que se altera
+						$("#list13").css(efeitolista); // timeline que mantem-se default
+						$("#list14").css(listapadrao); // timeline que mantem-se default
+						$("#list15").css(listapadrao); // timeline que mantem-se default
+						$("#list16").css(listapadrao); // timeline que mantem-se default
+						$("#list17").css(listapadrao); // timeline que mantem-se default
+						$("#list18").css(listapadrao); // timeline que mantem-se default
+						$("#list19").css(listapadrao); // timeline que mantem-se default
+						$("#list20").css(listapadrao); // timeline que mantem-se default
+						$("#list21").css(listapadrao); // timeline que mantem-se default
+						$("#list22").css(listapadrao); // timeline que mantem-se default
+						$("#list23").css(listapadrao); // timeline que mantem-se default
+						$("#list24").css(listapadrao); // timeline que mantem-se default
+						$("#list25").css(listapadrao); // timeline que mantem-se default
+						$("#list26").css(listapadrao); // timeline que mantem-se default
+						$("#list27").css(listapadrao); // timeline que mantem-se default						 
 
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, .p').fadeOut("slow", function(){
@@ -800,17 +1128,43 @@
 					titulo = "novo titulo";
 					link = "#myModal14";
 						
-					$(".metade-esquerda").css("background", "blue");
 					
-					$(".metade-esquerda").toggle("blind", 1000, function(){
+					$(".metade-esquerda").toggle("puff", 800, function(){
 
 						$(".metade-esquerda").css("background", "red");
-						$(".metade-esquerda").toggle("blind", 1000, function(){					
+						$(".metade-esquerda").toggle("puff", 600, function(){					
 						});
 
 					});
 
-						handledot(14,'');
+						$("#list1").css(listapadrao); // lista da timeline que se altera
+						$("#list2").css(listapadrao); // timeline que mantem-se default
+						$("#list3").css(listapadrao); // timeline que mantem-se default
+						$("#list4").css(listapadrao); // timeline que mantem-se default
+						$("#list5").css(listapadrao); // timeline que mantem-se default
+						$("#list6").css(listapadrao); // timeline que mantem-se default
+						$("#list7").css(listapadrao); // timeline que mantem-se default
+						$("#list8").css(listapadrao); // timeline que mantem-se default
+						$("#list9").css(listapadrao); // timeline que mantem-se default
+						$("#list10").css(listapadrao); // timeline que mantem-se default
+						$("#list11").css(listapadrao); // timeline que mantem-se default
+						$("#list12").css(listapadrao); // timeline que mantem-se default
+						$("#list13").css(listapadrao); // timeline que mantem-se default
+						// lista da timeline que se altera
+						$("#list14").css(efeitolista); // timeline que mantem-se default
+						$("#list15").css(listapadrao); // timeline que mantem-se default
+						$("#list16").css(listapadrao); // timeline que mantem-se default
+						$("#list17").css(listapadrao); // timeline que mantem-se default
+						$("#list18").css(listapadrao); // timeline que mantem-se default
+						$("#list19").css(listapadrao); // timeline que mantem-se default
+						$("#list20").css(listapadrao); // timeline que mantem-se default
+						$("#list21").css(listapadrao); // timeline que mantem-se default
+						$("#list22").css(listapadrao); // timeline que mantem-se default
+						$("#list23").css(listapadrao); // timeline que mantem-se default
+						$("#list24").css(listapadrao); // timeline que mantem-se default
+						$("#list25").css(listapadrao); // timeline que mantem-se default
+						$("#list26").css(listapadrao); // timeline que mantem-se default
+						$("#list27").css(listapadrao); // timeline que mantem-se default						 
 
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, .p').fadeOut("slow", function(){
@@ -851,17 +1205,43 @@
 					titulo = "novo titulo";
 					link = "#myModal15";
 						
-					$(".metade-esquerda").css("background", "blue");
 					
-					$(".metade-esquerda").toggle("blind", 1000, function(){
+					$(".metade-esquerda").toggle("size", 800, function(){
 
 						$(".metade-esquerda").css("background", "red");
-						$(".metade-esquerda").toggle("blind", 1000, function(){					
+						$(".metade-esquerda").toggle("size", 600, function(){					
 						});
 
 					});
 
-						handledot(15,'');
+						$("#list1").css(listapadrao); // lista da timeline que se altera
+						$("#list2").css(listapadrao); // timeline que mantem-se default
+						$("#list3").css(listapadrao); // timeline que mantem-se default
+						$("#list4").css(listapadrao); // timeline que mantem-se default
+						$("#list5").css(listapadrao); // timeline que mantem-se default
+						$("#list6").css(listapadrao); // timeline que mantem-se default
+						$("#list7").css(listapadrao); // timeline que mantem-se default
+						$("#list8").css(listapadrao); // timeline que mantem-se default
+						$("#list9").css(listapadrao); // timeline que mantem-se default
+						$("#list10").css(listapadrao); // timeline que mantem-se default
+						$("#list11").css(listapadrao); // timeline que mantem-se default
+						$("#list12").css(listapadrao); // timeline que mantem-se default
+						$("#list13").css(listapadrao); // timeline que mantem-se default
+						$("#list14").css(listapadrao); // timeline que mantem-se default
+						// lista da timeline que se altera
+						$("#list15").css(efeitolista); // timeline que mantem-se default
+						$("#list16").css(listapadrao); // timeline que mantem-se default
+						$("#list17").css(listapadrao); // timeline que mantem-se default
+						$("#list18").css(listapadrao); // timeline que mantem-se default
+						$("#list19").css(listapadrao); // timeline que mantem-se default
+						$("#list20").css(listapadrao); // timeline que mantem-se default
+						$("#list21").css(listapadrao); // timeline que mantem-se default
+						$("#list22").css(listapadrao); // timeline que mantem-se default
+						$("#list23").css(listapadrao); // timeline que mantem-se default
+						$("#list24").css(listapadrao); // timeline que mantem-se default
+						$("#list25").css(listapadrao); // timeline que mantem-se default
+						$("#list26").css(listapadrao); // timeline que mantem-se default
+						$("#list27").css(listapadrao); // timeline que mantem-se default						 
 
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, .p').fadeOut("slow", function(){
@@ -902,17 +1282,43 @@
 					titulo = "novo titulo";
 					link = "#myModal16";
 						
-					$(".metade-esquerda").css("background", "blue");
-					
-					$(".metade-esquerda").toggle("blind", 1000, function(){
+				
+					$(".metade-esquerda").toggle("blind", 800, function(){
 
 						$(".metade-esquerda").css("background", "red");
-						$(".metade-esquerda").toggle("blind", 1000, function(){					
+						$(".metade-esquerda").toggle("blind", 600, function(){					
 						});
 
 					});
 
-						handledot(16,'');
+						$("#list1").css(listapadrao); // lista da timeline que se altera
+						$("#list2").css(listapadrao); // timeline que mantem-se default
+						$("#list3").css(listapadrao); // timeline que mantem-se default
+						$("#list4").css(listapadrao); // timeline que mantem-se default
+						$("#list5").css(listapadrao); // timeline que mantem-se default
+						$("#list6").css(listapadrao); // timeline que mantem-se default
+						$("#list7").css(listapadrao); // timeline que mantem-se default
+						$("#list8").css(listapadrao); // timeline que mantem-se default
+						$("#list9").css(listapadrao); // timeline que mantem-se default
+						$("#list10").css(listapadrao); // timeline que mantem-se default
+						$("#list11").css(listapadrao); // timeline que mantem-se default
+						$("#list12").css(listapadrao); // timeline que mantem-se default
+						$("#list13").css(listapadrao); // timeline que mantem-se default
+						$("#list14").css(listapadrao); // timeline que mantem-se default
+						$("#list15").css(listapadrao); // timeline que mantem-se default
+						// lista da timeline que se altera
+						$("#list16").css(efeitolista); // timeline que mantem-se default
+						$("#list17").css(listapadrao); // timeline que mantem-se default
+						$("#list18").css(listapadrao); // timeline que mantem-se default
+						$("#list19").css(listapadrao); // timeline que mantem-se default
+						$("#list20").css(listapadrao); // timeline que mantem-se default
+						$("#list21").css(listapadrao); // timeline que mantem-se default
+						$("#list22").css(listapadrao); // timeline que mantem-se default
+						$("#list23").css(listapadrao); // timeline que mantem-se default
+						$("#list24").css(listapadrao); // timeline que mantem-se default
+						$("#list25").css(listapadrao); // timeline que mantem-se default
+						$("#list26").css(listapadrao); // timeline que mantem-se default
+						$("#list27").css(listapadrao); // timeline que mantem-se default						 
 
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, .p').fadeOut("slow", function(){
@@ -953,18 +1359,44 @@
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal17";
-						
-					$(".metade-esquerda").css("background", "blue");
+
 					
-					$(".metade-esquerda").toggle("blind", 1000, function(){
+					$(".metade-esquerda").toggle("clip", 800, function(){
 
 						$(".metade-esquerda").css("background", "red");
-						$(".metade-esquerda").toggle("blind", 1000, function(){					
+						$(".metade-esquerda").toggle("clip", 600, function(){					
 						});
 
 					});
 
-						handledot(17,'');
+						$("#list1").css(listapadrao); // lista da timeline que se altera
+						$("#list2").css(listapadrao); // timeline que mantem-se default
+						$("#list3").css(listapadrao); // timeline que mantem-se default
+						$("#list4").css(listapadrao); // timeline que mantem-se default
+						$("#list5").css(listapadrao); // timeline que mantem-se default
+						$("#list6").css(listapadrao); // timeline que mantem-se default
+						$("#list7").css(listapadrao); // timeline que mantem-se default
+						$("#list8").css(listapadrao); // timeline que mantem-se default
+						$("#list9").css(listapadrao); // timeline que mantem-se default
+						$("#list10").css(listapadrao); // timeline que mantem-se default
+						$("#list11").css(listapadrao); // timeline que mantem-se default
+						$("#list12").css(listapadrao); // timeline que mantem-se default
+						$("#list13").css(listapadrao); // timeline que mantem-se default
+						$("#list14").css(listapadrao); // timeline que mantem-se default
+						$("#list15").css(listapadrao); // timeline que mantem-se default
+						$("#list16").css(listapadrao); // timeline que mantem-se default
+						// lista da timeline que se altera
+						$("#list17").css(efeitolista); // timeline que mantem-se default
+						$("#list18").css(listapadrao); // timeline que mantem-se default
+						$("#list19").css(listapadrao); // timeline que mantem-se default
+						$("#list20").css(listapadrao); // timeline que mantem-se default
+						$("#list21").css(listapadrao); // timeline que mantem-se default
+						$("#list22").css(listapadrao); // timeline que mantem-se default
+						$("#list23").css(listapadrao); // timeline que mantem-se default
+						$("#list24").css(listapadrao); // timeline que mantem-se default
+						$("#list25").css(listapadrao); // timeline que mantem-se default
+						$("#list26").css(listapadrao); // timeline que mantem-se default
+						$("#list27").css(listapadrao); // timeline que mantem-se default						 
 
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, .p').fadeOut("slow", function(){
@@ -1007,18 +1439,44 @@
 					titulo = "novo titulo";
 					link = "#myModal18";
 						
-					$(".metade-esquerda").css("background", "blue");
 					
-					$(".metade-esquerda").toggle("blind", 1000, function(){
+					$(".metade-esquerda").toggle("puff", 800, function(){
 
 						$(".metade-esquerda").css("background", "red");
-						$(".metade-esquerda").toggle("blind", 1000, function(){					
+						$(".metade-esquerda").toggle("puff", 600, function(){					
 						});
 
 					});
 
-						handledot(18,'');
-					
+						$("#list1").css(listapadrao); // lista da timeline que se altera
+						$("#list2").css(listapadrao); // timeline que mantem-se default
+						$("#list3").css(listapadrao); // timeline que mantem-se default
+						$("#list4").css(listapadrao); // timeline que mantem-se default
+						$("#list5").css(listapadrao); // timeline que mantem-se default
+						$("#list6").css(listapadrao); // timeline que mantem-se default
+						$("#list7").css(listapadrao); // timeline que mantem-se default
+						$("#list8").css(listapadrao); // timeline que mantem-se default
+						$("#list9").css(listapadrao); // timeline que mantem-se default
+						$("#list10").css(listapadrao); // timeline que mantem-se default
+						$("#list11").css(listapadrao); // timeline que mantem-se default
+						$("#list12").css(listapadrao); // timeline que mantem-se default
+						$("#list13").css(listapadrao); // timeline que mantem-se default
+						$("#list14").css(listapadrao); // timeline que mantem-se default
+						$("#list15").css(listapadrao); // timeline que mantem-se default
+						$("#list16").css(listapadrao); // timeline que mantem-se default
+						
+						$("#list17").css(listapadrao); // timeline que mantem-se default
+						// lista da timeline que se altera
+						$("#list18").css(efeitolista); // timeline que mantem-se default
+						$("#list19").css(listapadrao); // timeline que mantem-se default
+						$("#list20").css(listapadrao); // timeline que mantem-se default
+						$("#list21").css(listapadrao); // timeline que mantem-se default
+						$("#list22").css(listapadrao); // timeline que mantem-se default
+						$("#list23").css(listapadrao); // timeline que mantem-se default
+						$("#list24").css(listapadrao); // timeline que mantem-se default
+						$("#list25").css(listapadrao); // timeline que mantem-se default
+						$("#list26").css(listapadrao); // timeline que mantem-se default
+						$("#list27").css(listapadrao); // timeline que mantem-se default						 
 
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, .p').fadeOut("slow", function(){
@@ -1061,17 +1519,43 @@
 					titulo = "novo titulo";
 					link = "#myModal19";
 						
-					$(".metade-esquerda").css("background", "blue");
 					
-					$(".metade-esquerda").toggle("blind", 1000, function(){
+					$(".metade-esquerda").toggle("clip", 800, function(){
 
 						$(".metade-esquerda").css("background", "red");
-						$(".metade-esquerda").toggle("blind", 1000, function(){					
+						$(".metade-esquerda").toggle("clip", 600, function(){					
 						});
 
 					});
 
-						handledot(19,'');
+						$("#list1").css(listapadrao); // lista da timeline que se altera
+						$("#list2").css(listapadrao); // timeline que mantem-se default
+						$("#list3").css(listapadrao); // timeline que mantem-se default
+						$("#list4").css(listapadrao); // timeline que mantem-se default
+						$("#list5").css(listapadrao); // timeline que mantem-se default
+						$("#list6").css(listapadrao); // timeline que mantem-se default
+						$("#list7").css(listapadrao); // timeline que mantem-se default
+						$("#list8").css(listapadrao); // timeline que mantem-se default
+						$("#list9").css(listapadrao); // timeline que mantem-se default
+						$("#list10").css(listapadrao); // timeline que mantem-se default
+						$("#list11").css(listapadrao); // timeline que mantem-se default
+						$("#list12").css(listapadrao); // timeline que mantem-se default
+						$("#list13").css(listapadrao); // timeline que mantem-se default
+						$("#list14").css(listapadrao); // timeline que mantem-se default
+						$("#list15").css(listapadrao); // timeline que mantem-se default
+						$("#list16").css(listapadrao); // timeline que mantem-se default
+						$("#list17").css(listapadrao); // timeline que mantem-se default
+						$("#list18").css(listapadrao); // timeline que mantem-se default
+						// lista da timeline que se altera
+						$("#list19").css(efeitolista); // timeline que mantem-se default
+						$("#list20").css(listapadrao); // timeline que mantem-se default
+						$("#list21").css(listapadrao); // timeline que mantem-se default
+						$("#list22").css(listapadrao); // timeline que mantem-se default
+						$("#list23").css(listapadrao); // timeline que mantem-se default
+						$("#list24").css(listapadrao); // timeline que mantem-se default
+						$("#list25").css(listapadrao); // timeline que mantem-se default
+						$("#list26").css(listapadrao); // timeline que mantem-se default
+						$("#list27").css(listapadrao); // timeline que mantem-se default						 
 
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, .p').fadeOut("slow", function(){
@@ -1114,17 +1598,43 @@
 					titulo = "novo titulo";
 					link = "#myModal20";
 						
-					$(".metade-esquerda").css("background", "blue");
 					
-					$(".metade-esquerda").toggle("blind", 1000, function(){
+					$(".metade-esquerda").toggle("size", 800, function(){
 
 						$(".metade-esquerda").css("background", "red");
-						$(".metade-esquerda").toggle("blind", 1000, function(){					
+						$(".metade-esquerda").toggle("size", 600, function(){					
 						});
 
 					});
 
-						handledot(20,'');
+						$("#list1").css(listapadrao); // lista da timeline que se altera
+						$("#list2").css(listapadrao); // timeline que mantem-se default
+						$("#list3").css(listapadrao); // timeline que mantem-se default
+						$("#list4").css(listapadrao); // timeline que mantem-se default
+						$("#list5").css(listapadrao); // timeline que mantem-se default
+						$("#list6").css(listapadrao); // timeline que mantem-se default
+						$("#list7").css(listapadrao); // timeline que mantem-se default
+						$("#list8").css(listapadrao); // timeline que mantem-se default
+						$("#list9").css(listapadrao); // timeline que mantem-se default
+						$("#list10").css(listapadrao); // timeline que mantem-se default
+						$("#list11").css(listapadrao); // timeline que mantem-se default
+						$("#list12").css(listapadrao); // timeline que mantem-se default
+						$("#list13").css(listapadrao); // timeline que mantem-se default
+						$("#list14").css(listapadrao); // timeline que mantem-se default
+						$("#list15").css(listapadrao); // timeline que mantem-se default
+						$("#list16").css(listapadrao); // timeline que mantem-se default
+						$("#list17").css(listapadrao); // timeline que mantem-se default
+						$("#list18").css(listapadrao); // timeline que mantem-se default
+						$("#list19").css(listapadrao); // timeline que mantem-se default
+						// lista da timeline que se altera
+						$("#list20").css(efeitolista); // timeline que mantem-se default
+						$("#list21").css(listapadrao); // timeline que mantem-se default
+						$("#list22").css(listapadrao); // timeline que mantem-se default
+						$("#list23").css(listapadrao); // timeline que mantem-se default
+						$("#list24").css(listapadrao); // timeline que mantem-se default
+						$("#list25").css(listapadrao); // timeline que mantem-se default
+						$("#list26").css(listapadrao); // timeline que mantem-se default
+						$("#list27").css(listapadrao); // timeline que mantem-se default						 
 
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, .p').fadeOut("slow", function(){
@@ -1166,18 +1676,43 @@
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal21";
-						
-					$(".metade-esquerda").css("background", "blue");
 					
-					$(".metade-esquerda").toggle("blind", 1000, function(){
+					$(".metade-esquerda").toggle("blind", 800, function(){
 
 						$(".metade-esquerda").css("background", "red");
-						$(".metade-esquerda").toggle("blind", 1000, function(){					
+						$(".metade-esquerda").toggle("blind", 600, function(){					
 						});
 
 					});
 
-						handledot(21,'');
+						$("#list1").css(listapadrao); // lista da timeline que se altera
+						$("#list2").css(listapadrao); // timeline que mantem-se default
+						$("#list3").css(listapadrao); // timeline que mantem-se default
+						$("#list4").css(listapadrao); // timeline que mantem-se default
+						$("#list5").css(listapadrao); // timeline que mantem-se default
+						$("#list6").css(listapadrao); // timeline que mantem-se default
+						$("#list7").css(listapadrao); // timeline que mantem-se default
+						$("#list8").css(listapadrao); // timeline que mantem-se default
+						$("#list9").css(listapadrao); // timeline que mantem-se default
+						$("#list10").css(listapadrao); // timeline que mantem-se default
+						$("#list11").css(listapadrao); // timeline que mantem-se default
+						$("#list12").css(listapadrao); // timeline que mantem-se default
+						$("#list13").css(listapadrao); // timeline que mantem-se default
+						$("#list14").css(listapadrao); // timeline que mantem-se default
+						$("#list15").css(listapadrao); // timeline que mantem-se default
+						$("#list16").css(listapadrao); // timeline que mantem-se default
+						$("#list17").css(listapadrao); // timeline que mantem-se default
+						$("#list18").css(listapadrao); // timeline que mantem-se default
+						$("#list19").css(listapadrao); // timeline que mantem-se default
+						$("#list20").css(listapadrao); // timeline que mantem-se default
+						// lista da timeline que se altera
+						$("#list21").css(efeitolista); // timeline que mantem-se default
+						$("#list22").css(listapadrao); // timeline que mantem-se default
+						$("#list23").css(listapadrao); // timeline que mantem-se default
+						$("#list24").css(listapadrao); // timeline que mantem-se default
+						$("#list25").css(listapadrao); // timeline que mantem-se default
+						$("#list26").css(listapadrao); // timeline que mantem-se default
+						$("#list27").css(listapadrao); // timeline que mantem-se default						 
 
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, .p').fadeOut("slow", function(){
@@ -1219,17 +1754,43 @@
 					titulo = "novo titulo";
 					link = "#myModal22";
 						
-					$(".metade-esquerda").css("background", "blue");
 					
-					$(".metade-esquerda").toggle("blind", 1000, function(){
+					$(".metade-esquerda").toggle("puff", 800, function(){
 
 						$(".metade-esquerda").css("background", "red");
-						$(".metade-esquerda").toggle("blind", 1000, function(){					
+						$(".metade-esquerda").toggle("puff", 600, function(){					
 						});
 
 					});
 
-						handledot(22,'');
+						$("#list1").css(listapadrao); // lista da timeline que se altera
+						$("#list2").css(listapadrao); // timeline que mantem-se default
+						$("#list3").css(listapadrao); // timeline que mantem-se default
+						$("#list4").css(listapadrao); // timeline que mantem-se default
+						$("#list5").css(listapadrao); // timeline que mantem-se default
+						$("#list6").css(listapadrao); // timeline que mantem-se default
+						$("#list7").css(listapadrao); // timeline que mantem-se default
+						$("#list8").css(listapadrao); // timeline que mantem-se default
+						$("#list9").css(listapadrao); // timeline que mantem-se default
+						$("#list10").css(listapadrao); // timeline que mantem-se default
+						$("#list11").css(listapadrao); // timeline que mantem-se default
+						$("#list12").css(listapadrao); // timeline que mantem-se default
+						$("#list13").css(listapadrao); // timeline que mantem-se default
+						$("#list14").css(listapadrao); // timeline que mantem-se default
+						$("#list15").css(listapadrao); // timeline que mantem-se default
+						$("#list16").css(listapadrao); // timeline que mantem-se default
+						$("#list17").css(listapadrao); // timeline que mantem-se default
+						$("#list18").css(listapadrao); // timeline que mantem-se default
+						$("#list19").css(listapadrao); // timeline que mantem-se default
+						$("#list20").css(listapadrao); // timeline que mantem-se default
+						$("#list21").css(listapadrao); // timeline que mantem-se default
+						// lista da timeline que se altera
+						$("#list22").css(efeitolista); // timeline que mantem-se default
+						$("#list23").css(listapadrao); // timeline que mantem-se default
+						$("#list24").css(listapadrao); // timeline que mantem-se default
+						$("#list25").css(listapadrao); // timeline que mantem-se default
+						$("#list26").css(listapadrao); // timeline que mantem-se default
+						$("#list27").css(listapadrao); // timeline que mantem-se default						 
 
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, .p').fadeOut("slow", function(){
@@ -1270,18 +1831,43 @@
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal23";
-						
-					$(".metade-esquerda").css("background", "blue");
 					
-					$(".metade-esquerda").toggle("blind", 1000, function(){
+					$(".metade-esquerda").toggle("size", 800, function(){
 
 						$(".metade-esquerda").css("background", "red");
-						$(".metade-esquerda").toggle("blind", 1000, function(){					
+						$(".metade-esquerda").toggle("size", 600, function(){					
 						});
 
 					});
 
-						handledot(23,'');
+						$("#list1").css(listapadrao); // lista da timeline que se altera
+						$("#list2").css(listapadrao); // timeline que mantem-se default
+						$("#list3").css(listapadrao); // timeline que mantem-se default
+						$("#list4").css(listapadrao); // timeline que mantem-se default
+						$("#list5").css(listapadrao); // timeline que mantem-se default
+						$("#list6").css(listapadrao); // timeline que mantem-se default
+						$("#list7").css(listapadrao); // timeline que mantem-se default
+						$("#list8").css(listapadrao); // timeline que mantem-se default
+						$("#list9").css(listapadrao); // timeline que mantem-se default
+						$("#list10").css(listapadrao); // timeline que mantem-se default
+						$("#list11").css(listapadrao); // timeline que mantem-se default
+						$("#list12").css(listapadrao); // timeline que mantem-se default
+						$("#list13").css(listapadrao); // timeline que mantem-se default
+						$("#list14").css(listapadrao); // timeline que mantem-se default
+						$("#list15").css(listapadrao); // timeline que mantem-se default
+						$("#list16").css(listapadrao); // timeline que mantem-se default
+						$("#list17").css(listapadrao); // timeline que mantem-se default
+						$("#list18").css(listapadrao); // timeline que mantem-se default
+						$("#list19").css(listapadrao); // timeline que mantem-se default
+						$("#list20").css(listapadrao); // timeline que mantem-se default
+						$("#list21").css(listapadrao); // timeline que mantem-se default
+						$("#list22").css(listapadrao); // timeline que mantem-se default
+						// lista da timeline que se altera
+						$("#list23").css(efeitolista); // timeline que mantem-se default
+						$("#list24").css(listapadrao); // timeline que mantem-se default
+						$("#list25").css(listapadrao); // timeline que mantem-se default
+						$("#list26").css(listapadrao); // timeline que mantem-se default
+						$("#list27").css(listapadrao); // timeline que mantem-se default						 
 
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, .p').fadeOut("slow", function(){
@@ -1323,17 +1909,43 @@
 					titulo = "novo titulo";
 					link = "#myModal24";
 						
-					$(".metade-esquerda").css("background", "blue");
 					
-					$(".metade-esquerda").toggle("blind", 1000, function(){
+					$(".metade-esquerda").toggle("clip", 800, function(){
 
 						$(".metade-esquerda").css("background", "red");
-						$(".metade-esquerda").toggle("blind", 1000, function(){					
+						$(".metade-esquerda").toggle("clip", 600, function(){					
 						});
 
 					});
 
-						handledot(24,'');
+						$("#list1").css(listapadrao); // lista da timeline que se altera
+						$("#list2").css(listapadrao); // timeline que mantem-se default
+						$("#list3").css(listapadrao); // timeline que mantem-se default
+						$("#list4").css(listapadrao); // timeline que mantem-se default
+						$("#list5").css(listapadrao); // timeline que mantem-se default
+						$("#list6").css(listapadrao); // timeline que mantem-se default
+						$("#list7").css(listapadrao); // timeline que mantem-se default
+						$("#list8").css(listapadrao); // timeline que mantem-se default
+						$("#list9").css(listapadrao); // timeline que mantem-se default
+						$("#list10").css(listapadrao); // timeline que mantem-se default
+						$("#list11").css(listapadrao); // timeline que mantem-se default
+						$("#list12").css(listapadrao); // timeline que mantem-se default
+						$("#list13").css(listapadrao); // timeline que mantem-se default
+						$("#list14").css(listapadrao); // timeline que mantem-se default
+						$("#list15").css(listapadrao); // timeline que mantem-se default
+						$("#list16").css(listapadrao); // timeline que mantem-se default
+						$("#list17").css(listapadrao); // timeline que mantem-se default
+						$("#list18").css(listapadrao); // timeline que mantem-se default
+						$("#list19").css(listapadrao); // timeline que mantem-se default
+						$("#list20").css(listapadrao); // timeline que mantem-se default
+						$("#list21").css(listapadrao); // timeline que mantem-se default
+						$("#list22").css(listapadrao); // timeline que mantem-se default
+						$("#list23").css(listapadrao); // timeline que mantem-se default
+						// lista da timeline que se altera
+						$("#list24").css(efeitolista); // timeline que mantem-se default
+						$("#list25").css(listapadrao); // timeline que mantem-se default
+						$("#list26").css(listapadrao); // timeline que mantem-se default
+						$("#list27").css(listapadrao); // timeline que mantem-se default						 
 
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, .p').fadeOut("slow", function(){
@@ -1375,18 +1987,43 @@
 						titulo = "novo titulo";
 						link = "#myModal25";
 							
-						$(".metade-esquerda").css("background", "blue");
 						
-						$(".metade-esquerda").toggle("blind", 1000, function(){
+						$(".metade-esquerda").toggle("blind", 800, function(){
 
 							$(".metade-esquerda").css("background", "red");
-							$(".metade-esquerda").toggle("blind", 1000, function(){					
+							$(".metade-esquerda").toggle("blind", 600, function(){					
 							});
 
 						});
 
-							handledot(25,'');
-						
+							$("#list1").css(listapadrao); // lista da timeline que se altera
+							$("#list2").css(listapadrao); // timeline que mantem-se default
+							$("#list3").css(listapadrao); // timeline que mantem-se default
+							$("#list4").css(listapadrao); // timeline que mantem-se default
+							$("#list5").css(listapadrao); // timeline que mantem-se default
+							$("#list6").css(listapadrao); // timeline que mantem-se default
+							$("#list7").css(listapadrao); // timeline que mantem-se default
+							$("#list8").css(listapadrao); // timeline que mantem-se default
+							$("#list9").css(listapadrao); // timeline que mantem-se default
+							$("#list10").css(listapadrao); // timeline que mantem-se default
+							$("#list11").css(listapadrao); // timeline que mantem-se default
+							$("#list12").css(listapadrao); // timeline que mantem-se default
+							$("#list13").css(listapadrao); // timeline que mantem-se default
+							$("#list14").css(listapadrao); // timeline que mantem-se default
+							$("#list15").css(listapadrao); // timeline que mantem-se default
+							$("#list16").css(listapadrao); // timeline que mantem-se default
+							$("#list17").css(listapadrao); // timeline que mantem-se default
+							$("#list18").css(listapadrao); // timeline que mantem-se default
+							$("#list19").css(listapadrao); // timeline que mantem-se default
+							$("#list20").css(listapadrao); // timeline que mantem-se default
+							$("#list21").css(listapadrao); // timeline que mantem-se default
+							$("#list22").css(listapadrao); // timeline que mantem-se default
+							$("#list23").css(listapadrao); // timeline que mantem-se default
+							$("#list24").css(listapadrao); // timeline que mantem-se default
+							// lista da timeline que se altera
+							$("#list25").css(efeitolista); // timeline que mantem-se default
+							$("#list26").css(listapadrao); // timeline que mantem-se default
+							$("#list27").css(listapadrao); // timeline que mantem-se default						 
 
 							/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 							$('h1, p').fadeOut("slow", function(){
@@ -1427,19 +2064,43 @@
 						paragrafo = "Novo parágrafo";
 						titulo = "novo titulo";
 						link = "#myModal26";
-							
-						$(".metade-esquerda").css("background", "blue");
 						
-						$(".metade-esquerda").toggle("blind", 1000, function(){
+						$(".metade-esquerda").toggle("puff", 800, function(){
 
 							$(".metade-esquerda").css("background", "red");
-							$(".metade-esquerda").toggle("blind", 1000, function(){					
+							$(".metade-esquerda").toggle("puff", 600, function(){					
 							});
 
 						});
 
-							handledot(26,'');
-						
+							$("#list1").css(listapadrao); // lista da timeline que se altera
+							$("#list2").css(listapadrao); // timeline que mantem-se default
+							$("#list3").css(listapadrao); // timeline que mantem-se default
+							$("#list4").css(listapadrao); // timeline que mantem-se default
+							$("#list5").css(listapadrao); // timeline que mantem-se default
+							$("#list6").css(listapadrao); // timeline que mantem-se default
+							$("#list7").css(listapadrao); // timeline que mantem-se default
+							$("#list8").css(listapadrao); // timeline que mantem-se default
+							$("#list9").css(listapadrao); // timeline que mantem-se default
+							$("#list10").css(listapadrao); // timeline que mantem-se default
+							$("#list11").css(listapadrao); // timeline que mantem-se default
+							$("#list12").css(listapadrao); // timeline que mantem-se default
+							$("#list13").css(listapadrao); // timeline que mantem-se default
+							$("#list14").css(listapadrao); // timeline que mantem-se default
+							$("#list15").css(listapadrao); // timeline que mantem-se default
+							$("#list16").css(listapadrao); // timeline que mantem-se default
+							$("#list17").css(listapadrao); // timeline que mantem-se default
+							$("#list18").css(listapadrao); // timeline que mantem-se default
+							$("#list19").css(listapadrao); // timeline que mantem-se default
+							$("#list20").css(listapadrao); // timeline que mantem-se default
+							$("#list21").css(listapadrao); // timeline que mantem-se default
+							$("#list22").css(listapadrao); // timeline que mantem-se default
+							$("#list23").css(listapadrao); // timeline que mantem-se default
+							$("#list24").css(listapadrao); // timeline que mantem-se default
+							$("#list25").css(listapadrao); // timeline que mantem-se default
+							// lista da timeline que se altera
+							$("#list26").css(efeitolista); // timeline que mantem-se default
+							$("#list27").css(listapadrao); // timeline que mantem-se default						 
 
 							/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 							$('h1, p').fadeOut("slow", function(){
@@ -1474,23 +2135,49 @@
 
 							break;
 
-					case 162:
+					case 156:
 
 						paragrafo = "Novo parágrafo";
 						titulo = "novo titulo";
 						link = "#myModal28";
 							
-						$(".metade-esquerda").css("background", "blue");
 						
-						$(".metade-esquerda").toggle("blind", 1000, function(){
+						$(".metade-esquerda").toggle("size", 800, function(){
 
 							$(".metade-esquerda").css("background", "red");
-							$(".metade-esquerda").toggle("blind", 1000, function(){					
+							$(".metade-esquerda").toggle("size", 600, function(){					
 							});
 
 						});
 
-							handledot(27);
+							$("#list1").css(listapadrao); // lista da timeline que se altera
+							$("#list2").css(listapadrao); // timeline que mantem-se default
+							$("#list3").css(listapadrao); // timeline que mantem-se default
+							$("#list4").css(listapadrao); // timeline que mantem-se default
+							$("#list5").css(listapadrao); // timeline que mantem-se default
+							$("#list6").css(listapadrao); // timeline que mantem-se default
+							$("#list7").css(listapadrao); // timeline que mantem-se default
+							$("#list8").css(listapadrao); // timeline que mantem-se default
+							$("#list9").css(listapadrao); // timeline que mantem-se default
+							$("#list10").css(listapadrao); // timeline que mantem-se default
+							$("#list11").css(listapadrao); // timeline que mantem-se default
+							$("#list12").css(listapadrao); // timeline que mantem-se default
+							$("#list13").css(listapadrao); // timeline que mantem-se default
+							$("#list14").css(listapadrao); // timeline que mantem-se default
+							$("#list15").css(listapadrao); // timeline que mantem-se default
+							$("#list16").css(listapadrao); // timeline que mantem-se default
+							$("#list17").css(listapadrao); // timeline que mantem-se default
+							$("#list18").css(listapadrao); // timeline que mantem-se default
+							$("#list19").css(listapadrao); // timeline que mantem-se default
+							$("#list20").css(listapadrao); // timeline que mantem-se default
+							$("#list21").css(listapadrao); // timeline que mantem-se default
+							$("#list22").css(listapadrao); // timeline que mantem-se default
+							$("#list23").css(listapadrao); // timeline que mantem-se default
+							$("#list24").css(listapadrao); // timeline que mantem-se default
+							$("#list25").css(listapadrao); // timeline que mantem-se default
+							$("#list26").css(listapadrao); // timeline que mantem-se default
+							// lista da timeline que se altera
+							$("#list27").css(efeitolista); // timeline que mantem-se default						 
 
 							/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 							$('h1, p').fadeOut("slow", function(){
@@ -1526,12 +2213,15 @@
 
 							break;
 
-					case 168:
+					case 162:
 
 						posicao = 5;
 						break;
 
 			}
+
+		
+		   
 
 		}
 
@@ -1551,10 +2241,10 @@
 		}
 		else if(event.detail){
 			delta=-event.detail/3;
+
 		}
 
 		if(delta)handle(delta);
-
 		if(event.preventDefault){
 			event.preventDefault();
 			event.returnValue=false;
