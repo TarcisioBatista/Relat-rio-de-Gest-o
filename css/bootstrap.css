@@ -5049,7 +5049,7 @@ input[type="submit"].btn.btn-mini {
   top: 10%;
   left: 5%;
   z-index: 1050;
-  height: 2000px;
+  height: auto;
   
  /* margin-left: -280px; */
     width: 90%;

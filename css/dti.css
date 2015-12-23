@@ -21,7 +21,7 @@ body{
 	width: 50%;
 	height: 667px;
 	
-	background: #f1f1f1;/*-image: url(../img/fundo-2.png);*/
+	background: #BAF3AD;/*-image: url(../img/fundo-2.png);*/
 	position: fixed;
 	right:1px;
 }
@@ -105,6 +105,9 @@ p{
 	margin-top: -32px;
 	margin-bottom: 6px;
 }
+.time-line li:hover{
+	cursor:pointer;
+}
 
 .time-line{
 	text-align: center;
@@ -124,6 +127,10 @@ p{
  ul {
 	list-style: none;
 
+}
+li{
+	    line-height: 13px;
+    margin-bottom: 4px;
 }
 .encapsulador-conteudo{
 	
