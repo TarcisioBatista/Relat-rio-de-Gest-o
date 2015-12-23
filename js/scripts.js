@@ -5,7 +5,7 @@
     },
     100
 );
-	var posicao	= 5;
+	var posicao	= 11;
 	var listapadrao = {marginLeft: "", fontSize: "1em", marginTop: ""};
 	var efeitolista = {marginLeft: "-11px", fontSize: "2em", marginTop: "3px"};
 	var titulo = "Título default";
@@ -82,8 +82,7 @@
 
 				case 0:	
 
-
-					posicao = 161;			
+					posicao = 167;			
 					break;		
 
 
@@ -93,12 +92,97 @@
 					titulo = "novo titulo";
 					link = "#myModal1";
 
+					//$(".metade-esquerda").toggle("puff", 800, function(){
+
+						$(".metade-esquerda").css({"background": "url(img/relatorio/capa.png)", "background-repeat": "no-repeat", backgroundSize: "cover"});
+
+						//$(".metade-esquerda").toggle("puff", 600, function(){	
+						//	$(".metade-esquerda").css({"background": "url(img/relatorio/capa.png)", "background-repeat": "no-repeat", backgroundSize: "cover"});						
+						//});	
+						
+					//});
+
+//
+						//$("#list1").css(efeitolista); // lista da timeline que se altera
+					 //// lista da timeline que se altera
+//
+						//$("#list2").css(listapadrao); // timeline que mantem-se default
+						//$("#list3").css(listapadrao); // timeline que mantem-se default
+						//$("#list4").css(listapadrao); // timeline que mantem-se default
+						//$("#list5").css(listapadrao); // timeline que mantem-se default
+						//$("#list6").css(listapadrao); // timeline que mantem-se default
+						//$("#list7").css(listapadrao); // timeline que mantem-se default
+						//$("#list8").css(listapadrao); // timeline que mantem-se default
+						//$("#list9").css(listapadrao); // timeline que mantem-se default
+						//$("#list10").css(listapadrao); // timeline que mantem-se default
+						//$("#list11").css(listapadrao); // timeline que mantem-se default
+						//$("#list12").css(listapadrao); // timeline que mantem-se default
+						//$("#list13").css(listapadrao); // timeline que mantem-se default
+						//$("#list14").css(listapadrao); // timeline que mantem-se default
+						//$("#list15").css(listapadrao); // timeline que mantem-se default
+						//$("#list16").css(listapadrao); // timeline que mantem-se default
+						//$("#list17").css(listapadrao); // timeline que mantem-se default
+						//$("#list18").css(listapadrao); // timeline que mantem-se default
+						//$("#list19").css(listapadrao); // timeline que mantem-se default
+						//$("#list20").css(listapadrao); // timeline que mantem-se default
+						//$("#list21").css(listapadrao); // timeline que mantem-se default
+						//$("#list22").css(listapadrao); // timeline que mantem-se default
+						//$("#list23").css(listapadrao); // timeline que mantem-se default
+						//$("#list24").css(listapadrao); // timeline que mantem-se default
+						//$("#list25").css(listapadrao); // timeline que mantem-se default
+						//$("#list26").css(listapadrao); // timeline que mantem-se default
+						//$("#list27").css(listapadrao); // timeline que mantem-se default
+
+
+											
+						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
+						//$('h1, .p').fadeOut("slow", function(){
+						$('h1').html(titulo);
+						$('p').html(paragrafo);
+						//$('h1, .p').fadeIn("slow");
+					//});		
+
+						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
+						
+						$( ".metade-direita" ).animate({
+							
+							 opacity: 0.1
+							}, 800, function(){
+								$(".metade-direita").css("background" ,"#BAF3AD"); //COLOCAREMOS IMAGEM OU COR
+						
+							});
+
+						$( ".metade-direita" ).animate({
+							  opacity: 1
+							}, 800);
+						
+						/* MUDA O LINK DOS BOTOES */
+						$('a').attr("href", link);
+
+						/* DEFINE OS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO */
+
+						$("#foto3").attr("src","img/ic-2.png");
+						$("#foto3").attr("id", "foto6");
+
+						$("#foto6").attr("src","img/ic-5.png");
+						$("#foto6").attr("id", "foto3");
+						/* FIM DA DEFINICAO DOS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO*/
+
+					break;
+
+
+
+				case 12:
+					paragrafo = "Novo parágrafo";
+					titulo = "novo titulo";
+					link = "#myModal1";
+
 					$(".metade-esquerda").toggle("puff", 800, function(){
 
-						$(".metade-esquerda").css({"background": "url(img/relatorio/Atividades.jpg)", "background-repeat": "no-repeat", backgroundSize: "cover"});
+						$(".metade-esquerda").css({"background": "url(img/relatorio/apresentacao.jpg)", "background-repeat": "no-repeat", backgroundSize: "cover"});
 
 						$(".metade-esquerda").toggle("puff", 600, function(){	
-							$(".metade-esquerda").css({"background": "url(img/relatorio/Atividades.jpg)", "background-repeat": "no-repeat", backgroundSize: "cover"});						
+							$(".metade-esquerda").css({"background": "url(img/relatorio/apresentacao.jpg)", "background-repeat": "no-repeat", backgroundSize: "cover"});						
 						});	
 						
 					});
@@ -170,12 +254,11 @@
 						/* FIM DA DEFINICAO DOS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO*/
 
 					break;
-
-
-
-				case 12:
-
 					
+
+
+
+				case 18:
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal2";
@@ -256,9 +339,8 @@
 					break;
 
 
-				case 18:
 
-
+				case 24:
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal3";
@@ -341,9 +423,10 @@
 					
 					break;
 
-				case 24:
 
 
+
+				case 30:
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal4";
@@ -412,9 +495,9 @@
 					break;
 
 
-				case 30:
 
 
+				case 36:
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal5";
@@ -491,9 +574,9 @@
 					break;
 
 
-				case 36:
 
 
+				case 42:
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal6";
@@ -570,9 +653,9 @@
 					break;
 
 
-				case 42:
 
 
+				case 48:
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal7";
@@ -649,9 +732,8 @@
 					break;
 
 
-				case 48:
 
-
+				case 54:
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal8";
@@ -727,9 +809,10 @@
 
 					break;
 
-				case 54:
 
 
+
+				case 60:
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal9";
@@ -812,10 +895,9 @@
 					break;
 
 
-				case 60:
 
 
-
+				case 66:
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal10";
@@ -892,10 +974,9 @@
 
 						break;
 
-				case 66:
 
 
-
+				case 72:
 				paragrafo = "Novo parágrafo";
 				titulo = "novo titulo";
 				link = "#myModal11";						
@@ -964,8 +1045,7 @@
 					break;
 
 
-				case 72:
-
+				case 78:
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal12";
@@ -1043,9 +1123,9 @@
 
 						break;
 
-				case 78:
 
 
+				case 84:
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal13";
@@ -1122,8 +1202,7 @@
 
 						break;
 
-				case 84:
-
+				case 90:
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal14";
@@ -1199,8 +1278,9 @@
 						/* FIM DA DEFINICAO DOS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO*/
 
 						break;
-				case 90:
 
+
+				case 96:
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal15";
@@ -1276,8 +1356,8 @@
 
 						break;
 
-				case 96:
 
+				case 102:
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal16";
@@ -1354,8 +1434,8 @@
 
 						break;
 
-				case 102:
 
+				case 108:
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal17";
@@ -1431,10 +1511,10 @@
 						/* FIM DA DEFINICAO DOS TAMANHOS DAS LOGOS DA UNIMONTES GIRANDO*/
 
 						break;
-
-				case 108:
-
 					
+
+
+				case 114:
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal18";
@@ -1512,9 +1592,10 @@
 
 						break;
 
-				case 114:
 
 
+
+				case 120:
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal19";
@@ -1591,9 +1672,8 @@
 						break;
 
 
-				case 120:
 
-
+				case 126:
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal20";
@@ -1670,9 +1750,9 @@
 
 						break;
 
-				case 126:
 
 
+				case 132:
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal21";
@@ -1747,9 +1827,9 @@
 
 						break;
 
-				case 132:
 
 
+				case 138:
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal22";
@@ -1825,9 +1905,9 @@
 
 						break;
 
-				case 138:
 
 
+				case 144:
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal23";
@@ -1903,8 +1983,8 @@
 
 						break;
 
-				case 144:
 
+				case 150:
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal24";
@@ -1981,8 +2061,8 @@
 
 						break;
 
-					case 150:
 
+					case 156:
 						paragrafo = "Novo parágrafo";
 						titulo = "novo titulo";
 						link = "#myModal25";
@@ -2059,8 +2139,9 @@
 
 							break;
 
-					case 156:
 
+
+					case 156:
 						paragrafo = "Novo parágrafo";
 						titulo = "novo titulo";
 						link = "#myModal26";
@@ -2135,8 +2216,9 @@
 
 							break;
 
-					case 156:
 
+
+					case 162:
 						paragrafo = "Novo parágrafo";
 						titulo = "novo titulo";
 						link = "#myModal28";
@@ -2213,10 +2295,23 @@
 
 							break;
 
-					case 162:
+						
+					case 167:
+
+						$(".metade-esquerda").toggle("puff", 800, function(){
+
+						$(".metade-esquerda").css({"background": "url(img/relatorio/capa.png)", "background-repeat": "no-repeat", backgroundSize: "cover"});
+
+						$(".metade-esquerda").toggle("puff", 600, function(){	
+							$(".metade-esquerda").css({"background": "url(img/relatorio/capa.png)", "background-repeat": "no-repeat", backgroundSize: "cover"});						
+						});	
+						
+					});
+
 
 						posicao = 5;
 						break;
+
 
 			}
 

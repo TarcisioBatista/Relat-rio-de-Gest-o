@@ -9,7 +9,7 @@ body{
 }
 .metade-esquerda{
 	width: 50%;
-	background: url(../img/relatorio/apresentacao.jpg);
+	background: url(../img/relatorio/capa.png);
 	background-size:cover;
 	height:667px;
 	position: fixed;
