@@ -14,15 +14,11 @@
 	
 		
 
-		function teste(){
-			 var myVar = {};
-			  myVar = 5;
-		}
 
 		
 		function handle(delta, ver) {
-	
-			if(window.myVar == 5){alert("5");}
+		
+		
 			 if(posicao >= 214){
 		    	posicao = 214;
 		    	if(ver == 2){
@@ -34,6 +30,7 @@
 
 		    else if (delta < 0){
 		        /* EVENTO COM O MOUSE WHEEL DESCENDO */
+
 		        posicao = posicao + 1;
 		         $('.text').html('para baixo'+posicao);
 
@@ -94,9 +91,9 @@
 					titulo = "novo titulo";
 					link = "#myModal1";
 
-				
+				    $('.go-to').attr("onclick", "handle(handle, 12)");
 
-					//$("body").css("background", "red");
+					$("body").css("background", "#8F7753");
 
 					$(".metade-esquerda").toggle("puff", 800, function(){
 
@@ -146,7 +143,7 @@
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, .p').fadeOut("slow", function(){
 						$('h1').html(titulo);
-						$('p').html(paragrafo);
+						$('.p').html(paragrafo);
 						$('h1, .p').fadeIn("slow");
 					});		
 
@@ -156,7 +153,7 @@
 							
 							 opacity: 0.1
 							}, 800, function(){
-								$(".metade-direita").css("background" ,"#BAF3AD"); //COLOCAREMOS IMAGEM OU COR
+								$(".metade-direita").css("background" ,"#8F7753"); //COLOCAREMOS IMAGEM OU COR
 						
 							});
 
@@ -187,8 +184,8 @@
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal2";
-
-					$("body").css("background", "#6ce9fc");
+					$('.go-to').attr("onclick", "handle(handle, 18)");
+					$("body").css("background", "#EDE09A");
 					//$(".metade-esquerda").css("background", "purple");
 
 					
@@ -235,7 +232,7 @@
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, .p').fadeOut("slow", function(){
 						$('h1').html(titulo);
-						$('p').html(paragrafo);
+						$('.p').html(paragrafo);
 						$('h1, .p').fadeIn("slow");
 					});		
 						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
@@ -244,7 +241,7 @@
 							
 							 opacity: 0.1
 							}, 800, function(){
-								$(".metade-direita").css("background" ,"url(img/fundo-2.png)");
+								$(".metade-direita").css("background" ,"#DBE2FF");
 						
 							});
 
@@ -272,7 +269,7 @@
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal3";
-
+					$('.go-to').attr("onclick", "handle(handle, 24)");
 					$(".metade-esquerda").css("background", "blue");
 					
 					$(".metade-esquerda").toggle("size", 700, function(){
@@ -316,7 +313,7 @@
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, .p').fadeOut("slow", function(){
 						$('h1').html(titulo);
-						$('p').html(paragrafo);
+						$('.p').html(paragrafo);
 						$('h1, .p').fadeIn("slow");
 					});		
 						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
@@ -355,7 +352,8 @@
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal4";
-
+					$('.go-to').attr("onclick", "handle(handle, 30)");
+					
 					$(".metade-esquerda").css("background", "red");
 					$(".metade-esquerda").toggle("clip", 800, function(){
 
@@ -396,7 +394,7 @@
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, .p').fadeOut("slow", function(){
 						$('h1').html(titulo);
-						$('p').html(paragrafo);
+						$('.p').html(paragrafo);
 						$('h1, .p').fadeIn("slow");
 					});		
 						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
@@ -424,7 +422,7 @@
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal5";
-
+					$('.go-to').attr("onclick", "handle(handle, 36)");
 					$(".metade-esquerda").css("background", "black");
 					
 					$(".metade-esquerda").toggle("blind", 1000, function(){
@@ -466,7 +464,7 @@
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, .p').fadeOut("slow", function(){
 						$('h1').html(titulo);
-						$('p').html(paragrafo);
+						$('.p').html(paragrafo);
 						$('h1, .p').fadeIn("slow");
 					});		
 						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
@@ -504,7 +502,7 @@
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal6";
-
+					$('.go-to').attr("onclick", "handle(handle, 42)");
 					$(".metade-esquerda").css("background", "blue");
 					
 					$(".metade-esquerda").toggle("puff", 1000, function(){
@@ -547,7 +545,7 @@
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, .p').fadeOut("slow", function(){
 						$('h1').html(titulo);
-						$('p').html(paragrafo);
+						$('.p').html(paragrafo);
 						$('h1, .p').fadeIn("slow");
 					});		
 						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
@@ -585,7 +583,7 @@
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal7";
-
+					$('.go-to').attr("onclick", "handle(handle, 48)");
 					$(".metade-esquerda").css("background", "purple");
 					
 					$(".metade-esquerda").toggle("blind", 1000, function(){
@@ -628,7 +626,7 @@
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, .p').fadeOut("slow", function(){
 						$('h1').html(titulo);
-						$('p').html(paragrafo);
+						$('.p').html(paragrafo);
 						$('h1, .p').fadeIn("slow");
 					});		
 						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
@@ -666,6 +664,7 @@
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal8";
+					$('.go-to').attr("onclick", "handle(handle, 54)");
 
 					$(".metade-esquerda").css("background", "blue");
 					
@@ -708,7 +707,7 @@
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, .p').fadeOut("slow", function(){
 						$('h1').html(titulo);
-						$('p').html(paragrafo);
+						$('.p').html(paragrafo);
 						$('h1, .p').fadeIn("slow");
 					});		
 						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
@@ -745,7 +744,7 @@
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal9";
-
+					$('.go-to').attr("onclick", "handle(handle, 60)");
 					$(".metade-esquerda").css("background", "green");
 					
 					$(".metade-esquerda").toggle("clip", 1000, function(){
@@ -793,7 +792,7 @@
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, .p').fadeOut("slow", function(){
 						$('h1').html(titulo);
-						$('p').html(paragrafo);
+						$('.p').html(paragrafo);
 						$('h1, .p').fadeIn("slow");
 					});		
 						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
@@ -832,7 +831,7 @@
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal10";
-						
+					$('.go-to').attr("onclick", "handle(handle, 66)");
 					$(".metade-esquerda").css("background", "blue");
 					
 					$(".metade-esquerda").toggle("blind", 1000, function(){
@@ -875,7 +874,7 @@
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, .p').fadeOut("slow", function(){
 						$('h1').html(titulo);
-						$('p').html(paragrafo);
+						$('.p').html(paragrafo);
 						$('h1, .p').fadeIn("slow");
 					});		
 						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
@@ -913,7 +912,7 @@
 				paragrafo = "Novo parágrafo";
 				titulo = "novo titulo";
 				link = "#myModal11";						
-									
+				$('.go-to').attr("onclick", "handle(handle, 72)");			
 				$(".metade-esquerda").toggle("blind", 1000, function(){
 					$(".metade-esquerda").css("background", "red");
 					$(".metade-esquerda").toggle("blind", 1000, function(){					
@@ -950,7 +949,7 @@
 					/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 					$('h1, .p').fadeOut("slow", function(){
 						$('h1').html(titulo);
-						$('p').html(paragrafo);
+						$('.p').html(paragrafo);
 						$('h1, .p').fadeIn("slow");
 					});						
 					/* MUDA O BACKGRDOUND DA METADE DIREITA*/
@@ -983,7 +982,7 @@
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal12";
-						
+					$('.go-to').attr("onclick", "handle(handle, 78)");	
 					
 					
 					$(".metade-esquerda").toggle("blind", 1000, function(){
@@ -1026,7 +1025,7 @@
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, .p').fadeOut("slow", function(){
 						$('h1').html(titulo);
-						$('p').html(paragrafo);
+						$('.p').html(paragrafo);
 						$('h1, .p').fadeIn("slow");
 					});		
 						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
@@ -1063,7 +1062,7 @@
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal13";
-						
+					$('.go-to').attr("onclick", "handle(handle, 84)");
 					$(".metade-esquerda").css("background", "red");
 					
 					$(".metade-esquerda").toggle("blind", 1000, function(){
@@ -1106,7 +1105,7 @@
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, .p').fadeOut("slow", function(){
 						$('h1').html(titulo);
-						$('p').html(paragrafo);
+						$('.p').html(paragrafo);
 						$('h1, .p').fadeIn("slow");
 					});		
 						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
@@ -1142,7 +1141,7 @@
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal14";
-						
+					$('.go-to').attr("onclick", "handle(handle, 90)");	
 					$(".metade-esquerda").css("background", "blue");
 					
 					$(".metade-esquerda").toggle("blind", 1000, function(){
@@ -1185,7 +1184,7 @@
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, .p').fadeOut("slow", function(){
 						$('h1').html(titulo);
-						$('p').html(paragrafo);
+						$('.p').html(paragrafo);
 						$('h1, .p').fadeIn("slow");
 					});		
 						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
@@ -1220,7 +1219,7 @@
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal15";
-						
+					$('.go-to').attr("onclick", "handle(handle, 96)");
 					$(".metade-esquerda").css("background", "blue");
 					
 					$(".metade-esquerda").toggle("blind", 1000, function(){
@@ -1263,7 +1262,7 @@
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, .p').fadeOut("slow", function(){
 						$('h1').html(titulo);
-						$('p').html(paragrafo);
+						$('.p').html(paragrafo);
 						$('h1, .p').fadeIn("slow");
 					});		
 						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
@@ -1298,7 +1297,7 @@
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal16";
-						
+					$('.go-to').attr("onclick", "handle(handle, 102)");
 					$(".metade-esquerda").css("background", "blue");
 					
 					$(".metade-esquerda").toggle("blind", 1000, function(){
@@ -1341,7 +1340,7 @@
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, .p').fadeOut("slow", function(){
 						$('h1').html(titulo);
-						$('p').html(paragrafo);
+						$('.p').html(paragrafo);
 						$('h1, .p').fadeIn("slow");
 					});		
 						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
@@ -1377,7 +1376,7 @@
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal17";
-						
+					$('.go-to').attr("onclick", "handle(handle, 108)");
 					$(".metade-esquerda").css("background", "blue");
 					
 					$(".metade-esquerda").toggle("blind", 1000, function(){
@@ -1420,7 +1419,7 @@
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, .p').fadeOut("slow", function(){
 						$('h1').html(titulo);
-						$('p').html(paragrafo);
+						$('.p').html(paragrafo);
 						$('h1, .p').fadeIn("slow");
 					});		
 						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
@@ -1457,7 +1456,7 @@
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal18";
-						
+					$('.go-to').attr("onclick", "handle(handle, 114)");
 					$(".metade-esquerda").css("background", "blue");
 					
 					$(".metade-esquerda").toggle("blind", 1000, function(){
@@ -1501,7 +1500,7 @@
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, .p').fadeOut("slow", function(){
 						$('h1').html(titulo);
-						$('p').html(paragrafo);
+						$('.p').html(paragrafo);
 						$('h1, .p').fadeIn("slow");
 					});		
 						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
@@ -1538,7 +1537,7 @@
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal19";
-						
+					$('.go-to').attr("onclick", "handle(handle, 120)");	
 					$(".metade-esquerda").css("background", "blue");
 					
 					$(".metade-esquerda").toggle("blind", 1000, function(){
@@ -1581,7 +1580,7 @@
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, .p').fadeOut("slow", function(){
 						$('h1').html(titulo);
-						$('p').html(paragrafo);
+						$('.p').html(paragrafo);
 						$('h1, .p').fadeIn("slow");
 					});		
 						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
@@ -1618,7 +1617,7 @@
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal20";
-						
+					$('.go-to').attr("onclick", "handle(handle, 126)");
 					$(".metade-esquerda").css("background", "blue");
 					
 					$(".metade-esquerda").toggle("blind", 1000, function(){
@@ -1661,7 +1660,7 @@
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, .p').fadeOut("slow", function(){
 						$('h1').html(titulo);
-						$('p').html(paragrafo);
+						$('.p').html(paragrafo);
 						$('h1, .p').fadeIn("slow");
 					});		
 						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
@@ -1698,7 +1697,7 @@
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal21";
-						
+					$('.go-to').attr("onclick", "handle(handle, 132)");	
 					$(".metade-esquerda").css("background", "blue");
 					
 					$(".metade-esquerda").toggle("blind", 1000, function(){
@@ -1741,7 +1740,7 @@
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, .p').fadeOut("slow", function(){
 						$('h1').html(titulo);
-						$('p').html(paragrafo);
+						$('.p').html(paragrafo);
 						$('h1, .p').fadeIn("slow");
 					});		
 						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
@@ -1777,7 +1776,7 @@
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal22";
-						
+					$('.go-to').attr("onclick", "handle(handle, 138)");	
 					$(".metade-esquerda").css("background", "blue");
 					
 					$(".metade-esquerda").toggle("blind", 1000, function(){
@@ -1820,7 +1819,7 @@
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, .p').fadeOut("slow", function(){
 						$('h1').html(titulo);
-						$('p').html(paragrafo);
+						$('.p').html(paragrafo);
 						$('h1, .p').fadeIn("slow");
 					});		
 						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
@@ -1856,7 +1855,7 @@
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal23";
-						
+					$('.go-to').attr("onclick", "handle(handle, 144)");	
 					$(".metade-esquerda").css("background", "blue");
 					
 					$(".metade-esquerda").toggle("blind", 1000, function(){
@@ -1899,7 +1898,7 @@
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, .p').fadeOut("slow", function(){
 						$('h1').html(titulo);
-						$('p').html(paragrafo);
+						$('.p').html(paragrafo);
 						$('h1, .p').fadeIn("slow");
 					});		
 						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
@@ -1935,7 +1934,7 @@
 					paragrafo = "Novo parágrafo";
 					titulo = "novo titulo";
 					link = "#myModal24";
-						
+					$('.go-to').attr("onclick", "handle(handle, 150)");
 					$(".metade-esquerda").css("background", "blue");
 					
 					$(".metade-esquerda").toggle("blind", 1000, function(){
@@ -1978,7 +1977,7 @@
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 						$('h1, .p').fadeOut("slow", function(){
 						$('h1').html(titulo);
-						$('p').html(paragrafo);
+						$('.p').html(paragrafo);
 						$('h1, .p').fadeIn("slow");
 					});		
 						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
@@ -2014,7 +2013,7 @@
 						paragrafo = "Novo parágrafo";
 						titulo = "novo titulo";
 						link = "#myModal25";
-							
+						$('.go-to').attr("onclick", "handle(handle, 156)");
 						$(".metade-esquerda").css("background", "blue");
 						
 						$(".metade-esquerda").toggle("blind", 1000, function(){
@@ -2057,7 +2056,7 @@
 							/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 							$('h1, p').fadeOut("slow", function(){
 								$('h1').html(titulo);
-								$('p').html(paragrafo);
+								$('.p').html(paragrafo);
 								$('h1, p').fadeIn("slow");
 							});
 							/* MUDA O BACKGRDOUND DA METADE DIREITA*/
@@ -2093,7 +2092,7 @@
 						paragrafo = "Novo parágrafo";
 						titulo = "novo titulo";
 						link = "#myModal26";
-							
+						$('.go-to').attr("onclick", "handle(handle, 6)");	
 						$(".metade-esquerda").css("background", "blue");
 						
 						$(".metade-esquerda").toggle("blind", 1000, function(){
@@ -2136,7 +2135,7 @@
 							/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 							$('h1, p').fadeOut("slow", function(){
 								$('h1').html(titulo);
-								$('p').html(paragrafo);
+								$('.p').html(paragrafo);
 								$('h1, p').fadeIn("slow");
 							});
 							/* MUDA O BACKGRDOUND DA METADE DIREITA*/
@@ -2166,7 +2165,7 @@
 
 							break;
 
-					case 156:
+					case 162:
 
 						paragrafo = "Novo parágrafo";
 						titulo = "novo titulo";
@@ -2214,7 +2213,7 @@
 							/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
 							$('h1, p').fadeOut("slow", function(){
 								$('h1').html(titulo);
-								$('p').html(paragrafo);
+								$('.p').html(paragrafo);
 								$('h1, p').fadeIn("slow");
 							});
 							/* MUDA O BACKGRDOUND DA METADE DIREITA*/
@@ -2245,7 +2244,7 @@
 
 							break;
 
-					case 162:
+					case 168:
 
 						posicao = 5;
 						break;
