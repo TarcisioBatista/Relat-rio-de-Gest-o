@@ -129,11 +129,11 @@
 					
 						
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
-						$('h1, p').fadeOut("slow", function(){
-							$('h1').html(titulo);
-							$('p').html(paragrafo);
-							$('h1, p').fadeIn("slow");
-						});
+						$('h1, .p').fadeOut("slow", function(){
+						$('h1').html(titulo);
+						$('p').html(paragrafo);
+						$('h1, .p').fadeIn("slow");
+					});		
 
 						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
 						
@@ -218,11 +218,11 @@
 						$("#list27").css(listapadrao); // timeline que mantem-se default
 
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
-						$('h1, p').fadeOut("slow", function(){
-							$('h1').html(titulo);
-							$('p').html(paragrafo);
-							$('h1, p').fadeIn("slow");
-						});
+						$('h1, .p').fadeOut("slow", function(){
+						$('h1').html(titulo);
+						$('p').html(paragrafo);
+						$('h1, .p').fadeIn("slow");
+					});		
 						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
 						
 						$( ".metade-direita" ).animate({
@@ -299,11 +299,11 @@
 						$("#list27").css(listapadrao); // timeline que mantem-se default
 
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
-						$('h1, p').fadeOut("slow", function(){
-							$('h1').html(titulo);
-							$('p').html(paragrafo);
-							$('h1, p').fadeIn("slow");
-						});
+						$('h1, .p').fadeOut("slow", function(){
+						$('h1').html(titulo);
+						$('p').html(paragrafo);
+						$('h1, .p').fadeIn("slow");
+					});		
 						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
 						
 						$( ".metade-direita" ).animate({
@@ -379,11 +379,11 @@
 						$("#list27").css(listapadrao); // timeline que mantem-se default
 
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
-						$('h1, p').fadeOut("slow", function(){
-							$('h1').html(titulo);
-							$('p').html(paragrafo);
-							$('h1, p').fadeIn("slow");
-						});
+						$('h1, .p').fadeOut("slow", function(){
+						$('h1').html(titulo);
+						$('p').html(paragrafo);
+						$('h1, .p').fadeIn("slow");
+					});		
 						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
 						
 						$( ".metade-direita" ).animate({
@@ -449,11 +449,11 @@
 						$("#list27").css(listapadrao); // timeline que mantem-se default
 
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
-						$('h1, p').fadeOut("slow", function(){
-							$('h1').html(titulo);
-							$('p').html(paragrafo);
-							$('h1, p').fadeIn("slow");
-						});
+						$('h1, .p').fadeOut("slow", function(){
+						$('h1').html(titulo);
+						$('p').html(paragrafo);
+						$('h1, .p').fadeIn("slow");
+					});		
 						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
 						
 						$( ".metade-direita" ).animate({
@@ -530,11 +530,11 @@
 						$("#list27").css(listapadrao); // timeline que mantem-se default
 
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
-						$('h1, p').fadeOut("slow", function(){
-							$('h1').html(titulo);
-							$('p').html(paragrafo);
-							$('h1, p').fadeIn("slow");
-						});
+						$('h1, .p').fadeOut("slow", function(){
+						$('h1').html(titulo);
+						$('p').html(paragrafo);
+						$('h1, .p').fadeIn("slow");
+					});		
 						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
 						
 						$( ".metade-direita" ).animate({
@@ -611,11 +611,11 @@
 						$("#list27").css(listapadrao); // timeline que mantem-se default
 
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
-						$('h1, p').fadeOut("slow", function(){
-							$('h1').html(titulo);
-							$('p').html(paragrafo);
-							$('h1, p').fadeIn("slow");
-						});
+						$('h1, .p').fadeOut("slow", function(){
+						$('h1').html(titulo);
+						$('p').html(paragrafo);
+						$('h1, .p').fadeIn("slow");
+					});		
 						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
 						
 						$( ".metade-direita" ).animate({
@@ -691,11 +691,11 @@
 						$("#list27").css(listapadrao); // timeline que mantem-se default						
 
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
-						$('h1, p').fadeOut("slow", function(){
-							$('h1').html(titulo);
-							$('p').html(paragrafo);
-							$('h1, p').fadeIn("slow");
-						});
+						$('h1, .p').fadeOut("slow", function(){
+						$('h1').html(titulo);
+						$('p').html(paragrafo);
+						$('h1, .p').fadeIn("slow");
+					});		
 						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
 						
 						$( ".metade-direita" ).animate({
@@ -776,11 +776,11 @@
 					
 
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
-						$('h1, p').fadeOut("slow", function(){
-							$('h1').html(titulo);
-							$('p').html(paragrafo);
-							$('h1, p').fadeIn("slow");
-						});
+						$('h1, .p').fadeOut("slow", function(){
+						$('h1').html(titulo);
+						$('p').html(paragrafo);
+						$('h1, .p').fadeIn("slow");
+					});		
 						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
 						
 						$( ".metade-direita" ).animate({
@@ -858,11 +858,11 @@
 						$("#list27").css(listapadrao); // timeline que mantem-se default						 
 
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
-						$('h1, p').fadeOut("slow", function(){
-							$('h1').html(titulo);
-							$('p').html(paragrafo);
-							$('h1, p').fadeIn("slow");
-						});
+						$('h1, .p').fadeOut("slow", function(){
+						$('h1').html(titulo);
+						$('p').html(paragrafo);
+						$('h1, .p').fadeIn("slow");
+					});		
 						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
 						
 						$( ".metade-direita" ).animate({
@@ -933,10 +933,10 @@
 					$("#list26").css(listapadrao); // timeline que mantem-se default
 					$("#list27").css(listapadrao); // timeline que mantem-se default						 
 					/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
-					$('h1, p').fadeOut("slow", function(){
+					$('h1, .p').fadeOut("slow", function(){
 						$('h1').html(titulo);
 						$('p').html(paragrafo);
-						$('h1, p').fadeIn("slow");
+						$('h1, .p').fadeIn("slow");
 					});						
 					/* MUDA O BACKGRDOUND DA METADE DIREITA*/
 						
@@ -1009,11 +1009,11 @@
 						$("#list27").css(listapadrao); // timeline que mantem-se default						 
 
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
-						$('h1, p').fadeOut("slow", function(){
-							$('h1').html(titulo);
-							$('p').html(paragrafo);
-							$('h1, p').fadeIn("slow");
-						});
+						$('h1, .p').fadeOut("slow", function(){
+						$('h1').html(titulo);
+						$('p').html(paragrafo);
+						$('h1, .p').fadeIn("slow");
+					});		
 						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
 						
 						$( ".metade-direita" ).animate({
@@ -1089,11 +1089,11 @@
 						$("#list27").css(listapadrao); // timeline que mantem-se default						 
 
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
-						$('h1, p').fadeOut("slow", function(){
-							$('h1').html(titulo);
-							$('p').html(paragrafo);
-							$('h1, p').fadeIn("slow");
-						});
+						$('h1, .p').fadeOut("slow", function(){
+						$('h1').html(titulo);
+						$('p').html(paragrafo);
+						$('h1, .p').fadeIn("slow");
+					});		
 						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
 						
 						$( ".metade-direita" ).animate({
@@ -1168,11 +1168,11 @@
 						$("#list27").css(listapadrao); // timeline que mantem-se default						 
 
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
-						$('h1, p').fadeOut("slow", function(){
-							$('h1').html(titulo);
-							$('p').html(paragrafo);
-							$('h1, p').fadeIn("slow");
-						});
+						$('h1, .p').fadeOut("slow", function(){
+						$('h1').html(titulo);
+						$('p').html(paragrafo);
+						$('h1, .p').fadeIn("slow");
+					});		
 						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
 						
 						$( ".metade-direita" ).animate({
@@ -1246,11 +1246,11 @@
 						$("#list27").css(listapadrao); // timeline que mantem-se default						 
 
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
-						$('h1, p').fadeOut("slow", function(){
-							$('h1').html(titulo);
-							$('p').html(paragrafo);
-							$('h1, p').fadeIn("slow");
-						});
+						$('h1, .p').fadeOut("slow", function(){
+						$('h1').html(titulo);
+						$('p').html(paragrafo);
+						$('h1, .p').fadeIn("slow");
+					});		
 						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
 						
 						$( ".metade-direita" ).animate({
@@ -1324,11 +1324,11 @@
 						$("#list27").css(listapadrao); // timeline que mantem-se default						 
 
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
-						$('h1, p').fadeOut("slow", function(){
-							$('h1').html(titulo);
-							$('p').html(paragrafo);
-							$('h1, p').fadeIn("slow");
-						});
+						$('h1, .p').fadeOut("slow", function(){
+						$('h1').html(titulo);
+						$('p').html(paragrafo);
+						$('h1, .p').fadeIn("slow");
+					});		
 						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
 						
 						$( ".metade-direita" ).animate({
@@ -1403,11 +1403,11 @@
 						$("#list27").css(listapadrao); // timeline que mantem-se default						 
 
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
-						$('h1, p').fadeOut("slow", function(){
-							$('h1').html(titulo);
-							$('p').html(paragrafo);
-							$('h1, p').fadeIn("slow");
-						});
+						$('h1, .p').fadeOut("slow", function(){
+						$('h1').html(titulo);
+						$('p').html(paragrafo);
+						$('h1, .p').fadeIn("slow");
+					});		
 						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
 						
 						$( ".metade-direita" ).animate({
@@ -1484,11 +1484,11 @@
 						$("#list27").css(listapadrao); // timeline que mantem-se default						 
 
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
-						$('h1, p').fadeOut("slow", function(){
-							$('h1').html(titulo);
-							$('p').html(paragrafo);
-							$('h1, p').fadeIn("slow");
-						});
+						$('h1, .p').fadeOut("slow", function(){
+						$('h1').html(titulo);
+						$('p').html(paragrafo);
+						$('h1, .p').fadeIn("slow");
+					});		
 						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
 						
 						$( ".metade-direita" ).animate({
@@ -1564,11 +1564,11 @@
 						$("#list27").css(listapadrao); // timeline que mantem-se default						 
 
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
-						$('h1, p').fadeOut("slow", function(){
-							$('h1').html(titulo);
-							$('p').html(paragrafo);
-							$('h1, p').fadeIn("slow");
-						});
+						$('h1, .p').fadeOut("slow", function(){
+						$('h1').html(titulo);
+						$('p').html(paragrafo);
+						$('h1, .p').fadeIn("slow");
+					});		
 						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
 						
 						$( ".metade-direita" ).animate({
@@ -1644,11 +1644,11 @@
 						$("#list27").css(listapadrao); // timeline que mantem-se default						 
 
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
-						$('h1, p').fadeOut("slow", function(){
-							$('h1').html(titulo);
-							$('p').html(paragrafo);
-							$('h1, p').fadeIn("slow");
-						});
+						$('h1, .p').fadeOut("slow", function(){
+						$('h1').html(titulo);
+						$('p').html(paragrafo);
+						$('h1, .p').fadeIn("slow");
+					});		
 						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
 						
 						$( ".metade-direita" ).animate({
@@ -1724,11 +1724,11 @@
 						$("#list27").css(listapadrao); // timeline que mantem-se default						 
 
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
-						$('h1, p').fadeOut("slow", function(){
-							$('h1').html(titulo);
-							$('p').html(paragrafo);
-							$('h1, p').fadeIn("slow");
-						});
+						$('h1, .p').fadeOut("slow", function(){
+						$('h1').html(titulo);
+						$('p').html(paragrafo);
+						$('h1, .p').fadeIn("slow");
+					});		
 						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
 						
 						$( ".metade-direita" ).animate({
@@ -1803,11 +1803,11 @@
 						$("#list27").css(listapadrao); // timeline que mantem-se default						 
 
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
-						$('h1, p').fadeOut("slow", function(){
-							$('h1').html(titulo);
-							$('p').html(paragrafo);
-							$('h1, p').fadeIn("slow");
-						});
+						$('h1, .p').fadeOut("slow", function(){
+						$('h1').html(titulo);
+						$('p').html(paragrafo);
+						$('h1, .p').fadeIn("slow");
+					});		
 						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
 						
 						$( ".metade-direita" ).animate({
@@ -1882,11 +1882,11 @@
 						$("#list27").css(listapadrao); // timeline que mantem-se default						 
 
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
-						$('h1, p').fadeOut("slow", function(){
-							$('h1').html(titulo);
-							$('p').html(paragrafo);
-							$('h1, p').fadeIn("slow");
-						});
+						$('h1, .p').fadeOut("slow", function(){
+						$('h1').html(titulo);
+						$('p').html(paragrafo);
+						$('h1, .p').fadeIn("slow");
+					});		
 						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
 						
 						$( ".metade-direita" ).animate({
@@ -1961,11 +1961,11 @@
 						$("#list27").css(listapadrao); // timeline que mantem-se default						 
 
 						/* ESSE SCRIPT MUDA O CONTEUDO DO TITULO E PARÁGRAFO */
-						$('h1, p').fadeOut("slow", function(){
-							$('h1').html(titulo);
-							$('p').html(paragrafo);
-							$('h1, p').fadeIn("slow");
-						});
+						$('h1, .p').fadeOut("slow", function(){
+						$('h1').html(titulo);
+						$('p').html(paragrafo);
+						$('h1, .p').fadeIn("slow");
+					});		
 						/* MUDA O BACKGRDOUND DA METADE DIREITA*/
 						
 						$( ".metade-direita" ).animate({
