@@ -156,7 +156,7 @@
 							
 							 opacity: 0.1
 							}, 800, function(){
-								$(".metade-direita").css("background" ,"url(img/fundo-1.png)"); //COLOCAREMOS IMAGEM OU COR
+								$(".metade-direita").css("background" ,"#BAF3AD"); //COLOCAREMOS IMAGEM OU COR
 						
 							});
 
