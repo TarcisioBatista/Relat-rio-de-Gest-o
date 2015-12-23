@@ -21,13 +21,14 @@
 
 		
 		function handle(delta, ver) {
-
+	
 			if(window.myVar == 5){alert("5");}
 			 if(posicao >= 214){
 		    	posicao = 214;
 		    	if(ver == 2){
 				posicao = 156;
-			}
+				}
+
 
 		    }
 
@@ -36,16 +37,25 @@
 		        posicao = posicao + 1;
 		         $('.text').html('para baixo'+posicao);
 
-		          if(ver == 2){
-				posicao = 156;
-			}
+		         if(ver == 2){
+					posicao = 156;
+				 }
+
+				if(ver >2 ){ 
+					posicao=ver;
+				}
 
 		    }
 		    else if(posicao <=0){
 		    	posicao=0 ;
- if(ver == 2){
-				posicao = 156;
-			}
+
+	 			if(ver == 2){
+					posicao = 156;
+				}
+
+				if(ver >2 ){
+					posicao=ver;
+				}
 		    
 		    }
 		    
@@ -55,9 +65,14 @@
 		        posicao = posicao - 1;
 		         $('.text').html('para cima'+posicao);
 
- if(ver == 2){
-				posicao = 156;
-			}
+				 if(ver == 2){
+					posicao = 156;
+				}
+
+				if(ver >2 ){
+					posicao=ver;
+				}
+
 		    }
 		    	//$('h1').html("Hello world");
 		
